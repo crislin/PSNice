@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="seekBarLevel">#F7E11A</color>
+    <color name="background_azul_escuro">#031a39</color>
+    <color name="trophie_earned">#a7da8e</color>
+    <color name="Green_Emerald">#50C878</color>
+    <color name="Red_Persian">#CA3433</color>
+    <color name="Blue_Prussian">#003152</color>
+    <color name="Yellow_Royal">#FADA5E</color>
+</resources>
