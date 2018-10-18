@@ -2,6 +2,7 @@ package br.com.livroandroid.psnice.Activity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,11 +17,20 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.json.JSONException;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import br.com.livroandroid.psnice.Adapter.ComentarioAdapter;
 import br.com.livroandroid.psnice.Adapter.TrofeusAdapter;
@@ -44,10 +54,12 @@ public class DetalheTrofeuActivity extends AppCompatActivity {
 
     private int imagem;
     private String nome;
+    private String nomeJogo;
     private String descricao;
     private boolean earned;
     private boolean comentarioAberto;
     private boolean btComentarioHabilitado = false;
+    private FirebaseFirestore firebaseStore;
 
     public static List<Comentario> listaComent = new ArrayList<>();
 
@@ -74,9 +86,11 @@ public class DetalheTrofeuActivity extends AppCompatActivity {
 
         Intent i = this.getIntent();
         imagem = i.getExtras().getInt("imagem");
-        nome = i.getExtras().getString("nome");
+        nome = i.getExtras().getString("nomeTrofeu");
         descricao = i.getExtras().getString("descricao");
         earned = i.getExtras().getBoolean("earned");
+        nomeJogo = i.getExtras().getString("nomeJogo");
+        firebaseStore = FirebaseFirestore.getInstance();
     }
 
     private View.OnClickListener limparLista() {
@@ -137,9 +151,12 @@ public class DetalheTrofeuActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 if (usuario != null){
-                    listaComent.add(new Comentario(usuario.getPsnId(), etComentario.getText().toString(), "24-12-2018", "0"));
+                    Comentario comentario = new Comentario(usuario.getPsnId(), etComentario.getText().toString(), "24-12-2018", "0");
+                    listaComent.add(comentario);
                     atualizaComentarios();
                     etComentario.setText("");
+
+                    enviarProFirebase(comentario);
 
                     TransitionManager.beginDelayedTransition(layoutPai);
                     comentarioAberto = false;
@@ -186,5 +203,24 @@ public class DetalheTrofeuActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(listAdapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
+    }
+
+    public void enviarProFirebase(Comentario comentario){
+        Map<String, String> usermap = new HashMap<>();
+
+        usermap.put("psn_id", comentario.getIdComentario());
+        usermap.put("comentario", comentario.getComentario());
+
+        firebaseStore.collection("comentarios").document(nomeJogo).collection(nome).add(usermap).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+            @Override
+            public void onSuccess(DocumentReference documentReference) {
+                Toast.makeText(DetalheTrofeuActivity.this, "foi pro firebase", Toast.LENGTH_SHORT).show();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(DetalheTrofeuActivity.this, "não foi", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

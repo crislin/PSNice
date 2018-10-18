@@ -34,7 +34,7 @@ public class DetalheJogoActivity extends AppCompatActivity {
         imagemDetalhe.setImageResource(imagem);
         nomeDetalhe.setText(nome);
 
-        TrofeusAdapter listAdapter = new TrofeusAdapter(this);
+        TrofeusAdapter listAdapter = new TrofeusAdapter(this, nome);
         mRecyclerView.setAdapter(listAdapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);

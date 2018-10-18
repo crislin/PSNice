@@ -1,6 +1,7 @@
 package br.com.livroandroid.psnice.Activity;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -11,17 +12,26 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
+
 import br.com.livroandroid.psnice.R;
 
 public class CadastroActivity extends AppCompatActivity {
 
     private LinearLayout btCadastrar;
     private LinearLayout layoutPai;
-    private EditText psnId;
-    private EditText senha;
-    private EditText confirmarSenha;
+    private EditText etPsnId;
+    private EditText etSenha;
+    private EditText etConfirmarSenha;
 
     private boolean cadastroHabilitado = false;
+    private FirebaseFirestore firebaseStore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,16 +39,17 @@ public class CadastroActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cadastro);
 
         btCadastrar = findViewById(R.id.btCadastrar);
-        psnId = findViewById(R.id.etPsnId);
-        senha = findViewById(R.id.etSenha);
-        confirmarSenha = findViewById(R.id.etConfirmarSenha);
+        etPsnId = findViewById(R.id.etPsnId);
+        etSenha = findViewById(R.id.etSenha);
+        etConfirmarSenha = findViewById(R.id.etConfirmarSenha);
         layoutPai = findViewById(R.id.layoutPai);
 
         btCadastrar.setOnClickListener(enviarCadastro());
-        psnId.addTextChangedListener(habilitarBotao());
-        senha.addTextChangedListener(habilitarBotao());
-        confirmarSenha.addTextChangedListener(habilitarBotao());
+        etPsnId.addTextChangedListener(habilitarBotao());
+        etSenha.addTextChangedListener(habilitarBotao());
+        etConfirmarSenha.addTextChangedListener(habilitarBotao());
         layoutPai.setOnClickListener(onClickLayoutPai());
+        firebaseStore = FirebaseFirestore.getInstance();
     }
 
     private View.OnClickListener onClickLayoutPai() {
@@ -61,7 +72,7 @@ public class CadastroActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (!psnId.getText().toString().equals("") && !senha.getText().toString().equals("") && !confirmarSenha.getText().toString().equals("")) {
+                if (!etPsnId.getText().toString().equals("") && !etSenha.getText().toString().equals("") && !etConfirmarSenha.getText().toString().equals("")) {
                     btCadastrar.setBackgroundResource(R.drawable.botao_habilitado);
                     cadastroHabilitado = true;
                 } else {
@@ -85,7 +96,7 @@ public class CadastroActivity extends AppCompatActivity {
                 boolean idValido = validaId();
                 if (cadastroHabilitado){
                     if (idValido){
-                        if (senha.getText().toString().equalsIgnoreCase(confirmarSenha.getText().toString())){
+                        if (etSenha.getText().toString().equalsIgnoreCase(etConfirmarSenha.getText().toString())){
                             cadastrar();
                         } else {
                             Toast.makeText(CadastroActivity.this, "Campo confirmar senha deve conter a mesma senha", Toast.LENGTH_SHORT).show();
@@ -99,16 +110,34 @@ public class CadastroActivity extends AppCompatActivity {
     }
 
     private void cadastrar(){
-        psnId.setText("");
-        senha.setText("");
-        confirmarSenha.setText("");
+        String psnId = etPsnId.getText().toString();
+        String senha = etSenha.getText().toString();
 
-        Toast.makeText(CadastroActivity.this, "Cadastrado com sucesso", Toast.LENGTH_SHORT).show();
+        Map<String, String> usermap = new HashMap<>();
+
+        usermap.put("psn_id", psnId);
+        usermap.put("senha", senha);
+
+        firebaseStore.collection("users").add(usermap).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+            @Override
+            public void onSuccess(DocumentReference documentReference) {
+                Toast.makeText(CadastroActivity.this, "Cadastro feito com sucesso!", Toast.LENGTH_SHORT).show();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(CadastroActivity.this, "Ocorreu um erro!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        etPsnId.setText("");
+        etSenha.setText("");
+        etConfirmarSenha.setText("");
     }
 
     private boolean validaId(){
         boolean valido = false;
-        if (psnId.getText().toString().equalsIgnoreCase("gazinice")){
+        if (etPsnId.getText().toString().equalsIgnoreCase("gazinice")){
             valido = true;
         }
         return valido;

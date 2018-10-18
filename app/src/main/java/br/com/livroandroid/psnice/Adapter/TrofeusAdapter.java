@@ -24,9 +24,11 @@ import br.com.livroandroid.psnice.TesteTrofeu;
 public class TrofeusAdapter extends RecyclerView.Adapter<TrofeusListViewHolder> {
 
     private Context context;
+    private String nomeJogo;
 
-    public TrofeusAdapter(Context c){
+    public TrofeusAdapter(Context c, String nomeJogo){
         context = c;
+        this.nomeJogo = nomeJogo;
     }
 
     @NonNull
@@ -64,9 +66,10 @@ public class TrofeusAdapter extends RecyclerView.Adapter<TrofeusListViewHolder> 
     private void openDetailActivity(int posicion) {
         Intent i = new Intent(context, DetalheTrofeuActivity.class);
         i.putExtra("imagem", TesteTrofeu.imagemTrofeu[posicion]);
-        i.putExtra("nome", TesteTrofeu.nomeTrofeu[posicion]);
+        i.putExtra("nomeTrofeu", TesteTrofeu.nomeTrofeu[posicion]);
         i.putExtra("descricao", TesteTrofeu.descricaoTrofeu[posicion]);
         i.putExtra("earned", TesteTrofeu.trofeusGanhos[posicion]);
+        i.putExtra("nomeJogo", nomeJogo);
         context.startActivity(i);
     }
 
