@@ -8,9 +8,9 @@ public class Comentario {
     private String idComentario;
     private String comentario;
     private String data;
-    private String totalVotos;
+    private int totalVotos;
 
-    public Comentario(String idComentario, String comentario, String data, String totalVotos) {
+    public Comentario(String idComentario, String comentario, String data, int totalVotos) {
         this.idComentario = idComentario;
         this.comentario = comentario;
         this.data = data;
@@ -41,11 +41,11 @@ public class Comentario {
         this.data = data;
     }
 
-    public String getTotalVotos() {
+    public int getTotalVotos() {
         return totalVotos;
     }
 
-    public void setTotalVotos(String totalVotos) {
+    public void setTotalVotos(int totalVotos) {
         this.totalVotos = totalVotos;
     }
 }

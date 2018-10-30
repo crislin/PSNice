@@ -21,7 +21,11 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -39,7 +43,7 @@ import br.com.livroandroid.psnice.R;
 import br.com.livroandroid.psnice.Service.PSNiceService;
 import br.com.livroandroid.psnice.Usuario;
 
-public class DetalheTrofeuActivity extends AppCompatActivity {
+public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEventListener {
 
     private ImageView imagemTrofeu;
     private TextView nomeTrofeu;
@@ -60,6 +64,9 @@ public class DetalheTrofeuActivity extends AppCompatActivity {
     private boolean comentarioAberto;
     private boolean btComentarioHabilitado = false;
     private FirebaseFirestore firebaseStore;
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private DatabaseReference mRootReference = firebaseDatabase.getReference();
+    private DatabaseReference mComentarioReference = mRootReference.child("comentarios");
 
     public static List<Comentario> listaComent = new ArrayList<>();
 
@@ -151,7 +158,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 if (usuario != null){
-                    Comentario comentario = new Comentario(usuario.getPsnId(), etComentario.getText().toString(), "24-12-2018", "0");
+                    Comentario comentario = new Comentario(usuario.getPsnId(), etComentario.getText().toString(), "24-12-2018", 0);
                     listaComent.add(comentario);
                     atualizaComentarios();
                     etComentario.setText("");
@@ -206,21 +213,88 @@ public class DetalheTrofeuActivity extends AppCompatActivity {
     }
 
     public void enviarProFirebase(Comentario comentario){
-        Map<String, String> usermap = new HashMap<>();
+        DatabaseReference mComentReference = mComentarioReference.child(nomeJogo).child(nome);
+        mComentReference.setValue(comentario);
+//        DatabaseReference mComentReference = mComentarioReference.child(nomeJogo).child(nome);
 
-        usermap.put("psn_id", comentario.getIdComentario());
-        usermap.put("comentario", comentario.getComentario());
+//        Map<String, Comentario> usermap = new HashMap<>();
+//
+//        usermap.put("coment", comentario);
+//
+//        firebaseStore.collection("comentarios").document(nomeJogo).collection(nome).add(usermap).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+//            @Override
+//            public void onSuccess(DocumentReference documentReference) {
+//                Toast.makeText(DetalheTrofeuActivity.this, "foi pro firebase", Toast.LENGTH_SHORT).show();
+//            }
+//        }).addOnFailureListener(new OnFailureListener() {
+//            @Override
+//            public void onFailure(@NonNull Exception e) {
+//                Toast.makeText(DetalheTrofeuActivity.this, "não foi", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//
+//        pegaListaFirebase();
+    }
 
-        firebaseStore.collection("comentarios").document(nomeJogo).collection(nome).add(usermap).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-            @Override
-            public void onSuccess(DocumentReference documentReference) {
-                Toast.makeText(DetalheTrofeuActivity.this, "foi pro firebase", Toast.LENGTH_SHORT).show();
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(DetalheTrofeuActivity.this, "não foi", Toast.LENGTH_SHORT).show();
-            }
-        });
+    public void pegaListaFirebase(){
+//        final List<Comentario> comentarios = new ArrayList<>();
+//
+//        CollectionReference collection = firebaseStore.collection("comentarios").document(nomeJogo).collection(nome);
+//        collection.get()
+//                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+//                    @Override
+//                    public void onSuccess(QuerySnapshot queryDocumentSnapshot) {
+//                        for (DocumentSnapshot documentos : queryDocumentSnapshot){
+//                            comentarios.add(documentos.toObject(Comentario.class));
+//                        }
+//                        Toast.makeText(DetalheTrofeuActivity.this, "pegou ", Toast.LENGTH_SHORT).show();
+//                    }
+//                });
+
+    }
+
+    @Override
+    public void onDataChange(DataSnapshot dataSnapshot) {
+
+    }
+
+    @Override
+    public void onCancelled(DatabaseError databaseError) {
+
+    }
+//    DocumentReference collection = firebaseStore.collection("comentarios").document(nomeJogo);
+//        collection.get()
+//                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+//        @Override
+//        public void onSuccess(QuerySnapshot documentSnapshots) {
+//            for (DocumentSnapshot documentos : documentSnapshots){
+//                comentarios.add(documentos.toObject(Comentario.class));
+//            }
+//
+//        }
+//        myRef.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//
+//                for (DataSnapshot chidSnap : dataSnapshot.getChildren()) {
+//                    Log.v("tmz",""+ chidSnap.getKey()); //displays the key for the node
+//                    Log.v("tmz",""+ chidSnap.child("market_name").getValue());   //gives the value for given keyname
+//                }
+//
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        });
+//    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
     }
 }
+

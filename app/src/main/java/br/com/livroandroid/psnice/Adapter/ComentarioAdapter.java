@@ -32,16 +32,16 @@ public class ComentarioAdapter extends RecyclerView.Adapter<ComentarioListViewHo
         holder.tvIdComentario.setText(DetalheTrofeuActivity.listaComent.get(position).getIdComentario());
         holder.tvComentario.setText(DetalheTrofeuActivity.listaComent.get(position).getComentario());
         holder.tvData.setText(DetalheTrofeuActivity.listaComent.get(position).getData());
-        holder.tvTotalUpDownVotes.setText(DetalheTrofeuActivity.listaComent.get(position).getTotalVotos());
+        holder.tvTotalUpDownVotes.setText(String.valueOf(DetalheTrofeuActivity.listaComent.get(position).getTotalVotos()));
 
 
         holder.upvote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 TransitionManager.beginDelayedTransition(holder.layoutPaiVotos);
-                int votos = Integer.valueOf(DetalheTrofeuActivity.listaComent.get(position).getTotalVotos());
+                int votos = DetalheTrofeuActivity.listaComent.get(position).getTotalVotos();
                 votos++;
-                DetalheTrofeuActivity.listaComent.get(position).setTotalVotos(String.valueOf(votos));
+                DetalheTrofeuActivity.listaComent.get(position).setTotalVotos(votos);
                 holder.tvTotalUpDownVotes.setText(String.valueOf(DetalheTrofeuActivity.listaComent.get(position).getTotalVotos()));
             }
         });
@@ -49,9 +49,9 @@ public class ComentarioAdapter extends RecyclerView.Adapter<ComentarioListViewHo
         holder.downvote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int votos = Integer.valueOf(DetalheTrofeuActivity.listaComent.get(position).getTotalVotos());
+                int votos = DetalheTrofeuActivity.listaComent.get(position).getTotalVotos();
                 votos--;
-                DetalheTrofeuActivity.listaComent.get(position).setTotalVotos(String.valueOf(votos));
+                DetalheTrofeuActivity.listaComent.get(position).setTotalVotos(votos);
                 holder.tvTotalUpDownVotes.setText(String.valueOf(DetalheTrofeuActivity.listaComent.get(position).getTotalVotos()));
             }
         });
