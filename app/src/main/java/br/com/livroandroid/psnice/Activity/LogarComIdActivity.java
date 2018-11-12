@@ -12,6 +12,16 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import br.com.livroandroid.psnice.R;
 
@@ -22,6 +32,11 @@ public class LogarComIdActivity extends AppCompatActivity {
     private LinearLayout layoutPai;
     private EditText etPsnId;
     private TextView btCadastro;
+    public static List<String> idsValidasFirebase = new ArrayList<>();
+
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private DatabaseReference mRootReference = firebaseDatabase.getReference();
+    private DatabaseReference mIdValidoReference = mRootReference.child("id_valido");
 
     boolean updateHabilitado = false;
 
@@ -41,6 +56,7 @@ public class LogarComIdActivity extends AppCompatActivity {
         layoutPai.setOnClickListener(onClickLayoutPai());
         btCadastro.setOnClickListener(vaiProCadastro());
         btUpdatePsnId.setOnClickListener(vaiPraHome());
+        mIdValidoReference.addChildEventListener(childEventListener);
     }
 
     private View.OnClickListener vaiPraHome() {
@@ -48,10 +64,12 @@ public class LogarComIdActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (updateHabilitado){
-                    if (etPsnId.getText().toString().equalsIgnoreCase("gazinice")){
+                    if (verificaId(etPsnId.getText().toString())){
                         Intent it = new Intent(LogarComIdActivity.this, MainActivity.class);
                         it.putExtra("logado", false);
                         startActivity(it);
+                    } else {
+                        Toast.makeText(LogarComIdActivity.this, "Id inválida", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -113,4 +131,41 @@ public class LogarComIdActivity extends AppCompatActivity {
             }
         };
     }
+
+    public boolean verificaId(String id){
+        for (int i = 0; i < idsValidasFirebase.size(); i++){
+            if (id.equalsIgnoreCase(idsValidasFirebase.get(i))){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    ChildEventListener childEventListener = new ChildEventListener(){
+
+        @Override
+        public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+            idsValidasFirebase.add(dataSnapshot.getValue(String.class));
+        }
+
+        @Override
+        public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+        }
+
+        @Override
+        public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+        }
+
+        @Override
+        public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+        }
+
+        @Override
+        public void onCancelled(DatabaseError databaseError) {
+
+        }
+    };
 }
