@@ -9,12 +9,23 @@ public class Comentario {
     private String comentario;
     private String data;
     private int totalVotos;
+    private String key;
 
     public Comentario(String idComentario, String comentario, String data, int totalVotos) {
         this.idComentario = idComentario;
         this.comentario = comentario;
         this.data = data;
         this.totalVotos = totalVotos;
+    }
+
+    public Comentario(){}
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
     }
 
     public String getIdComentario() {

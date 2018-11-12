@@ -2,7 +2,6 @@ package br.com.livroandroid.psnice.Activity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,27 +16,21 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.json.JSONException;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import br.com.livroandroid.psnice.Adapter.ComentarioAdapter;
-import br.com.livroandroid.psnice.Adapter.TrofeusAdapter;
 import br.com.livroandroid.psnice.Comentario;
 import br.com.livroandroid.psnice.R;
 import br.com.livroandroid.psnice.Service.PSNiceService;
@@ -67,8 +60,9 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference mRootReference = firebaseDatabase.getReference();
     private DatabaseReference mComentarioReference = mRootReference.child("comentarios");
+    private DatabaseReference mTrofeuReference;
 
-    public static List<Comentario> listaComent = new ArrayList<>();
+    public static List<Comentario> listaComentarios = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,7 +83,6 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
         fabComentario.setOnClickListener(abrirCampoComentario());
         btEnviarComentario.setOnClickListener(enviarComentario());
         etComentario.addTextChangedListener(habilitaBotao());
-        imagemTrofeu.setOnClickListener(limparLista());
 
         Intent i = this.getIntent();
         imagem = i.getExtras().getInt("imagem");
@@ -98,16 +91,9 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
         earned = i.getExtras().getBoolean("earned");
         nomeJogo = i.getExtras().getString("nomeJogo");
         firebaseStore = FirebaseFirestore.getInstance();
-    }
 
-    private View.OnClickListener limparLista() {
-        return new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                listaComent.clear();
-                atualizaComentarios();
-            }
-        };
+        mTrofeuReference = mComentarioReference.child(nomeJogo).child(nome);
+        mTrofeuReference.addChildEventListener(childEventListener);
     }
 
     @Override
@@ -125,6 +111,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
         }
         comentarioAberto = false;
         atualizaComentarios();
+        listaComentarios.clear();
     }
 
     private View.OnClickListener abrirCampoComentario() {
@@ -159,8 +146,6 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
                 }
                 if (usuario != null){
                     Comentario comentario = new Comentario(usuario.getPsnId(), etComentario.getText().toString(), "24-12-2018", 0);
-                    listaComent.add(comentario);
-                    atualizaComentarios();
                     etComentario.setText("");
 
                     enviarProFirebase(comentario);
@@ -204,9 +189,9 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
     }
 
     public void atualizaComentarios(){
-        tvTotalComentarios.setText(String.valueOf(listaComent.size()));
+        tvTotalComentarios.setText(String.valueOf(listaComentarios.size()));
 
-        ComentarioAdapter listAdapter = new ComentarioAdapter();
+        ComentarioAdapter listAdapter = new ComentarioAdapter(listaComentarios, nomeJogo, nome);
         mRecyclerView.setAdapter(listAdapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
@@ -214,7 +199,10 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
 
     public void enviarProFirebase(Comentario comentario){
         DatabaseReference mComentReference = mComentarioReference.child(nomeJogo).child(nome);
-        mComentReference.setValue(comentario);
+//        mComentReference.setValue(comentario);
+
+        mComentReference.push().setValue(comentario);
+
 //        DatabaseReference mComentReference = mComentarioReference.child(nomeJogo).child(nome);
 
 //        Map<String, Comentario> usermap = new HashMap<>();
@@ -255,7 +243,6 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
 
     @Override
     public void onDataChange(DataSnapshot dataSnapshot) {
-
     }
 
     @Override
@@ -296,5 +283,36 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
         super.onStart();
 
     }
+
+    ChildEventListener childEventListener = new ChildEventListener(){
+
+        @Override
+        public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+            Comentario comentario = dataSnapshot.getValue(Comentario.class);
+            comentario.setKey(dataSnapshot.getKey());
+            listaComentarios.add(comentario);
+            atualizaComentarios();
+        }
+
+        @Override
+        public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+        }
+
+        @Override
+        public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+        }
+
+        @Override
+        public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+        }
+
+        @Override
+        public void onCancelled(DatabaseError databaseError) {
+
+        }
+    };
 }
 

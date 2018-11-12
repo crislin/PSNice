@@ -11,7 +11,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import br.com.livroandroid.psnice.Activity.DetalheTrofeuActivity;
+import br.com.livroandroid.psnice.Comentario;
 import br.com.livroandroid.psnice.R;
 
 /**
@@ -20,46 +27,63 @@ import br.com.livroandroid.psnice.R;
 
 public class ComentarioAdapter extends RecyclerView.Adapter<ComentarioListViewHolder> {
 
+    private List<Comentario> comentarios = new ArrayList<>();
+    private String nomeJogo;
+    private String nomeTrofeu;
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private DatabaseReference mRootReference = firebaseDatabase.getReference();
+    private DatabaseReference mComentarioReference = mRootReference.child("comentarios");
+    private DatabaseReference mTrofeuReference;
+
+    public ComentarioAdapter(List<Comentario> comentarios, String nomeJogo, String nomeTrofeu){
+        this.comentarios = comentarios;
+        this.nomeJogo = nomeJogo;
+        this.nomeTrofeu = nomeTrofeu;
+    }
+
     @NonNull
     @Override
     public ComentarioListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.lista_comentarios, parent, false);
+        mTrofeuReference = mComentarioReference.child(nomeJogo).child(nomeTrofeu);
         return new ComentarioListViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull final ComentarioListViewHolder holder, final int position) {
-        holder.tvIdComentario.setText(DetalheTrofeuActivity.listaComent.get(position).getIdComentario());
-        holder.tvComentario.setText(DetalheTrofeuActivity.listaComent.get(position).getComentario());
-        holder.tvData.setText(DetalheTrofeuActivity.listaComent.get(position).getData());
-        holder.tvTotalUpDownVotes.setText(String.valueOf(DetalheTrofeuActivity.listaComent.get(position).getTotalVotos()));
+        holder.tvIdComentario.setText(comentarios.get(position).getIdComentario());
+        holder.tvComentario.setText(comentarios.get(position).getComentario());
+        holder.tvData.setText(comentarios.get(position).getData());
+        holder.tvTotalUpDownVotes.setText(String.valueOf(comentarios.get(position).getTotalVotos()));
 
 
         holder.upvote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 TransitionManager.beginDelayedTransition(holder.layoutPaiVotos);
-                int votos = DetalheTrofeuActivity.listaComent.get(position).getTotalVotos();
+                int votos = comentarios.get(position).getTotalVotos();
                 votos++;
-                DetalheTrofeuActivity.listaComent.get(position).setTotalVotos(votos);
-                holder.tvTotalUpDownVotes.setText(String.valueOf(DetalheTrofeuActivity.listaComent.get(position).getTotalVotos()));
+                comentarios.get(position).setTotalVotos(votos);
+                mTrofeuReference.child(comentarios.get(position).getKey()).setValue(comentarios.get(position));
+                holder.tvTotalUpDownVotes.setText(String.valueOf(comentarios.get(position).getTotalVotos()));
             }
         });
 
         holder.downvote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int votos = DetalheTrofeuActivity.listaComent.get(position).getTotalVotos();
+                int votos = comentarios.get(position).getTotalVotos();
                 votos--;
-                DetalheTrofeuActivity.listaComent.get(position).setTotalVotos(votos);
-                holder.tvTotalUpDownVotes.setText(String.valueOf(DetalheTrofeuActivity.listaComent.get(position).getTotalVotos()));
+                comentarios.get(position).setTotalVotos(votos);
+                mTrofeuReference.child(comentarios.get(position).getKey()).setValue(comentarios.get(position));
+                holder.tvTotalUpDownVotes.setText(String.valueOf(comentarios.get(position).getTotalVotos()));
             }
         });
     }
 
     @Override
     public int getItemCount() {
-        return DetalheTrofeuActivity.listaComent.size();
+        return comentarios.size();
     }
 }
 
