@@ -110,6 +110,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
             imagemTrofeu.setAlpha((float) 0.5);
         }
         comentarioAberto = false;
+
         atualizaComentarios();
         listaComentarios.clear();
     }
