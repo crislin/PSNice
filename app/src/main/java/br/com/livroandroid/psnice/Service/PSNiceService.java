@@ -12,10 +12,14 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 import br.com.livroandroid.psnice.BaseTask;
+import br.com.livroandroid.psnice.Jogo;
 import br.com.livroandroid.psnice.Service.Parser.Parser;
 import br.com.livroandroid.psnice.Task;
+import br.com.livroandroid.psnice.Trofeu;
 import br.com.livroandroid.psnice.Usuario;
 
 import static br.com.livroandroid.psnice.Service.WebService.IS_FAKE;
@@ -31,11 +35,42 @@ public class PSNiceService {
         String jsonResponse;
         try {
             if (IS_FAKE){
-                jsonResponse = loadJSONFromAsset(context, "PSNice.json");
+//                jsonResponse = loadJSONFromAsset(context, "PSNice.json");
+                jsonResponse = loadJSONFromAsset(context, "UsuarioCassiano.json");
                 usuario = Parser.parserUsuario(jsonResponse);
                 if (usuario != null){
                     return usuario;
                 }
+            }
+        } catch (Exception e){
+            throw e;
+        }
+        return null;
+    }
+
+    public static List<Jogo> getJogos(Context context) throws JSONException {
+        List<Jogo> lista = new ArrayList<>();
+        String jsonResponse;
+        try {
+            jsonResponse = loadJSONFromAsset(context, "UsuarioCassiano.json");
+            lista = Parser.parserJogos(jsonResponse);
+            if (lista != null){
+                return lista;
+            }
+        } catch (Exception e){
+            throw e;
+        }
+        return null;
+    }
+
+    public static List<Trofeu> getTrofeus(Context context, String nomeJogo) throws JSONException {
+        List<Trofeu> lista = new ArrayList<>();
+        String jsonResponse;
+        try {
+            jsonResponse = loadJSONFromAsset(context, "UsuarioCassiano.json");
+            lista = Parser.parserTrofeus(jsonResponse, nomeJogo);
+            if (lista != null){
+                return lista;
             }
         } catch (Exception e){
             throw e;

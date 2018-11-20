@@ -8,14 +8,24 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
+import org.json.JSONException;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import br.com.livroandroid.psnice.R;
 import br.com.livroandroid.psnice.Adapter.TrofeusAdapter;
+import br.com.livroandroid.psnice.Service.PSNiceService;
+import br.com.livroandroid.psnice.Trofeu;
 
 public class DetalheJogoActivity extends AppCompatActivity {
 
     private ImageView imagemDetalhe;
     private TextView nomeDetalhe;
     private RecyclerView mRecyclerView;
+    private List<Trofeu> listaTrofeus = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,13 +38,19 @@ public class DetalheJogoActivity extends AppCompatActivity {
         nomeDetalhe = findViewById(R.id.nomeDetalhe);
 
         Intent i = this.getIntent();
-        int imagem = i.getExtras().getInt("imagem");
+        String imagem = i.getExtras().getString("imagem");
         String nome = i.getExtras().getString("nome");
 
-        imagemDetalhe.setImageResource(imagem);
+        Glide.with(this).load(imagem).into(imagemDetalhe);
         nomeDetalhe.setText(nome);
 
-        TrofeusAdapter listAdapter = new TrofeusAdapter(this, nome);
+        try {
+            listaTrofeus = PSNiceService.getTrofeus(this, nome);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        TrofeusAdapter listAdapter = new TrofeusAdapter(this, listaTrofeus, nome);
         mRecyclerView.setAdapter(listAdapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);

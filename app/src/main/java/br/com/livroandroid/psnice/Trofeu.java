@@ -7,16 +7,20 @@ package br.com.livroandroid.psnice;
 public class Trofeu {
     private String nome;
     private String descricao;
+    private String imagemTrofeu;
     private String tipo;
     private boolean hidden;
-    private boolean conquistado;
-    private int imagemTrofeu;
+    private boolean earned;
+    private String dayEarned;
+    private String hourEarned;
 
-    public Trofeu(int imagemTrofeu, String nome, String descricao){
+    public Trofeu(String imagemTrofeu, String nome, String descricao){
         this.imagemTrofeu = imagemTrofeu;
         this.nome = nome;
         this.descricao = descricao;
     }
+
+    public Trofeu(){}
 
     public String getNome() {
         return nome;
@@ -34,6 +38,14 @@ public class Trofeu {
         this.descricao = descricao;
     }
 
+    public String getImagemTrofeu() {
+        return imagemTrofeu;
+    }
+
+    public void setImagemTrofeu(String imagemTrofeu) {
+        this.imagemTrofeu = imagemTrofeu;
+    }
+
     public String getTipo() {
         return tipo;
     }
@@ -42,7 +54,7 @@ public class Trofeu {
         this.tipo = tipo;
     }
 
-    public boolean isHidden() {
+    public boolean getHidden() {
         return hidden;
     }
 
@@ -50,19 +62,27 @@ public class Trofeu {
         this.hidden = hidden;
     }
 
-    public boolean isConquistado() {
-        return conquistado;
+    public boolean getEarned() {
+        return earned;
     }
 
-    public void setConquistado(boolean conquistado) {
-        this.conquistado = conquistado;
+    public void setEarned(boolean earned) {
+        this.earned = earned;
     }
 
-    public int getImagemTrofeu() {
-        return imagemTrofeu;
+    public String getDayEarned() {
+        return dayEarned;
     }
 
-    public void setImagemTrofeu(int imagemTrofeu) {
-        this.imagemTrofeu = imagemTrofeu;
+    public void setDayEarned(String dayEarned) {
+        this.dayEarned = dayEarned;
+    }
+
+    public String getHourEarned() {
+        return hourEarned;
+    }
+
+    public void setHourEarned(String hourEarned) {
+        this.hourEarned = hourEarned;
     }
 }

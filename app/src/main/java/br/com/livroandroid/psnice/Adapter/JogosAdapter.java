@@ -12,9 +12,14 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import java.util.ArrayList;
+import java.util.List;
+
 import br.com.livroandroid.psnice.Activity.DetalheJogoActivity;
 import br.com.livroandroid.psnice.Activity.HomeActivity;
 import br.com.livroandroid.psnice.Activity.LoginActivity;
+import br.com.livroandroid.psnice.Jogo;
 import br.com.livroandroid.psnice.R;
 import br.com.livroandroid.psnice.TesteJogos;
 
@@ -27,9 +32,11 @@ import static android.support.v4.content.ContextCompat.startActivity;
 public class JogosAdapter extends RecyclerView.Adapter<JogosListViewHolder> {
 
     private Context context;
+    private List<Jogo> listaDosJogos = new ArrayList<>();
 
-    public JogosAdapter(Context c){
-        context = c;
+    public JogosAdapter(Context c, List<Jogo> listaDosJogos){
+        this.context = c;
+        this.listaDosJogos = listaDosJogos;
     }
 
     @NonNull
@@ -42,12 +49,12 @@ public class JogosAdapter extends RecyclerView.Adapter<JogosListViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull JogosListViewHolder holder, final int position) {
         holder.sbPorcentagem.getThumb().mutate().setAlpha(0);
-        holder.nomeJogos.setText(TesteJogos.nomeJogos[position]);
-        holder.imagemJogos.setImageResource(TesteJogos.imagemJogos[position]);
-        holder.trofeusGanhos.setText(String.valueOf(TesteJogos.trofeusJogos[position]));
-        holder.totalTrofeus.setText(String.valueOf(TesteJogos.totalTrofeusJogos[position]));
-        holder.porcentagem.setText(String.valueOf(TesteJogos.porcentagemJogos[position]));
-        holder.sbPorcentagem.setProgress(TesteJogos.porcentagemJogos[position]);
+        holder.nomeJogos.setText(listaDosJogos.get(position).getNome());
+        Glide.with(context).load(listaDosJogos.get(position).getImagem()).into(holder.imagemJogos);
+        holder.trofeusGanhos.setText(String.valueOf(listaDosJogos.get(position).getGameTotalEarned()));
+        holder.totalTrofeus.setText(String.valueOf(listaDosJogos.get(position).getGameTotal()));
+        holder.porcentagem.setText(String.valueOf(listaDosJogos.get(position).getGameProgress()));
+        holder.sbPorcentagem.setProgress(listaDosJogos.get(position).getGameProgress());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,13 +66,13 @@ public class JogosAdapter extends RecyclerView.Adapter<JogosListViewHolder> {
 
     @Override
     public int getItemCount() {
-        return TesteJogos.nomeJogos.length;
+        return listaDosJogos.size();
     }
 
     private void openDetailActivity(int posicion) {
         Intent i = new Intent(context, DetalheJogoActivity.class);
-        i.putExtra("nome", TesteJogos.nomeJogos[posicion]);
-        i.putExtra("imagem", TesteJogos.imagemJogos[posicion]);
+        i.putExtra("nome", listaDosJogos.get(posicion).getNome());
+        i.putExtra("imagem", listaDosJogos.get(posicion).getImagem());
         context.startActivity(i);
     }
 

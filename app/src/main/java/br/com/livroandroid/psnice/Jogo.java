@@ -1,19 +1,23 @@
 package br.com.livroandroid.psnice;
 
+import java.util.List;
+
 /**
  * Created by livetouch on 28/08/18.
  */
 
 public class Jogo {
     private String nome;
-    private int imagemJogo;
-    private int totalTrofeus;
-    private int bronze;
-    private int silver;
-    private int gold;
-    private int platinum;
-    private int porcentagem;
-    private boolean havePlatinum;
+    private String imagem;
+    private boolean hasPlatinum;
+    private int gamePlatinum;
+    private int gameGold;
+    private int gameSilver;
+    private int gameBronze;
+    private int gameTotal;
+    private int gameTotalEarned;
+    private int gameProgress;
+    private List<Trofeu> trofeus;
 
     public String getNome() {
         return nome;
@@ -23,67 +27,83 @@ public class Jogo {
         this.nome = nome;
     }
 
-    public int getImagemJogo() {
-        return imagemJogo;
+    public String getImagem() {
+        return imagem;
     }
 
-    public void setImagemJogo(int imagemJogo) {
-        this.imagemJogo = imagemJogo;
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
     }
 
-    public int getTotalTrofeus() {
-        return totalTrofeus;
+    public boolean getHasPlatinum() {
+        return hasPlatinum;
     }
 
-    public void setTotalTrofeus(int totalTrofeus) {
-        this.totalTrofeus = totalTrofeus;
+    public void setHasPlatinum(boolean hasPlatinum) {
+        this.hasPlatinum = hasPlatinum;
     }
 
-    public int getBronze() {
-        return bronze;
+    public int getGamePlatinum() {
+        return gamePlatinum;
     }
 
-    public void setBronze(int bronze) {
-        this.bronze = bronze;
+    public void setGamePlatinum(int gamePlatinum) {
+        this.gamePlatinum = gamePlatinum;
     }
 
-    public int getSilver() {
-        return silver;
+    public int getGameGold() {
+        return gameGold;
     }
 
-    public void setSilver(int silver) {
-        this.silver = silver;
+    public void setGameGold(int gameGold) {
+        this.gameGold = gameGold;
     }
 
-    public int getGold() {
-        return gold;
+    public int getGameSilver() {
+        return gameSilver;
     }
 
-    public void setGold(int gold) {
-        this.gold = gold;
+    public void setGameSilver(int gameSilver) {
+        this.gameSilver = gameSilver;
     }
 
-    public int getPlatinum() {
-        return platinum;
+    public int getGameBronze() {
+        return gameBronze;
     }
 
-    public void setPlatinum(int platinum) {
-        this.platinum = platinum;
+    public void setGameBronze(int gameBronze) {
+        this.gameBronze = gameBronze;
     }
 
-    public int getPorcentagem() {
-        return porcentagem;
+    public int getGameTotal() {
+        return gameTotal;
     }
 
-    public void setPorcentagem(int porcentagem) {
-        this.porcentagem = porcentagem;
+    public void setGameTotal(int gameTotal) {
+        this.gameTotal = gameTotal;
     }
 
-    public boolean isHavePlatinum() {
-        return havePlatinum;
+    public int getGameTotalEarned() {
+        return gameTotalEarned;
     }
 
-    public void setHavePlatinum(boolean havePlatinum) {
-        this.havePlatinum = havePlatinum;
+    public void setGameTotalEarned(int gameTotalEarned) {
+        this.gameTotalEarned = gameTotalEarned;
+    }
+
+    public int getGameProgress() {
+        return gameProgress;
+    }
+
+    public void setGameProgress(int gameProgress) {
+        this.gameProgress = gameProgress;
+    }
+
+    public List<Trofeu> getTrofeus() {
+        return trofeus;
+    }
+
+    public void setTrofeus(List<Trofeu> trofeus) {
+        this.trofeus = trofeus;
     }
 }

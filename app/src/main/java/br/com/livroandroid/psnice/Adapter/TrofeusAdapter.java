@@ -11,11 +11,17 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import br.com.livroandroid.psnice.Activity.DetalheJogoActivity;
 import br.com.livroandroid.psnice.Activity.DetalheTrofeuActivity;
 import br.com.livroandroid.psnice.R;
 import br.com.livroandroid.psnice.TesteJogos;
 import br.com.livroandroid.psnice.TesteTrofeu;
+import br.com.livroandroid.psnice.Trofeu;
 
 /**
  * Created by livetouch on 10/09/18.
@@ -25,9 +31,11 @@ public class TrofeusAdapter extends RecyclerView.Adapter<TrofeusListViewHolder> 
 
     private Context context;
     private String nomeJogo;
+    private List<Trofeu> listaTrofeus = new ArrayList<>();
 
-    public TrofeusAdapter(Context c, String nomeJogo){
+    public TrofeusAdapter(Context c, List<Trofeu> listaTrofeus, String nomeJogo){
         context = c;
+        this.listaTrofeus = listaTrofeus;
         this.nomeJogo = nomeJogo;
     }
 
@@ -40,13 +48,13 @@ public class TrofeusAdapter extends RecyclerView.Adapter<TrofeusListViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull TrofeusListViewHolder holder, final int position) {
-        holder.imagemTrofeu.setImageResource(TesteTrofeu.imagemTrofeu[position]);
-        holder.nomeTrofeu.setText(TesteTrofeu.nomeTrofeu[position]);
-        holder.descricaoTrofeu.setText(TesteTrofeu.descricaoTrofeu[position]);
-        if (TesteTrofeu.trofeusGanhos[position]){
+        holder.nomeTrofeu.setText(listaTrofeus.get(position).getNome());
+        holder.descricaoTrofeu.setText(listaTrofeus.get(position).getDescricao());
+        Glide.with(context).load(listaTrofeus.get(position).getImagemTrofeu()).into(holder.imagemTrofeu);
+        if (listaTrofeus.get(position).getEarned()){
             holder.linearPai.setBackgroundColor(context.getResources().getColor(R.color.trophie_earned));
         }
-        if (!TesteTrofeu.trofeusGanhos[position]){
+        if (!listaTrofeus.get(position).getEarned()){
             holder.imagemTrofeu.setAlpha((float) 0.5);
         }
 
@@ -60,15 +68,15 @@ public class TrofeusAdapter extends RecyclerView.Adapter<TrofeusListViewHolder> 
 
     @Override
     public int getItemCount() {
-        return TesteTrofeu.nomeTrofeu.length;
+        return listaTrofeus.size();
     }
 
     private void openDetailActivity(int posicion) {
         Intent i = new Intent(context, DetalheTrofeuActivity.class);
-        i.putExtra("imagem", TesteTrofeu.imagemTrofeu[posicion]);
-        i.putExtra("nomeTrofeu", TesteTrofeu.nomeTrofeu[posicion]);
-        i.putExtra("descricao", TesteTrofeu.descricaoTrofeu[posicion]);
-        i.putExtra("earned", TesteTrofeu.trofeusGanhos[posicion]);
+        i.putExtra("imagem", listaTrofeus.get(posicion).getImagemTrofeu());
+        i.putExtra("nomeTrofeu", listaTrofeus.get(posicion).getNome());
+        i.putExtra("descricao", listaTrofeus.get(posicion).getDescricao());
+        i.putExtra("earned", listaTrofeus.get(posicion).getEarned());
         i.putExtra("nomeJogo", nomeJogo);
         context.startActivity(i);
     }

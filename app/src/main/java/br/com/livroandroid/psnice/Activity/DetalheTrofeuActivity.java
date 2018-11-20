@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -49,7 +50,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
     private RecyclerView mRecyclerView;
     private TextView tvTotalComentarios;
 
-    private int imagem;
+    private String imagem;
     private String nome;
     private String nomeJogo;
     private String descricao;
@@ -85,7 +86,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
         etComentario.addTextChangedListener(habilitaBotao());
 
         Intent i = this.getIntent();
-        imagem = i.getExtras().getInt("imagem");
+        imagem = i.getExtras().getString("imagem");
         nome = i.getExtras().getString("nomeTrofeu");
         descricao = i.getExtras().getString("descricao");
         earned = i.getExtras().getBoolean("earned");
@@ -99,7 +100,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
     @Override
     protected void onResume() {
         super.onResume();
-        imagemTrofeu.setImageResource(imagem);
+        Glide.with(this).load(imagem).into(imagemTrofeu);
         nomeTrofeu.setText(nome);
         descricaoTrofeu.setText(descricao);
         if (earned){
