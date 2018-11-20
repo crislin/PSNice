@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <EditText
+            android:id="@+id/etPesquisa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/pesquisar_edittext"
@@ -24,6 +25,19 @@
             android:src="@drawable/ic_search"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="28dp"
+        android:background="#FFFFFF"
+        android:padding="10dp">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_layour_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/lista_jogo"/>
     </LinearLayout>
 
 
