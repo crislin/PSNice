@@ -67,6 +67,7 @@ public class LogarComIdActivity extends AppCompatActivity {
                     if (verificaId(etPsnId.getText().toString())){
                         Intent it = new Intent(LogarComIdActivity.this, MainActivity.class);
                         it.putExtra("logado", false);
+                        it.putExtra("psnId", etPsnId.getText().toString());
                         startActivity(it);
                     } else {
                         Toast.makeText(LogarComIdActivity.this, "Id inválida", Toast.LENGTH_SHORT).show();

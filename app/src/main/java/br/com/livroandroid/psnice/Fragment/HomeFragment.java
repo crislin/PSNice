@@ -41,7 +41,8 @@ public class HomeFragment extends Fragment {
     private ImageView ivAvatar;
     private View view;
 
-    Usuario usuario;
+    private Usuario usuario;
+    private String psnId;
 
     private boolean logado = false;
 
@@ -62,6 +63,8 @@ public class HomeFragment extends Fragment {
         ivAvatar = view.findViewById(R.id.ivAvatar);
         sbLevel.getThumb().mutate().setAlpha(0);
 
+        psnId = getArguments().getString("psnId");
+
         return view;
     }
 
@@ -70,7 +73,7 @@ public class HomeFragment extends Fragment {
         super.onResume();
 
         try {
-            usuario = PSNiceService.getUsuario(view.getContext());
+            usuario = PSNiceService.getUsuario(view.getContext(), psnId);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -85,8 +88,12 @@ public class HomeFragment extends Fragment {
 
 //        Intent i = getActivity().getIntent();
 //        logado = i.getExtras().getBoolean("logado", false);
+        Bundle bundle = new Bundle();
+        bundle.putString("psnId", psnId);
+        ListaJogosFragment listaJogosFragment = new ListaJogosFragment();
+        listaJogosFragment.setArguments(bundle);
 
-        adapter.adicionar( new ListaJogosFragment() , "Jogos");
+        adapter.adicionar( listaJogosFragment , "Jogos");
         adapter.adicionar( new EstatisticasFragment(), "Estatisticas");
         if (logado){
             adapter.adicionar( new ListaAmigosFragment(), "Amigos");

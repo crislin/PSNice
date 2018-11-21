@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.zip.CheckedOutputStream;
 
 import br.com.livroandroid.psnice.Activity.DetalheJogoActivity;
 import br.com.livroandroid.psnice.Activity.HomeActivity;
@@ -31,8 +32,15 @@ import static android.support.v4.content.ContextCompat.startActivity;
 
 public class JogosAdapter extends RecyclerView.Adapter<JogosListViewHolder> {
 
+    private String psnId;
     private Context context;
     private List<Jogo> listaDosJogos = new ArrayList<>();
+
+    public JogosAdapter(Context c, List<Jogo> listaDosJogos, String psnId){
+        this.context = c;
+        this.listaDosJogos = listaDosJogos;
+        this.psnId = psnId;
+    }
 
     public JogosAdapter(Context c, List<Jogo> listaDosJogos){
         this.context = c;
@@ -73,6 +81,7 @@ public class JogosAdapter extends RecyclerView.Adapter<JogosListViewHolder> {
         Intent i = new Intent(context, DetalheJogoActivity.class);
         i.putExtra("nome", listaDosJogos.get(posicion).getNome());
         i.putExtra("imagem", listaDosJogos.get(posicion).getImagem());
+        i.putExtra("psnId", psnId);
         context.startActivity(i);
     }
 

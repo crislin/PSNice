@@ -1,0 +1,16 @@
+{
+	"usuarios": [{
+		"avatar": "https://i.imgur.com/1mhu3AR.png",
+		"level": "16",
+		"psn_id": "debli23"
+		}, {
+		"avatar": "https://i.imgur.com/pKvw48B.png",
+		"level": "31",
+		"psn_id": "Thigo23"
+		}, {
+		"avatar": "https://i.imgur.com/gUGk83v.png",
+		"level": "38",
+		"psn_id": "vinte_dos_22"
+		}
+	]
+}

@@ -54,6 +54,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
     private String nome;
     private String nomeJogo;
     private String descricao;
+    private String psnId;
     private boolean earned;
     private boolean comentarioAberto;
     private boolean btComentarioHabilitado = false;
@@ -91,6 +92,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
         descricao = i.getExtras().getString("descricao");
         earned = i.getExtras().getBoolean("earned");
         nomeJogo = i.getExtras().getString("nomeJogo");
+        psnId = i.getExtras().getString("psnId");
         firebaseStore = FirebaseFirestore.getInstance();
 
         mTrofeuReference = mComentarioReference.child(nomeJogo).child(nome);
@@ -140,14 +142,9 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
         return new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Usuario usuario = null;
-                try {
-                    usuario = PSNiceService.getUsuario(DetalheTrofeuActivity.this);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-                if (usuario != null){
-                    Comentario comentario = new Comentario(usuario.getPsnId(), etComentario.getText().toString(), "24-12-2018", 0);
+
+                if (psnId != null){
+                    Comentario comentario = new Comentario(psnId, etComentario.getText().toString(), "24-12-2018", 0);
                     etComentario.setText("");
 
                     enviarProFirebase(comentario);

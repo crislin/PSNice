@@ -40,6 +40,7 @@ public class DetalheJogoActivity extends AppCompatActivity {
         Intent i = this.getIntent();
         String imagem = i.getExtras().getString("imagem");
         String nome = i.getExtras().getString("nome");
+        String psnId = i.getExtras().getString("psnId");
 
         Glide.with(this).load(imagem).into(imagemDetalhe);
         nomeDetalhe.setText(nome);
@@ -50,7 +51,7 @@ public class DetalheJogoActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        TrofeusAdapter listAdapter = new TrofeusAdapter(this, listaTrofeus, nome);
+        TrofeusAdapter listAdapter = new TrofeusAdapter(this, listaTrofeus, nome, psnId);
         mRecyclerView.setAdapter(listAdapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);

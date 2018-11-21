@@ -39,7 +39,7 @@ public class PesquisaFragment extends Fragment {
         etPesquisa = view.findViewById(R.id.etPesquisa);
         mRecyclerView = view.findViewById(R.id.recycler_view_layour_recycler);
         try {
-            listaDosJogos = PSNiceService.getJogos(view.getContext());
+            listaDosJogos = PSNiceService.getTodosJogos(view.getContext());
         } catch (JSONException e) {
             e.printStackTrace();
         }

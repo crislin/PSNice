@@ -56,6 +56,43 @@ public class Parser {
         return lista;
     }
 
+    public static List<Jogo> parserTodosJogos(String jsonResponse) throws JSONException {
+        List<Jogo> lista = new ArrayList<>();
+        JSONObject jsonObject = new JSONObject(jsonResponse);
+        JSONArray jsonArray = (JSONArray) jsonObject.get("jogos");
+        for (int i = 0; i < jsonArray.length(); i++) {
+            Jogo jogo = new Jogo();
+            JSONObject jsonObjectJogo = jsonArray.getJSONObject(i);
+            jogo.setNome(jsonObjectJogo.optString("nome"));
+            jogo.setImagem(jsonObjectJogo.optString("imagem"));
+            jogo.setHasPlatinum(Boolean.parseBoolean(jsonObjectJogo.optString("has_platinum")));
+            jogo.setGamePlatinum(Integer.valueOf(jsonObjectJogo.optString("game_platinum")));
+            jogo.setGameGold(Integer.valueOf(jsonObjectJogo.optString("game_gold")));
+            jogo.setGameSilver(Integer.valueOf(jsonObjectJogo.optString("game_silver")));
+            jogo.setGameBronze(Integer.valueOf(jsonObjectJogo.optString("game_bronze")));
+            jogo.setGameTotal(Integer.valueOf(jsonObjectJogo.optString("game_total")));
+            jogo.setGameTotalEarned(Integer.valueOf(jsonObjectJogo.optString("game_total_earned")));
+            jogo.setGameProgress(Integer.valueOf(jsonObjectJogo.optString("game_progress")));
+            lista.add(jogo);
+        }
+        return lista;
+    }
+
+    public static List<Usuario> parserTodosUsuarios(String jsonResponse) throws JSONException {
+        List<Usuario> lista = new ArrayList<>();
+        JSONObject jsonObject = new JSONObject(jsonResponse);
+        JSONArray jsonArray = (JSONArray) jsonObject.get("usuarios");
+        for (int i = 0; i < jsonArray.length(); i++) {
+            Usuario usuario = new Usuario();
+            JSONObject jsonObjectUsuario = jsonArray.getJSONObject(i);
+            usuario.setAvatar(jsonObjectUsuario.optString("avatar"));
+            usuario.setLevel(jsonObjectUsuario.optInt("level"));
+            usuario.setPsnId(jsonObjectUsuario.getString("psn_id"));
+            lista.add(usuario);
+        }
+        return lista;
+    }
+
     public static List<Trofeu> parserTrofeus(String jsonResponse, String nomeJogo) throws JSONException {
         List<Trofeu> lista = new ArrayList<>();
         JSONObject jsonObject = new JSONObject(jsonResponse);

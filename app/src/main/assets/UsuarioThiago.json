@@ -1,0 +1,337 @@
+{
+ "country": "br",
+ "avatar": "https://i.imgur.com/pKvw48B.png",
+ "psnplus": "0",
+ "points": "184410",
+ "level": "31",
+ "base": "178000",
+ "next": "188000",
+ "progress": "64",
+ "platinum": "111",
+ "gold": "497",
+ "silver": "1545",
+ "bronze": "4890",
+ "total": "7043",
+ "psn_id": "Thigo23",
+ "completion_percentage": "57.11",
+ "worldrank": "16079",
+ "regionrank": "3873",
+ "total_possible_trophies": "12332",
+ "success": "1",
+ "jogos": [{
+	"nome": "Horizon: Zero Dawn",
+	"imagem": "https://i.imgur.com/qkCSi9s.png",
+	"has_platinum": "true",
+	"game_platinum": "1",
+	"game_gold": "2",
+	"game_silver": "5",
+	"game_bronze": "48",
+	"game_total": "56",
+	"game_total_earned": "56",
+	"game_progress": "100",
+	"trofeus": [{
+		"nome": "All trophies obtained",
+		"descricao": "Obtained all Horizon Zero Dawn trophies.",
+		"imagem_trofeu": "https://i.imgur.com/8qwCqYW.png",
+		"tipo": "platinum",
+		"hidden": "false",
+		"earned": "true",
+		"day_earned": "29/09/2018",
+		"hour_earned": "19:00:08"
+		}, {
+		"nome": "Stealth killed 10 machines",
+		"descricao": "Performed a stealth kill on 10 machines.",
+		"imagem_trofeu": "https://i.imgur.com/nReory7.png",
+		"tipo": "bronze",
+		"hidden": "false",
+		"earned": "true",
+		"day_earned": "14/09/2018",
+		"hour_earned": "22:51:10"
+		}, {
+		"nome": "3 Strikes From Above",
+		"descricao": "Killed 3 enemies using the Strike from Above skill.",
+		"imagem_trofeu": "https://i.imgur.com/22cliqu.png",
+		"tipo": "bronze",
+		"hidden": "false",
+		"earned": "true",
+		"day_earned": "24/09/2018",
+		"hour_earned": "01:44:34"
+		}, {
+		"nome": "Tore off 10 components",
+		"descricao": "Detached 10 components from machines during combat.",
+		"imagem_trofeu": "https://i.imgur.com/wpS0uJj.png",
+		"tipo": "bronze",
+		"hidden": "false",
+		"earned": "true",
+		"day_earned": "15/09/2018",
+		"hour_earned": "13:08:27"
+		}, {
+		"nome": "First Modification",
+		"descricao": "Used a Weapon Coil or Outfit Weave on a modifiable weapon or outfit.",
+		"imagem_trofeu": "https://i.imgur.com/GQH2GJz.png",
+		"tipo": "bronze",
+		"hidden": "false",
+		"earned": "true",
+		"day_earned": "14/09/2018",
+		"hour_earned": "20:52:50"
+		}, {
+		"nome": "Reached level 50",
+		"descricao": "Reached player level 50.",
+		"imagem_trofeu": "https://i.imgur.com/VwGao4F.png",
+		"tipo": "bronze",
+		"hidden": "false",
+		"earned": "true",
+		"day_earned": "29/09/2018",
+		"hour_earned": "18:01:51"
+		}, {
+		"nome": "First Bandit Camp cleared",
+		"descricao": "Took back a settlement from a bandit clan.",
+		"imagem_trofeu": "https://i.imgur.com/WObVgAm.png",
+		"tipo": "bronze",
+		"hidden": "false",
+		"earned": "true",
+		"day_earned": "15/09/2018",
+		"hour_earned": "19:52:23"
+		}, {
+		"nome": "All Cores Overridden",
+		"descricao": "Reached the Core of every Cauldron and accessed the information within.",
+		"imagem_trofeu": "https://i.imgur.com/8yJmm5Q.png",
+		"tipo": "silver",
+		"hidden": "false",
+		"earned": "true",
+		"day_earned": "28/09/2018",
+		"hour_earned": "00:01:01"
+		}, {
+		"nome": "Blazing Suns at all Grounds",
+		"descricao": "Earned a Blazing Sun mark in all trials at all of the Hunting Grounds.",
+		"imagem_trofeu": "https://i.imgur.com/q6IVTJv.png",
+		"tipo": "gold",
+		"hidden": "false",
+		"earned": "true",
+		"day_earned": "29/09/2018",
+		"hour_earned": "04:19:18"
+		}, {
+		"nome": "Defeated the Sawtooth",
+		"descricao": "Defeated the Sawtooth that threatened the Nora.",
+		"imagem_trofeu": "https://i.imgur.com/Iz4B1CA.png",
+		"tipo": "bronze",
+		"hidden": "false",
+		"earned": "true",
+		"day_earned": "14/09/2018",
+		"hour_earned": "23:17:44"
+		}, {
+		"nome": "Ended the war machine threat",
+		"descricao": "Ended the threat of the ancient war machines.",
+		"imagem_trofeu": "https://i.imgur.com/sLuiDRc.png",
+		"tipo": "gold",
+		"hidden": "false",
+		"earned": "true",
+		"day_earned": "29/09/2018",
+		"hour_earned": "19:00:08"
+		}]
+	}, {
+	"nome": "Fallout Shelter",
+	"imagem": "https://i.imgur.com/WUUodyA.png",
+	"has_platinum": "true",
+	"game_platinum": "0",
+	"game_gold": "0",
+	"game_silver": "5",
+	"game_bronze": "11",
+	"game_total": "35",
+	"game_total_earned": "16",
+	"game_progress": "32",
+	"trofeus": [{
+		"nome": "Hard Work is Happy Work",
+		"descricao": "Successfully complete 50 Room Rushes",
+		"imagem_trofeu": "https://i.imgur.com/ocTEpch.png",
+		"tipo": "silver",
+		"hidden": "false",
+		"earned": "false",
+		"day_earned": "",
+		"hour_earned": ""
+		}, {
+		"nome": "Vault-Tec Engineer",
+		"descricao": "Build 50 rooms",
+		"imagem_trofeu": "https://i.imgur.com/HJyRVFN.png",
+		"tipo": "silver",
+		"hidden": "false",
+		"earned": "true",
+		"day_earned": "01/08/2018 ",
+		"hour_earned": "18:53:54"
+		}, {
+		"nome": "Better Settler",
+		"descricao": "Level up a dweller from Level 1 to 10",
+		"imagem_trofeu": "https://i.imgur.com/shJkC71.png",
+		"tipo": "bronze",
+		"hidden": "false",
+		"earned": "true",
+		"day_earned": "18/06/2018",
+		"hour_earned": "20:04:37"
+		}, {
+		"nome": "Armed and Dangerous",
+		"descricao": "Collect 20 Legendary Weapons",
+		"imagem_trofeu": "https://i.imgur.com/EGLFuOt.png",
+		"tipo": "gold",
+		"hidden": "false",
+		"earned": "false",
+		"day_earned": "",
+		"hour_earned": ""
+		}, {
+		"nome": "Atom Splitter",
+		"descricao": "Merge 3 Power Rooms",
+		"imagem_trofeu": "https://i.imgur.com/Fv31USI.png",
+		"tipo": "bronze",
+		"hidden": "false",
+		"earned": "true",
+		"day_earned": "11/06/2018",
+		"hour_earned": "20:08:06"
+		}, {
+		"nome": "Project Purity",
+		"descricao": "Merge 3 Water Rooms",
+		"imagem_trofeu": "https://i.imgur.com/0UqO3eX.png",
+		"tipo": "bronze",
+		"hidden": "false",
+		"earned": "true",
+		"day_earned": "14/06/2018 ",
+		"hour_earned": "00:58:19"
+		}, {
+		"nome": "A Better Future, Underground",
+		"descricao": "Upgrade 20 Rooms to Level 3",
+		"imagem_trofeu": "https://i.imgur.com/xCaH9do.png",
+		"tipo": "silver",
+		"hidden": "false",
+		"earned": "false",
+		"day_earned": "",
+		"hour_earned": ""
+		}, {
+		"nome": "Urban Ranger",
+		"descricao": "Complete 30 Quests",
+		"imagem_trofeu": "https://i.imgur.com/S9gJ0sX.png",
+		"tipo": "bronze",
+		"hidden": "false",
+		"earned": "false",
+		"day_earned": "",
+		"hour_earned": ""
+		}, {
+		"nome": "Legend of the Wastes",
+		"descricao": "Complete 100 Quests",
+		"imagem_trofeu": "https://i.imgur.com/RIzYIr6.png",
+		"tipo": "gold",
+		"hidden": "false",
+		"earned": "false",
+		"day_earned": "",
+		"hour_earned": ""
+		}, {
+		"nome": "Enemy of the Wastes",
+		"descricao": "Kill 500 enemies on Quests",
+		"imagem_trofeu": "https://i.imgur.com/w9vGhMU.png",
+		"tipo": "silver",
+		"hidden": "false",
+		"earned": "true",
+		"day_earned": "30/08/2018",
+		"hour_earned": "23:17:17"
+		}]
+	}, {
+	"nome": "Resident Evil",
+	"imagem": "https://i.imgur.com/lFzz9yJ.png",
+	"has_platinum": "true",
+	"game_platinum": "0",
+	"game_gold": "0",
+	"game_silver": "0",
+	"game_bronze": "10",
+	"game_total": "45",
+	"game_total_earned": "10",
+	"game_progress": "15",
+	"trofeus": [{
+		"nome": "Platinum Splattin' 'Em!",
+		"descricao": "Earn all trophies.",
+		"imagem_trofeu": "https://i.imgur.com/GxJpxT7.png",
+		"tipo": "platinum",
+		"hidden": "false",
+		"earned": "false",
+		"day_earned": "",
+		"hour_earned": ""
+		}, {
+		"nome": "Not in the Mood to Die",
+		"descricao": "Finish the game on Easy difficulty or higher.",
+		"imagem_trofeu": "https://i.imgur.com/HVmcHqc.png",
+		"tipo": "bronze",
+		"hidden": "false",
+		"earned": "false",
+		"day_earned": "",
+		"hour_earned": ""
+		}, {
+		"nome": "Take that, Zombies!",
+		"descricao": "Finish the game on Normal difficulty or higher.",
+		"imagem_trofeu": "https://i.imgur.com/5JJgxZQ.png",
+		"tipo": "bronze",
+		"hidden": "false",
+		"earned": "false",
+		"day_earned": "",
+		"hour_earned": ""
+		}, {
+		"nome": "Herbicide",
+		"descricao": "Defeat Plant 42 using Chris.",
+		"imagem_trofeu": "https://i.imgur.com/fxCVXY4.png",
+		"tipo": "bronze",
+		"hidden": "false",
+		"earned": "false",
+		"day_earned": "",
+		"hour_earned": ""
+		}, {
+		"nome": "An End to a Poor Girl's Misery",
+		"descricao": "Defeat Lisa Trevor using Chris.",
+		"imagem_trofeu": "https://i.imgur.com/a9DxFxz.png",
+		"tipo": "bronze",
+		"hidden": "false",
+		"earned": "false",
+		"day_earned": "",
+		"hour_earned": ""
+		}, {
+		"nome": "Grave Digger",
+		"descricao": "Defeat a Crimson Head prototype1 using Jill.",
+		"imagem_trofeu": "https://i.imgur.com/xRhjh69.png",
+		"tipo": "bronze",
+		"hidden": "false",
+		"earned": "true",
+		"day_earned": "24/03/2018",
+		"hour_earned": "18:00:57"
+		}, {
+		"nome": "The Key Master",
+		"descricao": "Obtain the Helmet Key using Jill.",
+		"imagem_trofeu": "https://i.imgur.com/HIxrqnd.png",
+		"tipo": "bronze",
+		"hidden": "false",
+		"earned": "true",
+		"day_earned": "24/03/2018",
+		"hour_earned": "19:59:30"
+		}, {
+		"nome": "Alpha Team's Finest",
+		"descricao": "Finish the game using Jill.",
+		"imagem_trofeu": "https://i.imgur.com/SwuD0qk.png",
+		"tipo": "silver",
+		"hidden": "false",
+		"earned": "false",
+		"day_earned": "",
+		"hour_earned": ""
+		}, {
+		"nome": "Who's the Hunter Now?",
+		"descricao": "Defeat a Hunter.",
+		"imagem_trofeu": "https://i.imgur.com/T2bCuys.png",
+		"tipo": "bronze",
+		"hidden": "false",
+		"earned": "true",
+		"day_earned": "24/03/2018",
+		"hour_earned": "20:17:49"
+		}, {
+		"nome": "Starsenal",
+		"descricao": "Obtain all weapons (must load grenade launcher with all shell types).",
+		"imagem_trofeu": "https://i.imgur.com/SNWxIXN.png",
+		"tipo": "silver",
+		"hidden": "false",
+		"earned": "false",
+		"day_earned": "",
+		"hour_earned": ""
+		}]
+	}]
+}

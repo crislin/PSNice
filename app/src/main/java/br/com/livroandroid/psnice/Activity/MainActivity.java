@@ -1,6 +1,7 @@
 package br.com.livroandroid.psnice.Activity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -18,12 +19,14 @@ import br.com.livroandroid.psnice.Fragment.HomeFragment;
 import br.com.livroandroid.psnice.Fragment.ListaJogosFragment;
 import br.com.livroandroid.psnice.Fragment.LogoutFragment;
 import br.com.livroandroid.psnice.Fragment.PesquisaFragment;
+import br.com.livroandroid.psnice.Fragment.PesquisaUsuarioFragment;
 import br.com.livroandroid.psnice.R;
 
 public class MainActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private String psnId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +36,18 @@ public class MainActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.abasViewPagerMain);
         tabLayout = findViewById(R.id.abasMain);
 
-        AbasMainAdapter adapterMain = new AbasMainAdapter(getSupportFragmentManager());
+        Intent i = this.getIntent();
+        psnId = i.getExtras().getString("psnId");
 
-        adapterMain.adicionar( new HomeFragment() , "");
+        AbasMainAdapter adapterMain = new AbasMainAdapter(getSupportFragmentManager());
+        Bundle bundle = new Bundle();
+        bundle.putString("psnId", psnId);
+        HomeFragment homeFragment = new HomeFragment();
+        homeFragment.setArguments(bundle);
+
+        adapterMain.adicionar( homeFragment , "");
         adapterMain.adicionar( new PesquisaFragment(), "");
-        adapterMain.adicionar( new PesquisaFragment(), "");
+        adapterMain.adicionar( new PesquisaUsuarioFragment(), "");
         adapterMain.adicionar( new LogoutFragment(), "");
 
         viewPager.setAdapter(adapterMain);
