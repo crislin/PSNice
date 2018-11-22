@@ -1,6 +1,7 @@
 package br.com.livroandroid.psnice.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.livroandroid.psnice.Activity.DetalheUsuarioActivity;
 import br.com.livroandroid.psnice.R;
 import br.com.livroandroid.psnice.Usuario;
 
@@ -39,10 +41,23 @@ public class UsuariosAdapter extends RecyclerView.Adapter<UsuariosListViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull UsuariosListViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull UsuariosListViewHolder holder, final int position) {
         holder.psnId.setText(listaUsuarios.get(position).getPsnId());
-        //holder.level.setText(listaUsuarios.get(position).getLevel());
+        holder.level.setText(String.valueOf(listaUsuarios.get(position).getLevel()));
         Glide.with(context).load(listaUsuarios.get(position).getAvatar()).into(holder.avatar);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDetailActivity(position);
+            }
+        });
+    }
+
+    private void openDetailActivity(int position) {
+        Intent i = new Intent(context, DetalheUsuarioActivity.class);
+        i.putExtra("psnId", listaUsuarios.get(position).getPsnId());
+        context.startActivity(i);
     }
 
     @Override

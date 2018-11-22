@@ -44,10 +44,12 @@ public class MainActivity extends AppCompatActivity {
         bundle.putString("psnId", psnId);
         HomeFragment homeFragment = new HomeFragment();
         homeFragment.setArguments(bundle);
+        PesquisaUsuarioFragment pesquisaUsuarioFragment = new PesquisaUsuarioFragment();
+        pesquisaUsuarioFragment.setArguments(bundle);
 
         adapterMain.adicionar( homeFragment , "");
         adapterMain.adicionar( new PesquisaFragment(), "");
-        adapterMain.adicionar( new PesquisaUsuarioFragment(), "");
+        adapterMain.adicionar( pesquisaUsuarioFragment, "");
         adapterMain.adicionar( new LogoutFragment(), "");
 
         viewPager.setAdapter(adapterMain);

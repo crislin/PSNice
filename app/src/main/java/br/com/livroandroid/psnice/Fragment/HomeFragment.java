@@ -86,8 +86,6 @@ public class HomeFragment extends Fragment {
 
         lbPsnId = view.findViewById(R.id.lbPsnId);
 
-//        Intent i = getActivity().getIntent();
-//        logado = i.getExtras().getBoolean("logado", false);
         Bundle bundle = new Bundle();
         bundle.putString("psnId", psnId);
         ListaJogosFragment listaJogosFragment = new ListaJogosFragment();
