@@ -1,6 +1,7 @@
 package br.com.livroandroid.psnice.Activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,13 +15,23 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
+import br.com.livroandroid.psnice.Cadastro;
 import br.com.livroandroid.psnice.R;
+
+import static br.com.livroandroid.psnice.Activity.LogarComIdActivity.idsValidasFirebase;
 
 public class CadastroActivity extends AppCompatActivity {
 
@@ -29,9 +40,12 @@ public class CadastroActivity extends AppCompatActivity {
     private EditText etPsnId;
     private EditText etSenha;
     private EditText etConfirmarSenha;
+    private List<Cadastro> listaCadastrados = new ArrayList<>();
 
     private boolean cadastroHabilitado = false;
-    private FirebaseFirestore firebaseStore;
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private DatabaseReference mRootReference = firebaseDatabase.getReference();
+    private DatabaseReference mCadastroReference = mRootReference.child("cadastros");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +63,7 @@ public class CadastroActivity extends AppCompatActivity {
         etSenha.addTextChangedListener(habilitarBotao());
         etConfirmarSenha.addTextChangedListener(habilitarBotao());
         layoutPai.setOnClickListener(onClickLayoutPai());
-        firebaseStore = FirebaseFirestore.getInstance();
+        mCadastroReference.addChildEventListener(childEventListener);
     }
 
     private View.OnClickListener onClickLayoutPai() {
@@ -93,9 +107,8 @@ public class CadastroActivity extends AppCompatActivity {
         return new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean idValido = validaId();
                 if (cadastroHabilitado){
-                    if (idValido){
+                    if (verificaId(etPsnId.getText().toString())){
                         if (etSenha.getText().toString().equalsIgnoreCase(etConfirmarSenha.getText().toString())){
                             cadastrar();
                         } else {
@@ -110,36 +123,64 @@ public class CadastroActivity extends AppCompatActivity {
     }
 
     private void cadastrar(){
-        String psnId = etPsnId.getText().toString();
-        String senha = etSenha.getText().toString();
-
-        Map<String, String> usermap = new HashMap<>();
-
-        usermap.put("psn_id", psnId);
-        usermap.put("senha", senha);
-
-        firebaseStore.collection("users").add(usermap).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-            @Override
-            public void onSuccess(DocumentReference documentReference) {
-                Toast.makeText(CadastroActivity.this, "Cadastro feito com sucesso!", Toast.LENGTH_SHORT).show();
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(CadastroActivity.this, "Ocorreu um erro!", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        etPsnId.setText("");
-        etSenha.setText("");
-        etConfirmarSenha.setText("");
-    }
-
-    private boolean validaId(){
-        boolean valido = false;
-        if (etPsnId.getText().toString().equalsIgnoreCase("gazinice")){
-            valido = true;
+        if (!verificaSeCadastrado(etPsnId.getText().toString())) {
+            Cadastro cadastro = new Cadastro(etPsnId.getText().toString(), etSenha.getText().toString());
+            mCadastroReference.push().setValue(cadastro);
+            Toast.makeText(CadastroActivity.this, "Cadastro feito com sucesso", Toast.LENGTH_SHORT).show();
+            etPsnId.setText("");
+            etSenha.setText("");
+            etConfirmarSenha.setText("");
+            Intent it = new Intent(CadastroActivity.this, MainActivity.class);
+            startActivity(it);
+        } else {
+            Toast.makeText(CadastroActivity.this, "Id ja cadastrado", Toast.LENGTH_SHORT).show();
         }
-        return valido;
     }
+
+    public boolean verificaId(String id){
+        for (int i = 0; i < idsValidasFirebase.size(); i++){
+            if (id.equalsIgnoreCase(idsValidasFirebase.get(i))){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean verificaSeCadastrado(String psnId){
+        for (int i = 0; i < listaCadastrados.size(); i++){
+            if (psnId.equalsIgnoreCase(listaCadastrados.get(i).getPsnId())){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    ChildEventListener childEventListener = new ChildEventListener(){
+
+        @Override
+        public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+            Cadastro cadastro = dataSnapshot.getValue(Cadastro.class);
+            listaCadastrados.add(cadastro);
+        }
+
+        @Override
+        public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+        }
+
+        @Override
+        public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+        }
+
+        @Override
+        public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+        }
+
+        @Override
+        public void onCancelled(DatabaseError databaseError) {
+
+        }
+    };
 }
