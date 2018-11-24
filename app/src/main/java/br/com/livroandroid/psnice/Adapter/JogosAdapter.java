@@ -34,12 +34,14 @@ public class JogosAdapter extends RecyclerView.Adapter<JogosListViewHolder> {
 
     private String psnId;
     private Context context;
+    private boolean logado;
     private List<Jogo> listaDosJogos = new ArrayList<>();
 
-    public JogosAdapter(Context c, List<Jogo> listaDosJogos, String psnId){
+    public JogosAdapter(Context c, List<Jogo> listaDosJogos, String psnId, boolean logado){
         this.context = c;
         this.listaDosJogos = listaDosJogos;
         this.psnId = psnId;
+        this.logado = logado;
     }
 
     public JogosAdapter(Context c, List<Jogo> listaDosJogos){
@@ -82,6 +84,7 @@ public class JogosAdapter extends RecyclerView.Adapter<JogosListViewHolder> {
         i.putExtra("nome", listaDosJogos.get(posicion).getNome());
         i.putExtra("imagem", listaDosJogos.get(posicion).getImagem());
         i.putExtra("psnId", psnId);
+        i.putExtra("logado", logado);
         context.startActivity(i);
     }
 

@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private String psnId;
+    private boolean logado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,17 +39,21 @@ public class MainActivity extends AppCompatActivity {
 
         Intent i = this.getIntent();
         psnId = i.getExtras().getString("psnId");
+        logado = i.getExtras().getBoolean("logado");
 
         AbasMainAdapter adapterMain = new AbasMainAdapter(getSupportFragmentManager());
         Bundle bundle = new Bundle();
         bundle.putString("psnId", psnId);
+        bundle.putBoolean("logado", logado);
         HomeFragment homeFragment = new HomeFragment();
         homeFragment.setArguments(bundle);
         PesquisaUsuarioFragment pesquisaUsuarioFragment = new PesquisaUsuarioFragment();
         pesquisaUsuarioFragment.setArguments(bundle);
+        PesquisaFragment pesquisaFragment = new PesquisaFragment();
+        pesquisaFragment.setArguments(bundle);
 
         adapterMain.adicionar( homeFragment , "");
-        adapterMain.adicionar( new PesquisaFragment(), "");
+        adapterMain.adicionar( pesquisaFragment, "");
         adapterMain.adicionar( pesquisaUsuarioFragment, "");
         adapterMain.adicionar( new LogoutFragment(), "");
 

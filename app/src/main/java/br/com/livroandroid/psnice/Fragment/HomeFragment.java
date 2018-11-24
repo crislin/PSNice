@@ -64,6 +64,7 @@ public class HomeFragment extends Fragment {
         sbLevel.getThumb().mutate().setAlpha(0);
 
         psnId = getArguments().getString("psnId");
+        logado = getArguments().getBoolean("logado");
 
         return view;
     }
@@ -88,6 +89,7 @@ public class HomeFragment extends Fragment {
 
         Bundle bundle = new Bundle();
         bundle.putString("psnId", psnId);
+        bundle.putBoolean("logado", logado);
         ListaJogosFragment listaJogosFragment = new ListaJogosFragment();
         listaJogosFragment.setArguments(bundle);
 

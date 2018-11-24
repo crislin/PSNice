@@ -95,7 +95,8 @@
             android:layout_gravity="end|bottom"
             android:layout_margin="10dp"
             android:src="@drawable/ic_comentario"
-            app:backgroundTint="#2b81e4" />
+            app:backgroundTint="#2b81e4"
+            android:visibility="gone"/>
     </FrameLayout>
     <LinearLayout
         android:id="@+id/campoComentario"

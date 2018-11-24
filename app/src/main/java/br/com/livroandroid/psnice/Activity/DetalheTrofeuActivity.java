@@ -56,6 +56,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
     private String descricao;
     private String psnId;
     private boolean earned;
+    private boolean logado;
     private boolean comentarioAberto;
     private boolean btComentarioHabilitado = false;
     private FirebaseFirestore firebaseStore;
@@ -93,6 +94,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
         earned = i.getExtras().getBoolean("earned");
         nomeJogo = i.getExtras().getString("nomeJogo");
         psnId = i.getExtras().getString("psnId");
+        logado = i.getExtras().getBoolean("logado");
         firebaseStore = FirebaseFirestore.getInstance();
 
         mTrofeuReference = mComentarioReference.child(nomeJogo).child(nome);
@@ -111,6 +113,9 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
         }
         if (!earned){
             imagemTrofeu.setAlpha((float) 0.5);
+        }
+        if (logado){
+            fabComentario.setVisibility(View.VISIBLE);
         }
         comentarioAberto = false;
 

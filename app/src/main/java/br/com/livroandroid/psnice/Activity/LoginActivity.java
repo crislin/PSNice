@@ -12,6 +12,16 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.livroandroid.psnice.Cadastro;
 import br.com.livroandroid.psnice.R;
 
 public class LoginActivity extends AppCompatActivity {
@@ -20,8 +30,12 @@ public class LoginActivity extends AppCompatActivity {
     private LinearLayout layoutPai;
     private EditText etSenha;
     private EditText etLogin;
+    private List<Cadastro> listaCadastrados = new ArrayList<>();
 
     boolean loginHabilitado = false;
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private DatabaseReference mRootReference = firebaseDatabase.getReference();
+    private DatabaseReference mCadastroReference = mRootReference.child("cadastros");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +51,7 @@ public class LoginActivity extends AppCompatActivity {
         etSenha.addTextChangedListener(habilitaBotao());
         layoutPai.setOnClickListener(onClickLayoutPai());
         btLogin.setOnClickListener(onClickLogin());
+        mCadastroReference.addChildEventListener(childEventListener);
     }
 
     private View.OnClickListener onClickLayoutPai() {
@@ -54,9 +69,10 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (loginHabilitado){
-                    if (etLogin.getText().toString().equalsIgnoreCase("gazinice") && etSenha.getText().toString().equalsIgnoreCase("nice22")){
-                        Intent it = new Intent(LoginActivity.this, HomeActivity.class);
+                    if (verificaSeCadastrado()){
+                        Intent it = new Intent(LoginActivity.this, MainActivity.class);
                         it.putExtra("logado", true);
+                        it.putExtra("psnId", etLogin.getText().toString());
                         startActivity(it);
                     }
                 }
@@ -89,4 +105,42 @@ public class LoginActivity extends AppCompatActivity {
             }
         };
     }
+
+    public boolean verificaSeCadastrado(){
+        for (int i = 0; i < listaCadastrados.size(); i++){
+            if (etLogin.getText().toString().equalsIgnoreCase(listaCadastrados.get(i).getPsnId()) && etSenha.getText().toString().equalsIgnoreCase(listaCadastrados.get(i).getSenha())){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    ChildEventListener childEventListener = new ChildEventListener(){
+
+        @Override
+        public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+            Cadastro cadastro = dataSnapshot.getValue(Cadastro.class);
+            listaCadastrados.add(cadastro);
+        }
+
+        @Override
+        public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+        }
+
+        @Override
+        public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+        }
+
+        @Override
+        public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+        }
+
+        @Override
+        public void onCancelled(DatabaseError databaseError) {
+
+        }
+    };
 }

@@ -24,6 +24,7 @@ public class ListaJogosFragment extends Fragment {
     RecyclerView mRecyclerView;
     private List<Jogo> listaDosJogos = new ArrayList<>();
     private String psnId;
+    private boolean logado;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class ListaJogosFragment extends Fragment {
 
         mRecyclerView = view.findViewById(R.id.recycler_view_layour_recycler);
         psnId = getArguments().getString("psnId");
+        logado = getArguments().getBoolean("logado");
 
         try {
             listaDosJogos = PSNiceService.getJogos(view.getContext());
@@ -38,7 +40,7 @@ public class ListaJogosFragment extends Fragment {
             e.printStackTrace();
         }
 
-        JogosAdapter listAdapter = new JogosAdapter(getActivity(), listaDosJogos, psnId);
+        JogosAdapter listAdapter = new JogosAdapter(getActivity(), listaDosJogos, psnId, logado);
         mRecyclerView.setAdapter(listAdapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(layoutManager);

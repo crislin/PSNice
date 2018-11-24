@@ -32,13 +32,15 @@ public class TrofeusAdapter extends RecyclerView.Adapter<TrofeusListViewHolder> 
     private Context context;
     private String nomeJogo;
     private String psnId;
+    private boolean logado;
     private List<Trofeu> listaTrofeus = new ArrayList<>();
 
-    public TrofeusAdapter(Context c, List<Trofeu> listaTrofeus, String nomeJogo, String psnId){
+    public TrofeusAdapter(Context c, List<Trofeu> listaTrofeus, String nomeJogo, String psnId, boolean logado){
         context = c;
         this.listaTrofeus = listaTrofeus;
         this.nomeJogo = nomeJogo;
         this.psnId = psnId;
+        this.logado = logado;
     }
 
     @NonNull
@@ -81,6 +83,7 @@ public class TrofeusAdapter extends RecyclerView.Adapter<TrofeusListViewHolder> 
         i.putExtra("earned", listaTrofeus.get(posicion).getEarned());
         i.putExtra("nomeJogo", nomeJogo);
         i.putExtra("psnId", psnId);
+        i.putExtra("logado", logado);
         context.startActivity(i);
     }
 
