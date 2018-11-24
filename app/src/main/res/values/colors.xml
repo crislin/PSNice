@@ -10,4 +10,10 @@
     <color name="Red_Persian">#CA3433</color>
     <color name="Blue_Prussian">#003152</color>
     <color name="Yellow_Royal">#FADA5E</color>
+    <color name="Red_Playstation">#DF0024</color>
+    <color name="Blue_Playstation">#2E6DB4</color>
+    <color name="Yellow_Playstation">#F3C300</color>
+    <color name="Green_Playstation">#00AC9F</color>
+    <color name="Cinza_Menu">#212121</color>
+    <color name="Menu_Ativo">#018FD5</color>
 </resources>

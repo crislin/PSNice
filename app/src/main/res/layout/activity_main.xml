@@ -17,8 +17,8 @@
         android:layout_height="wrap_content"
         app:tabGravity="fill"
         app:tabMode="fixed"
-        android:background="#000000"
+        android:background="@color/Cinza_Menu"
         app:tabTextColor="#FFFFFF"
-        app:tabSelectedTextColor="#5c61e4"
+        app:tabSelectedTextColor="@color/Menu_Ativo"
         app:tabIndicatorColor="#88333ce4"/>
 </LinearLayout>

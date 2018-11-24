@@ -6,20 +6,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="br.com.livroandroid.psnice.Activity.LoginActivity"
-    android:background="@color/background_azul_escuro"
+    android:background="@drawable/bg_poligonos"
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="220dp"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginTop="5dp">
         <ImageView
             android:id="@+id/logo_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/playstation_logo"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"/>
+            android:src="@drawable/psnice_logo_com_nome"
+            android:layout_gravity="center"/>
     </LinearLayout>
 
     <LinearLayout
@@ -27,16 +27,24 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/bg_login"
+        android:background="@drawable/bg_login_redondinho"
         android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Insira seus dados de login:"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/Menu_Ativo"/>
         <EditText
             android:id="@+id/etLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="5dp"
-            android:hint="Login"
-            android:backgroundTint="#8D8D8D"
+            android:hint="Playstation Network™ ID"
+            android:backgroundTint="@color/Menu_Ativo"
             android:textCursorDrawable="@drawable/cursor_color"/>
         <EditText
             android:id="@+id/etSenha"
@@ -45,7 +53,7 @@
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="5dp"
             android:hint="Senha"
-            android:backgroundTint="#8D8D8D"
+            android:backgroundTint="@color/Menu_Ativo"
             android:textCursorDrawable="@drawable/cursor_color"/>
         <LinearLayout
             android:id="@+id/btLogin"

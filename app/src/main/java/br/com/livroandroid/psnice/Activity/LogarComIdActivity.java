@@ -31,7 +31,7 @@ public class LogarComIdActivity extends AppCompatActivity {
     private LinearLayout btLogIn;
     private LinearLayout layoutPai;
     private EditText etPsnId;
-    private TextView btCadastro;
+    private LinearLayout btCadastro;
     public static List<String> idsValidasFirebase = new ArrayList<>();
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
@@ -48,7 +48,7 @@ public class LogarComIdActivity extends AppCompatActivity {
         btUpdatePsnId = findViewById(R.id.btUpdatePsnId);
         btLogIn = findViewById(R.id.btLogIn);
         etPsnId = findViewById(R.id.etPsnId);
-        btCadastro = findViewById(R.id.btCadastro);
+        btCadastro = findViewById(R.id.btCadastrar);
         layoutPai = findViewById(R.id.layoutPai);
 
         etPsnId.addTextChangedListener(habilitaBotao());

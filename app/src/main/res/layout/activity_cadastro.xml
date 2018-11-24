@@ -6,24 +6,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="br.com.livroandroid.psnice.Activity.CadastroActivity"
-    android:background="@color/background_azul_escuro"
-    android:gravity="top">
+    android:background="@drawable/bg_poligonos">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginVertical="20dp"
-        android:background="@drawable/bg_login"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/bg_login_redondinho"
         android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Insira seus para cadastro:"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/Menu_Ativo"/>
         <EditText
             android:id="@+id/etPsnId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="5dp"
-            android:hint="PSN-ID"
-            android:backgroundTint="#8D8D8D"
+            android:hint="Playstation Network™ ID"
+            android:backgroundTint="@color/Menu_Ativo"
             android:textCursorDrawable="@drawable/cursor_color"/>
         <EditText
             android:id="@+id/etSenha"
@@ -33,7 +39,7 @@
             android:layout_marginTop="5dp"
             android:hint="Senha"
             android:inputType="textPassword"
-            android:backgroundTint="#8D8D8D"
+            android:backgroundTint="@color/Menu_Ativo"
             android:textCursorDrawable="@drawable/cursor_color"/>
         <EditText
             android:id="@+id/etConfirmarSenha"
@@ -43,7 +49,7 @@
             android:layout_marginTop="5dp"
             android:hint="Confirmar Senha"
             android:inputType="textPassword"
-            android:backgroundTint="#8D8D8D"
+            android:backgroundTint="@color/Menu_Ativo"
             android:textCursorDrawable="@drawable/cursor_color"/>
         <LinearLayout
             android:id="@+id/btCadastrar"

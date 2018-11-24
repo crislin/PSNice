@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="br.com.livroandroid.psnice.Fragment.HomeFragment"
-    android:background="@color/background_azul_escuro"
+    android:background="@color/Cinza_Menu"
     android:orientation="vertical">
 
     <LinearLayout
@@ -72,7 +72,7 @@
                         android:max="100"
                         android:progress="40"
                         android:splitTrack="false"
-                        android:clickable="false" />
+                        android:clickable="false"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -180,17 +180,11 @@
         </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginVertical="5dp"
-        android:background="@drawable/bg_login"
-        android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="4dp"
+            android:layout_marginTop="5dp"
             android:background="#FFFFFF"
             android:orientation="vertical">
             <android.support.design.widget.TabLayout
@@ -199,15 +193,14 @@
                 android:layout_height="wrap_content"
                 app:tabGravity="fill"
                 app:tabMode="fixed"
-                android:background="#000000"
+                android:background="@color/Cinza_Menu"
                 app:tabTextColor="#FFFFFF"
-                app:tabSelectedTextColor="#5c61e4"
+                app:tabSelectedTextColor="@color/Menu_Ativo"
                 app:tabIndicatorColor="#88333ce4"/>
             <android.support.v4.view.ViewPager
                 android:id="@+id/abas_view_pager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
         </LinearLayout>
-    </LinearLayout>
 
 </LinearLayout>
