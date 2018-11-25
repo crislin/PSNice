@@ -20,5 +20,5 @@
         android:background="@color/Cinza_Menu"
         app:tabTextColor="#FFFFFF"
         app:tabSelectedTextColor="@color/Menu_Ativo"
-        app:tabIndicatorColor="#88333ce4"/>
+        app:tabIndicatorColor="@color/Menu_Ativo"/>
 </LinearLayout>

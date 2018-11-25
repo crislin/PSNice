@@ -64,15 +64,14 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-                    <SeekBar
-                        android:id="@+id/sbLevel"
+                    <ProgressBar
+                        android:id="@+id/pbLevel"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:max="100"
-                        android:progress="40"
-                        android:splitTrack="false"
-                        android:clickable="false"/>
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:max="100"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -196,7 +195,7 @@
                 android:background="@color/Cinza_Menu"
                 app:tabTextColor="#FFFFFF"
                 app:tabSelectedTextColor="@color/Menu_Ativo"
-                app:tabIndicatorColor="#88333ce4"/>
+                app:tabIndicatorColor="@color/Menu_Ativo"/>
             <android.support.v4.view.ViewPager
                 android:id="@+id/abas_view_pager"
                 android:layout_width="match_parent"

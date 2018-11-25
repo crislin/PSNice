@@ -73,16 +73,13 @@
                     android:text="%"
                     />
             </LinearLayout>
-            <SeekBar
-                android:id="@+id/sbPorcentagemJogo"
+            <ProgressBar
+                android:id="@+id/pbPorcentagem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:max="100"
-                android:progress="40"
-                android:splitTrack="false"
-                android:clickable="false"
-                />
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_marginHorizontal="10dp"
+                android:max="100"/>
         </LinearLayout>
     </LinearLayout>
 

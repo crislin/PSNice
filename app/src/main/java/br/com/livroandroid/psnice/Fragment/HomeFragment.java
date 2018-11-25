@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -37,9 +38,9 @@ public class HomeFragment extends Fragment {
     private TextView lbSilver;
     private TextView lbBronze;
     private TextView lbLevel;
-    private SeekBar sbLevel;
     private ImageView ivAvatar;
     private View view;
+    private ProgressBar pbLevel;
 
     private Usuario usuario;
     private String psnId;
@@ -59,9 +60,8 @@ public class HomeFragment extends Fragment {
         lbSilver = view.findViewById(R.id.lbSilver);
         lbBronze = view.findViewById(R.id.lbBronze);
         lbLevel = view.findViewById(R.id.lbLevel);
-        sbLevel = view.findViewById(R.id.sbLevel);
         ivAvatar = view.findViewById(R.id.ivAvatar);
-        sbLevel.getThumb().mutate().setAlpha(0);
+        pbLevel = view.findViewById(R.id.pbLevel);
 
         psnId = getArguments().getString("psnId");
         logado = getArguments().getBoolean("logado");
@@ -110,7 +110,7 @@ public class HomeFragment extends Fragment {
         lbGold.setText(String.valueOf(usuario.getGold()));
         lbSilver.setText(String.valueOf(usuario.getSilver()));
         lbBronze.setText(String.valueOf(usuario.getBronze()));
-        sbLevel.setProgress(usuario.getProgress());
+        pbLevel.setProgress(usuario.getProgress());
         lbLevel.setText(String.valueOf(usuario.getLevel()));
         Glide.with(view).load(usuario.getAvatar()).into(ivAvatar);
     }

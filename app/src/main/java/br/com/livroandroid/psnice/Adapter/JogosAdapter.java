@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -58,13 +59,12 @@ public class JogosAdapter extends RecyclerView.Adapter<JogosListViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull JogosListViewHolder holder, final int position) {
-        holder.sbPorcentagem.getThumb().mutate().setAlpha(0);
         holder.nomeJogos.setText(listaDosJogos.get(position).getNome());
         Glide.with(context).load(listaDosJogos.get(position).getImagem()).into(holder.imagemJogos);
         holder.trofeusGanhos.setText(String.valueOf(listaDosJogos.get(position).getGameTotalEarned()));
         holder.totalTrofeus.setText(String.valueOf(listaDosJogos.get(position).getGameTotal()));
         holder.porcentagem.setText(String.valueOf(listaDosJogos.get(position).getGameProgress()));
-        holder.sbPorcentagem.setProgress(listaDosJogos.get(position).getGameProgress());
+        holder.pbPorcentagem.setProgress(listaDosJogos.get(position).getGameProgress());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +95,7 @@ class JogosListViewHolder extends RecyclerView.ViewHolder{
     public TextView trofeusGanhos;
     public TextView totalTrofeus;
     public TextView porcentagem;
-    public SeekBar sbPorcentagem;
+    public ProgressBar pbPorcentagem;
 
     public  JogosListViewHolder(View itemView){
         super(itemView);
@@ -104,6 +104,6 @@ class JogosListViewHolder extends RecyclerView.ViewHolder{
         trofeusGanhos = itemView.findViewById(R.id.tcTrofeus);
         totalTrofeus = itemView.findViewById(R.id.tvTotalTrofeus);
         porcentagem = itemView.findViewById(R.id.porcentagem);
-        sbPorcentagem = itemView.findViewById(R.id.sbPorcentagemJogo);
+        pbPorcentagem = itemView.findViewById(R.id.pbPorcentagem);
     }
 }
