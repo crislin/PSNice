@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="br.com.livroandroid.psnice.Activity.DetalheJogoActivity"
-    android:background="#9b9b9b"
+    android:background="@drawable/bg_poligonos"
     android:orientation="vertical">
 
     <LinearLayout

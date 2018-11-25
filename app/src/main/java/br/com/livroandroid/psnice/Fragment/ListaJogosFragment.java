@@ -35,7 +35,7 @@ public class ListaJogosFragment extends Fragment {
         logado = getArguments().getBoolean("logado");
 
         try {
-            listaDosJogos = PSNiceService.getJogos(view.getContext());
+            listaDosJogos = PSNiceService.getJogos(view.getContext(), psnId);
         } catch (JSONException e) {
             e.printStackTrace();
         }

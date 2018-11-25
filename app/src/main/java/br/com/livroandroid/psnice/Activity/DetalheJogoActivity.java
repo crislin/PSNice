@@ -42,12 +42,17 @@ public class DetalheJogoActivity extends AppCompatActivity {
         String nome = i.getExtras().getString("nome");
         String psnId = i.getExtras().getString("psnId");
         boolean logado = i.getExtras().getBoolean("logado");
+        boolean usuarioTemEsseJogo = i.getExtras().getBoolean("usuarioTemEsseJogo");
 
         Glide.with(this).load(imagem).into(imagemDetalhe);
         nomeDetalhe.setText(nome);
 
         try {
-            listaTrofeus = PSNiceService.getTrofeus(this, nome);
+            if (usuarioTemEsseJogo) {
+                listaTrofeus = PSNiceService.getTrofeus(this, nome, psnId);
+            } else {
+                listaTrofeus = PSNiceService.getTrofeus(this, nome);
+            }
         } catch (JSONException e) {
             e.printStackTrace();
         }

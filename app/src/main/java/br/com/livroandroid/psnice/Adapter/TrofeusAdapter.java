@@ -61,6 +61,19 @@ public class TrofeusAdapter extends RecyclerView.Adapter<TrofeusListViewHolder> 
         if (!listaTrofeus.get(position).getEarned()){
             holder.imagemTrofeu.setAlpha((float) 0.5);
         }
+        String tipo = listaTrofeus.get(position).getTipo();
+        if (tipo.equalsIgnoreCase("platinum")){
+            holder.imagemTipo.setImageResource(R.drawable.trofeu_platina);
+        }
+        if (tipo.equalsIgnoreCase("gold")){
+            holder.imagemTipo.setImageResource(R.drawable.trofeu_ouro);
+        }
+        if (tipo.equalsIgnoreCase("silver")){
+            holder.imagemTipo.setImageResource(R.drawable.trofeu_prata);
+        }
+        if (tipo.equalsIgnoreCase("bronze")){
+            holder.imagemTipo.setImageResource(R.drawable.trofeu_bronze);
+        }
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,6 +107,7 @@ class TrofeusListViewHolder extends RecyclerView.ViewHolder{
     public TextView nomeTrofeu;
     public TextView descricaoTrofeu;
     public LinearLayout linearPai;
+    public ImageView imagemTipo;
 
     public  TrofeusListViewHolder(View itemView){
         super(itemView);
@@ -101,6 +115,7 @@ class TrofeusListViewHolder extends RecyclerView.ViewHolder{
         nomeTrofeu = itemView.findViewById(R.id.nomeTrofeu);
         descricaoTrofeu = itemView.findViewById(R.id.descricaoTrofeu);
         linearPai = itemView.findViewById(R.id.linearPai);
+        imagemTipo = itemView.findViewById(R.id.imagemTipo);
     }
 }
 

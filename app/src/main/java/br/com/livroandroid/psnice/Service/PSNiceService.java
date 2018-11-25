@@ -55,11 +55,21 @@ public class PSNiceService {
         return null;
     }
 
-    public static List<Jogo> getJogos(Context context) throws JSONException {
+    public static List<Jogo> getJogos(Context context, String psnId) throws JSONException {
         List<Jogo> lista = new ArrayList<>();
         String jsonResponse;
         try {
-            jsonResponse = loadJSONFromAsset(context, "UsuarioCassiano.json");
+            String fileName = "";
+            if (psnId.equalsIgnoreCase("vinte_dos_22")){
+                fileName = "UsuarioCassiano.json";
+            }
+            if (psnId.equalsIgnoreCase("debli23")){
+                fileName = "UsuarioAndre.json";
+            }
+            if (psnId.equalsIgnoreCase("Thigo23")){
+                fileName = "UsuarioThiago.json";
+            }
+            jsonResponse = loadJSONFromAsset(context, fileName);
             lista = Parser.parserJogos(jsonResponse);
             if (lista != null){
                 return lista;
@@ -85,12 +95,37 @@ public class PSNiceService {
         return null;
     }
 
+    public static List<Trofeu> getTrofeus(Context context, String nomeJogo, String psnId) throws JSONException {
+        List<Trofeu> lista = new ArrayList<>();
+        String jsonResponse;
+        try {
+            String fileName = "";
+            if (psnId.equalsIgnoreCase("vinte_dos_22")){
+                fileName = "UsuarioCassiano.json";
+            }
+            if (psnId.equalsIgnoreCase("debli23")){
+                fileName = "UsuarioAndre.json";
+            }
+            if (psnId.equalsIgnoreCase("Thigo23")){
+                fileName = "UsuarioThiago.json";
+            }
+            jsonResponse = loadJSONFromAsset(context, fileName);
+            lista = Parser.parserTrofeus(jsonResponse, nomeJogo);
+            if (lista != null){
+                return lista;
+            }
+        } catch (Exception e){
+            throw e;
+        }
+        return null;
+    }
+
     public static List<Trofeu> getTrofeus(Context context, String nomeJogo) throws JSONException {
         List<Trofeu> lista = new ArrayList<>();
         String jsonResponse;
         try {
-            jsonResponse = loadJSONFromAsset(context, "UsuarioCassiano.json");
-            lista = Parser.parserTrofeus(jsonResponse, nomeJogo);
+            jsonResponse = loadJSONFromAsset(context, "TodosOsJogos.json");
+            lista = Parser.parserTrofeusVazio(jsonResponse, nomeJogo);
             if (lista != null){
                 return lista;
             }
@@ -106,6 +141,21 @@ public class PSNiceService {
         try {
             jsonResponse = loadJSONFromAsset(context, "TodosUsuarios.json");
             lista = Parser.parserTodosUsuarios(jsonResponse);
+            if (lista != null){
+                return lista;
+            }
+        } catch (Exception e){
+            throw e;
+        }
+        return null;
+    }
+
+    public static List<Jogo> getListaJogos(Context context) throws JSONException {
+        List<Jogo> lista = new ArrayList<>();
+        String jsonResponse;
+        try {
+            jsonResponse = loadJSONFromAsset(context, "TodosJogosPesquisa.json");
+            lista = Parser.parserListaJogos(jsonResponse);
             if (lista != null){
                 return lista;
             }

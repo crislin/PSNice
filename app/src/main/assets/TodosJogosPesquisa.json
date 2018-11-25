@@ -1,0 +1,34 @@
+{
+	"jogos": [{
+		"nome": "Horizon: Zero Dawn",
+		"game_total": "56",
+		"developer": "Guerrilla Games",
+		"imagem": "https://i.imgur.com/qkCSi9s.png",
+		"genre": "Role-playing (RPG) | Shooter"
+		}, {
+		"nome": "Fallout Shelter",
+		"game_total": "35",
+		"developer": "Bethesda Game Studios",
+		"imagem": "https://i.imgur.com/WUUodyA.png",
+		"genre": "Role-playing (RPG) | Simulator | Strategy"
+		}, {
+		"nome": "Resident Evil",
+		"game_total": "45",
+		"developer": "Capcom",
+		"imagem": "https://i.imgur.com/lFzz9yJ.png",
+		"genre": "Adventure"
+		}, {
+		"nome": "Kitten Squad",
+		"game_total": "9",
+		"developer": "SAGENCY",
+		"imagem": "https://i.imgur.com/91z8UCx.png",
+		"genre": "Shooter"
+		}, {
+		"nome": "SINE MORA",
+		"game_total": "12",
+		"developer": "Grasshopper Manufacture, Digital Reality",
+		"imagem": "https://i.imgur.com/j3XvAif.png",
+		"genre": "Shooter"
+		}
+	]
+}

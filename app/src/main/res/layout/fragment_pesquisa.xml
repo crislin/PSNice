@@ -3,42 +3,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="br.com.livroandroid.psnice.Fragment.PesquisaFragment"
-    android:background="@color/background_azul_escuro"
+    android:background="@drawable/bg_poligonos"
     android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@color/Nao_Branco"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_marginTop="10dp">
         <EditText
             android:id="@+id/etPesquisa"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/pesquisar_edittext"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:textSize="22dp"/>
+            android:textSize="18sp"
+            android:backgroundTint="@color/Menu_Ativo"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_search"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"/>
+            android:src="@drawable/ic_search"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="28dp"
-        android:background="#FFFFFF"
-        android:padding="10dp">
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_view_layour_recycler"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+        <LinearLayout
+            android:id="@+id/textoResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Nao_Branco"
+            android:layout_marginHorizontal="5dp"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resultados da pesquisa:"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/lista_jogo"/>
+            android:background="@color/Nao_Branco"
+            android:padding="5dp"
+            android:layout_marginHorizontal="5dp">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_layour_recycler_pesquisa_jogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/lista_pesquisa_jogo"/>
+        </LinearLayout>
     </LinearLayout>
-
-
 </LinearLayout>

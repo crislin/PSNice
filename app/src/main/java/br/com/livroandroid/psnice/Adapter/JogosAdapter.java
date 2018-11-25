@@ -85,6 +85,7 @@ public class JogosAdapter extends RecyclerView.Adapter<JogosListViewHolder> {
         i.putExtra("imagem", listaDosJogos.get(posicion).getImagem());
         i.putExtra("psnId", psnId);
         i.putExtra("logado", logado);
+        i.putExtra("usuarioTemEsseJogo", true);
         context.startActivity(i);
     }
 

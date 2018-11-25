@@ -1,6 +1,10 @@
 {
 	"jogos": [{
 		"nome": "Horizon: Zero Dawn",
+		"developer": "Guerrilla Games",
+        "genre": "Role-playing (RPG) | Shooter",
+        "players_upto": "1",
+        "release_date": "01/02/2018",
 		"imagem": "https://i.imgur.com/qkCSi9s.png",
 		"has_platinum": "true",
 		"game_platinum": "1",
@@ -16,102 +20,106 @@
 			"imagem_trofeu": "https://i.imgur.com/8qwCqYW.png",
 			"tipo": "platinum",
 			"hidden": "false",
-			"earned": "true",
-			"day_earned": "29/09/2018",
-			"hour_earned": "19:00:08"
+			"earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
 			}, {
 			"nome": "Stealth killed 10 machines",
 			"descricao": "Performed a stealth kill on 10 machines.",
 			"imagem_trofeu": "https://i.imgur.com/nReory7.png",
 			"tipo": "bronze",
 			"hidden": "false",
-			"earned": "true",
-			"day_earned": "14/09/2018",
-			"hour_earned": "22:51:10"
+			"earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
 			}, {
 			"nome": "3 Strikes From Above",
 			"descricao": "Killed 3 enemies using the Strike from Above skill.",
 			"imagem_trofeu": "https://i.imgur.com/22cliqu.png",
 			"tipo": "bronze",
 			"hidden": "false",
-			"earned": "true",
-			"day_earned": "24/09/2018",
-			"hour_earned": "01:44:34"
+			"earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
 			}, {
 			"nome": "Tore off 10 components",
 			"descricao": "Detached 10 components from machines during combat.",
 			"imagem_trofeu": "https://i.imgur.com/wpS0uJj.png",
 			"tipo": "bronze",
 			"hidden": "false",
-			"earned": "true",
-			"day_earned": "15/09/2018",
-			"hour_earned": "13:08:27"
+			"earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
 			}, {
 			"nome": "First Modification",
 			"descricao": "Used a Weapon Coil or Outfit Weave on a modifiable weapon or outfit.",
 			"imagem_trofeu": "https://i.imgur.com/GQH2GJz.png",
 			"tipo": "bronze",
 			"hidden": "false",
-			"earned": "true",
-			"day_earned": "14/09/2018",
-			"hour_earned": "20:52:50"
+			"earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
 			}, {
 			"nome": "Reached level 50",
 			"descricao": "Reached player level 50.",
 			"imagem_trofeu": "https://i.imgur.com/VwGao4F.png",
 			"tipo": "bronze",
 			"hidden": "false",
-			"earned": "true",
-			"day_earned": "29/09/2018",
-			"hour_earned": "18:01:51"
+			"earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
 			}, {
 			"nome": "First Bandit Camp cleared",
 			"descricao": "Took back a settlement from a bandit clan.",
 			"imagem_trofeu": "https://i.imgur.com/WObVgAm.png",
 			"tipo": "bronze",
 			"hidden": "false",
-			"earned": "true",
-			"day_earned": "15/09/2018",
-			"hour_earned": "19:52:23"
+			"earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
 			}, {
 			"nome": "All Cores Overridden",
 			"descricao": "Reached the Core of every Cauldron and accessed the information within.",
 			"imagem_trofeu": "https://i.imgur.com/8yJmm5Q.png",
 			"tipo": "silver",
 			"hidden": "false",
-			"earned": "true",
-			"day_earned": "28/09/2018",
-			"hour_earned": "00:01:01"
+			"earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
 			}, {
 			"nome": "Blazing Suns at all Grounds",
 			"descricao": "Earned a Blazing Sun mark in all trials at all of the Hunting Grounds.",
 			"imagem_trofeu": "https://i.imgur.com/q6IVTJv.png",
 			"tipo": "gold",
 			"hidden": "false",
-			"earned": "true",
-			"day_earned": "29/09/2018",
-			"hour_earned": "04:19:18"
+			"earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
 			}, {
 			"nome": "Defeated the Sawtooth",
 			"descricao": "Defeated the Sawtooth that threatened the Nora.",
 			"imagem_trofeu": "https://i.imgur.com/Iz4B1CA.png",
 			"tipo": "bronze",
 			"hidden": "false",
-			"earned": "true",
-			"day_earned": "14/09/2018",
-			"hour_earned": "23:17:44"
+			"earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
 			}, {
 			"nome": "Ended the war machine threat",
 			"descricao": "Ended the threat of the ancient war machines.",
 			"imagem_trofeu": "https://i.imgur.com/sLuiDRc.png",
 			"tipo": "gold",
 			"hidden": "false",
-			"earned": "true",
-			"day_earned": "29/09/2018",
-			"hour_earned": "19:00:08"
+			"earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
 			}]
 		}, {
 		"nome": "Fallout Shelter",
+		"developer": "Bethesda Game Studios",
+        "genre": "Role-playing (RPG) | Simulator | Strategy",
+        "players_upto": "1",
+        "release_date": "10/06/2018",
 		"imagem": "https://i.imgur.com/WUUodyA.png",
 		"has_platinum": "true",
 		"game_platinum": "0",
@@ -136,18 +144,18 @@
 			"imagem_trofeu": "https://i.imgur.com/HJyRVFN.png",
 			"tipo": "silver",
 			"hidden": "false",
-			"earned": "true",
-			"day_earned": "01/08/2018 ",
-			"hour_earned": "18:53:54"
+			"earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
 			}, {
 			"nome": "Better Settler",
 			"descricao": "Level up a dweller from Level 1 to 10",
 			"imagem_trofeu": "https://i.imgur.com/shJkC71.png",
 			"tipo": "bronze",
 			"hidden": "false",
-			"earned": "true",
-			"day_earned": "18/06/2018",
-			"hour_earned": "20:04:37"
+			"earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
 			}, {
 			"nome": "Armed and Dangerous",
 			"descricao": "Collect 20 Legendary Weapons",
@@ -163,18 +171,18 @@
 			"imagem_trofeu": "https://i.imgur.com/Fv31USI.png",
 			"tipo": "bronze",
 			"hidden": "false",
-			"earned": "true",
-			"day_earned": "11/06/2018",
-			"hour_earned": "20:08:06"
+			"earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
 			}, {
 			"nome": "Project Purity",
 			"descricao": "Merge 3 Water Rooms",
 			"imagem_trofeu": "https://i.imgur.com/0UqO3eX.png",
 			"tipo": "bronze",
 			"hidden": "false",
-			"earned": "true",
-			"day_earned": "14/06/2018 ",
-			"hour_earned": "00:58:19"
+			"earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
 			}, {
 			"nome": "A Better Future, Underground",
 			"descricao": "Upgrade 20 Rooms to Level 3",
@@ -208,12 +216,16 @@
 			"imagem_trofeu": "https://i.imgur.com/w9vGhMU.png",
 			"tipo": "silver",
 			"hidden": "false",
-			"earned": "true",
-			"day_earned": "30/08/2018",
-			"hour_earned": "23:17:17"
+			"earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
 			}]
 		}, {
 		"nome": "Resident Evil",
+		"developer": "Capcom",
+        "genre": "Adventure",
+        "players_upto": "1",
+        "release_date": "20/01/2015",
 		"imagem": "https://i.imgur.com/lFzz9yJ.png",
 		"has_platinum": "true",
 		"game_platinum": "0",
@@ -274,18 +286,18 @@
 			"imagem_trofeu": "https://i.imgur.com/xRhjh69.png",
 			"tipo": "bronze",
 			"hidden": "false",
-			"earned": "true",
-			"day_earned": "24/03/2018",
-			"hour_earned": "18:00:57"
+			"earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
 			}, {
 			"nome": "The Key Master",
 			"descricao": "Obtain the Helmet Key using Jill.",
 			"imagem_trofeu": "https://i.imgur.com/HIxrqnd.png",
 			"tipo": "bronze",
 			"hidden": "false",
-			"earned": "true",
-			"day_earned": "24/03/2018",
-			"hour_earned": "19:59:30"
+			"earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
 			}, {
 			"nome": "Alpha Team's Finest",
 			"descricao": "Finish the game using Jill.",
@@ -301,9 +313,9 @@
 			"imagem_trofeu": "https://i.imgur.com/T2bCuys.png",
 			"tipo": "bronze",
 			"hidden": "false",
-			"earned": "true",
-			"day_earned": "24/03/2018",
-			"hour_earned": "20:17:49"
+			"earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
 			}, {
 			"nome": "Starsenal",
 			"descricao": "Obtain all weapons (must load grenade launcher with all shell types).",
@@ -314,5 +326,245 @@
 			"day_earned": "",
 			"hour_earned": ""
 			}]
-		}]
+		}, {
+        "nome": "Kitten Squad",
+        "developer": "SAGENCY",
+        "genre": "Shooter",
+        "players_upto": "2",
+        "release_date": "15/09/2015",
+        "imagem": "https://i.imgur.com/91z8UCx.png",
+        "has_platinum": "false",
+        "game_platinum": "0",
+        "game_gold": "0",
+        "game_silver": "0",
+        "game_bronze": "9",
+        "game_total": "9",
+        "game_progress": "100",
+        "trofeus": [
+        {
+            "nome": "Mission Accomplished",
+            "descricao": "Complete a story quest.",
+            "imagem_trofeu": "https://i.psnprofiles.com/games/31ff91/trophies/1Mdb28b2.png",
+            "tipo": "bronze",
+            "hidden": "false",
+            "earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
+        },
+        {
+            "nome": "Punchback",
+            "descricao": "Defeat the Sheep Puncher.",
+            "imagem_trofeu": "https://i.psnprofiles.com/games/31ff91/trophies/2M4b5415.png",
+            "tipo": "bronze",
+            "hidden": "false",
+            "earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
+        },
+        {
+            "nome": "Bounty Hunter",
+            "descricao": "Complete 3 bounty quests.",
+            "imagem_trofeu": "https://i.psnprofiles.com/games/31ff91/trophies/3M327503.png",
+            "tipo": "bronze",
+            "hidden": "false",
+            "earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
+        },
+        {
+            "nome": "Free Olivia",
+            "descricao": "Rescue Olivia from the imprisonment by Sealand.",
+            "imagem_trofeu": "https://i.psnprofiles.com/games/31ff91/trophies/4M1e8308.png",
+            "tipo": "bronze",
+            "hidden": "false",
+            "earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
+        },
+        {
+            "nome": "Locked and Loaded",
+            "descricao": "Collect and use every base weapon in the game",
+            "imagem_trofeu": "https://i.psnprofiles.com/games/31ff91/trophies/5M89cff5.png",
+            "tipo": "bronze",
+            "hidden": "false",
+            "earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
+        },
+        {
+            "nome": "Kittens With Style",
+            "descricao": "Purchase at least one type of every customization.",
+            "imagem_trofeu": "https://i.psnprofiles.com/games/31ff91/trophies/6M3088ec.png",
+            "tipo": "bronze",
+            "hidden": "false",
+            "earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
+        },
+        {
+            "nome": "Friends of the Sea",
+            "descricao": "Rescue whales, dolphins, and sealions from Sealand.",
+            "imagem_trofeu": "https://i.psnprofiles.com/games/31ff91/trophies/7Me8e2fd.png",
+            "tipo": "bronze",
+            "hidden": "false",
+            "earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
+        },
+        {
+            "nome": "Looting Machine",
+            "descricao": "Loot at least 20,000 Kitten Coins.",
+            "imagem_trofeu": "https://i.psnprofiles.com/games/31ff91/trophies/8M58a9b2.png",
+            "tipo": "bronze",
+            "hidden": "false",
+            "earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
+        },
+        {
+            "nome": "Friendly Sheep",
+            "descricao": "Rescue at least 100 sheep.",
+            "imagem_trofeu": "https://i.psnprofiles.com/games/31ff91/trophies/9M07187f.png",
+            "tipo": "bronze",
+            "hidden": "false",
+            "earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
+        }]
+    }, {
+        "nome": "SINE MORA",
+        "developer": "Grasshopper Manufacture, Digital Reality",
+        "genre": "Shooter",
+        "players_upto": "1",
+        "release_date": "21/11/2012",
+        "imagem": "https://i.imgur.com/j3XvAif.png",
+        "has_platinum": "false",
+        "game_platinum": "0",
+        "game_gold": "1",
+        "game_silver": "2",
+        "game_bronze": "9",
+        "game_total": "12",
+        "game_progress": "100",
+        "trofeus": [
+        {
+            "nome": "Dies Irae",
+            "descricao": "Promoted to General of the Air Force",
+            "imagem_trofeu": "https://i.psnprofiles.com/games/94c2f1/trophies/10M3654c2.png",
+            "tipo": "bronze",
+            "hidden": "false",
+            "earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
+        },
+        {
+            "nome": "Fortiter Fideliter Feliciter",
+            "descricao": "Promoted to Major General",
+            "imagem_trofeu": "https://i.psnprofiles.com/games/94c2f1/trophies/9M95a97a.png",
+            "tipo": "bronze",
+            "hidden": "false",
+            "earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
+        },
+        {
+            "nome": "Suaviter In Modo",
+            "descricao": "Promoted to Colonel",
+            "imagem_trofeu": "https://i.psnprofiles.com/games/94c2f1/trophies/8M4e6347.png",
+            "tipo": "bronze",
+            "hidden": "false",
+            "earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
+        },
+        {
+            "nome": "Nascentes Morimur",
+            "descricao": "Promoted to Airman",
+            "imagem_trofeu": "https://i.psnprofiles.com/games/94c2f1/trophies/1Mee78a6.png",
+            "tipo": "bronze",
+            "hidden": "false",
+            "earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
+        },
+        {
+            "nome": "Lex Talionis",
+            "descricao": "Promoted to Sergeant",
+            "imagem_trofeu": "https://i.psnprofiles.com/games/94c2f1/trophies/2M17e25b.png",
+            "tipo": "bronze",
+            "hidden": "false",
+            "earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
+        },
+        {
+            "nome": "Tempus Neminem Manet",
+            "descricao": "Promoted to Master Sergeant",
+            "imagem_trofeu": "https://i.psnprofiles.com/games/94c2f1/trophies/3Ma6fd14.png",
+            "tipo": "bronze",
+            "hidden": "false",
+            "earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
+        },
+        {
+            "nome": "Salva Veritate",
+            "descricao": "Promoted to Lieutenant",
+            "imagem_trofeu": "https://i.psnprofiles.com/games/94c2f1/trophies/4M3253b8.png",
+            "tipo": "bronze",
+            "hidden": "false",
+            "earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
+        },
+        {
+            "nome": "Repetitio Est Mater Memoriae",
+            "descricao": "Promoted to First Lieutenant",
+            "imagem_trofeu": "https://i.psnprofiles.com/games/94c2f1/trophies/5Mf47eb9.png",
+            "tipo": "bronze",
+            "hidden": "false",
+            "earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
+        },
+        {
+            "nome": "Inter Caecos Regnat Strabo",
+            "descricao": "Promoted to Captain",
+            "imagem_trofeu": "https://i.psnprofiles.com/games/94c2f1/trophies/6M20bfdc.png",
+            "tipo": "bronze",
+            "hidden": "false",
+            "earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
+        },
+        {
+            "nome": "Melius Frangi Quam Flecti",
+            "descricao": "Promoted to Major",
+            "imagem_trofeu": "https://i.psnprofiles.com/games/94c2f1/trophies/7M99890e.png",
+            "tipo": "bronze",
+            "hidden": "false",
+            "earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
+        },
+        {
+            "nome": "Stercus Accidit",
+            "descricao": "Fail the Prologue",
+            "imagem_trofeu": "https://i.psnprofiles.com/games/94c2f1/trophies/11M4e8b06.png",
+            "tipo": "bronze",
+            "hidden": "false",
+            "earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
+        },
+        {
+            "nome": "Sine Mora",
+            "descricao": "Destroy everything in the Prologue and remain unharmed",
+            "imagem_trofeu": "https://i.psnprofiles.com/games/94c2f1/trophies/12M487909.png",
+            "tipo": "bronze",
+            "hidden": "false",
+            "earned": "false",
+			"day_earned": "",
+			"hour_earned": ""
+        }]
+    }]
 }

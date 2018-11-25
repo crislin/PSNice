@@ -18,6 +18,33 @@ public class Jogo {
     private int gameTotalEarned;
     private int gameProgress;
     private List<Trofeu> trofeus;
+    private String desenvolvedora;
+    private String genero;
+    private String quantidadeJogadores;
+
+    public String getDesenvolvedora() {
+        return desenvolvedora;
+    }
+
+    public void setDesenvolvedora(String desenvolvedora) {
+        this.desenvolvedora = desenvolvedora;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public String getQuantidadeJogadores() {
+        return quantidadeJogadores;
+    }
+
+    public void setQuantidadeJogadores(String quantidadeJogadores) {
+        this.quantidadeJogadores = quantidadeJogadores;
+    }
 
     public String getNome() {
         return nome;

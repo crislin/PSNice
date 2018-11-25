@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 import org.json.JSONException;
 
@@ -31,12 +32,14 @@ public class PesquisaUsuarioFragment extends Fragment {
     private List<Usuario> listaUsuarios = new ArrayList<>();
     private List<Usuario> listaUsuariosParaRecycler = new ArrayList<>();
     private String psnId;
+    private LinearLayout textoResultado;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_pesquisa_usuario, container, false);
         etPesquisaUsuario = view.findViewById(R.id.etPesquisaUsuario);
+        textoResultado = view.findViewById(R.id.textoResultado);
         mRecyclerView = view.findViewById(R.id.recycler_view_layour_recycler);
         psnId = getArguments().getString("psnId");
 
@@ -72,6 +75,7 @@ public class PesquisaUsuarioFragment extends Fragment {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 if (!etPesquisaUsuario.getText().toString().equalsIgnoreCase("")){
                     listaUsuariosParaRecycler.clear();
+                    textoResultado.setVisibility(View.VISIBLE);
                     for (int t = 0; t < listaUsuarios.size(); t++){
                         if (listaUsuarios.get(t).getPsnId().toLowerCase().contains(etPesquisaUsuario.getText().toString().toLowerCase())){
                             listaUsuariosParaRecycler.add(listaUsuarios.get(t));
@@ -79,6 +83,7 @@ public class PesquisaUsuarioFragment extends Fragment {
                     }
                     mostraLista(listaUsuariosParaRecycler);
                 } else {
+                    textoResultado.setVisibility(View.GONE);
                     listaUsuariosParaRecycler.clear();
                     listaUsuariosParaRecycler.addAll(listaUsuarios);
                     mostraLista(listaUsuariosParaRecycler);

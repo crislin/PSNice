@@ -47,9 +47,9 @@
             android:gravity="center"
             android:layout_margin="10dp">
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/bronze"/>
+                android:id="@+id/imagemTipo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"/>
         </LinearLayout>
     </LinearLayout>
 

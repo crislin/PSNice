@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#DF0024</color>
     <color name="seekBarLevel">#F7E11A</color>
     <color name="background_azul_escuro">#031a39</color>
     <color name="trophie_earned">#a7da8e</color>
@@ -16,4 +16,5 @@
     <color name="Green_Playstation">#00AC9F</color>
     <color name="Cinza_Menu">#212121</color>
     <color name="Menu_Ativo">#018FD5</color>
+    <color name="Nao_Branco">#FAFAFA</color>
 </resources>
