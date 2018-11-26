@@ -79,13 +79,17 @@ public class JogosAdapter extends RecyclerView.Adapter<JogosListViewHolder> {
         return listaDosJogos.size();
     }
 
-    private void openDetailActivity(int posicion) {
+    private void openDetailActivity(int position) {
         Intent i = new Intent(context, DetalheJogoActivity.class);
-        i.putExtra("nome", listaDosJogos.get(posicion).getNome());
-        i.putExtra("imagem", listaDosJogos.get(posicion).getImagem());
+        i.putExtra("nome", listaDosJogos.get(position).getNome());
+        i.putExtra("imagem", listaDosJogos.get(position).getImagem());
         i.putExtra("psnId", psnId);
         i.putExtra("logado", logado);
         i.putExtra("usuarioTemEsseJogo", true);
+        i.putExtra("totalTrofeus", String.valueOf(listaDosJogos.get(position).getGameTotal()));
+        i.putExtra("desenvolvedora", listaDosJogos.get(position).getDesenvolvedora());
+        i.putExtra("genero", listaDosJogos.get(position).getGenero());
+        i.putExtra("porcentagem", String.valueOf(listaDosJogos.get(position).getGameProgress()));
         context.startActivity(i);
     }
 

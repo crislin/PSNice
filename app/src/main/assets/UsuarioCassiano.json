@@ -20,6 +20,10 @@
  "success": "1",
  "jogos": [{
 	"nome": "Horizon: Zero Dawn",
+	"developer": "Guerrilla Games",
+    "genre": "Role-playing (RPG) | Shooter",
+    "players_upto": "1",
+    "release_date": "01/02/2018",
 	"imagem": "https://i.imgur.com/qkCSi9s.png",
 	"has_platinum": "true",
 	"game_platinum": "1",
@@ -131,6 +135,10 @@
 		}]
 	}, {
 	"nome": "Fallout Shelter",
+	"developer": "Bethesda Game Studios",
+    "genre": "Role-playing (RPG) | Simulator | Strategy",
+    "players_upto": "1",
+    "release_date": "10/06/2018",
 	"imagem": "https://i.imgur.com/WUUodyA.png",
 	"has_platinum": "true",
 	"game_platinum": "0",
@@ -233,6 +241,10 @@
 		}]
 	}, {
 	"nome": "Resident Evil",
+	"developer": "Capcom",
+    "genre": "Adventure",
+    "players_upto": "1",
+    "release_date": "20/01/2015",
 	"imagem": "https://i.imgur.com/lFzz9yJ.png",
 	"has_platinum": "true",
 	"game_platinum": "0",

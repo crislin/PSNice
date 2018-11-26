@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -23,7 +24,12 @@ import br.com.livroandroid.psnice.Trofeu;
 public class DetalheJogoActivity extends AppCompatActivity {
 
     private ImageView imagemDetalhe;
-    private TextView nomeDetalhe;
+    private TextView nomeJogo;
+    private TextView tvTotalTrofeus;
+    private TextView tvDesenvolvedora;
+    private TextView tvGenero;
+    private TextView tvPorcentagem;
+    private ProgressBar pbProgresso;
     private RecyclerView mRecyclerView;
     private List<Trofeu> listaTrofeus = new ArrayList<>();
 
@@ -35,17 +41,31 @@ public class DetalheJogoActivity extends AppCompatActivity {
         mRecyclerView = findViewById(R.id.recycler_view_layour_recycler_trofeus);
 
         imagemDetalhe = findViewById(R.id.imagemDetalhe);
-        nomeDetalhe = findViewById(R.id.nomeDetalhe);
+        nomeJogo = findViewById(R.id.nomeJogo);
+        tvTotalTrofeus = findViewById(R.id.tvTotalTrofeus);
+        tvDesenvolvedora = findViewById(R.id.tvDesenvolvedora);
+        tvGenero = findViewById(R.id.tvGenero);
+        tvPorcentagem = findViewById(R.id.tvPorcentagem);
+        pbProgresso = findViewById(R.id.pbProgresso);
 
         Intent i = this.getIntent();
         String imagem = i.getExtras().getString("imagem");
         String nome = i.getExtras().getString("nome");
         String psnId = i.getExtras().getString("psnId");
+        String totalTrofeus = i.getExtras().getString("totalTrofeus");
+        String desenvolvedora = i.getExtras().getString("desenvolvedora");
+        String genero = i.getExtras().getString("genero");
+        String porcentagem = i.getExtras().getString("porcentagem");
         boolean logado = i.getExtras().getBoolean("logado");
         boolean usuarioTemEsseJogo = i.getExtras().getBoolean("usuarioTemEsseJogo");
 
         Glide.with(this).load(imagem).into(imagemDetalhe);
-        nomeDetalhe.setText(nome);
+        nomeJogo.setText(nome);
+        tvTotalTrofeus.setText(totalTrofeus);
+        tvDesenvolvedora.setText(desenvolvedora);
+        tvGenero.setText(genero);
+        tvPorcentagem.setText(porcentagem);
+        pbProgresso.setProgress(Integer.valueOf(porcentagem));
 
         try {
             if (usuarioTemEsseJogo) {

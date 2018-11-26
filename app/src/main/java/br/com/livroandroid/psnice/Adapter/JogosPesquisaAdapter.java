@@ -69,6 +69,10 @@ public class JogosPesquisaAdapter extends RecyclerView.Adapter<JogosPesquisaList
         i.putExtra("psnId", psnId);
         i.putExtra("nome", listaJogos.get(position).getNome());
         i.putExtra("usuarioTemEsseJogo", retornaSeTemOJogo(position));
+        i.putExtra("totalTrofeus", String.valueOf(listaJogos.get(position).getGameTotal()));
+        i.putExtra("desenvolvedora", listaJogos.get(position).getDesenvolvedora());
+        i.putExtra("genero", listaJogos.get(position).getGenero());
+        i.putExtra("porcentagem", String.valueOf(retornaPorcentagemJogoUsuario(position)));
         context.startActivity(i);
     }
 
@@ -79,6 +83,15 @@ public class JogosPesquisaAdapter extends RecyclerView.Adapter<JogosPesquisaList
             }
         }
         return false;
+    }
+
+    private int retornaPorcentagemJogoUsuario(int position){
+        for (int i = 0; i < listaJogosUsuario.size(); i++){
+            if (listaJogos.get(position).getNome().equalsIgnoreCase(listaJogosUsuario.get(i).getNome())){
+                return listaJogosUsuario.get(i).getGameProgress();
+            }
+        }
+        return 0;
     }
 
     @Override
