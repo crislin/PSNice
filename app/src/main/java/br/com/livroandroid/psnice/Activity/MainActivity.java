@@ -59,10 +59,10 @@ public class MainActivity extends AppCompatActivity {
 
         viewPager.setAdapter(adapterMain);
         tabLayout.setupWithViewPager(viewPager);
-        tabLayout.getTabAt(0).setIcon(R.drawable.ic_home);
-        tabLayout.getTabAt(1).setIcon(R.drawable.ic_games);
-        tabLayout.getTabAt(2).setIcon(R.drawable.ic_search);
-        tabLayout.getTabAt(3).setIcon(R.drawable.ic_logout);
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_red_home);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_yellow_game);
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_green_user);
+        tabLayout.getTabAt(3).setIcon(R.drawable.ic_blue_exit);
 
     }
 
