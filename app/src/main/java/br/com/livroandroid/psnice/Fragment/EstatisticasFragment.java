@@ -2,9 +2,13 @@ package br.com.livroandroid.psnice.Fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.PieChart;
@@ -24,28 +28,41 @@ import br.com.livroandroid.psnice.Usuario;
 public class EstatisticasFragment extends Fragment {
 
     private View view;
-    private Usuario usuario;
-    private PieChart graficoTorta;
+    private LinearLayout layoutRank;
+    private LinearLayout layoutRankExpandido;
+    private FrameLayout frameRank;
+    private ImageView ivExpandir;
+    private boolean rankAberto = false;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_estatisticas, container, false);
 
-        graficoTorta = view.findViewById(R.id.graficoTorta);
+        layoutRank = view.findViewById(R.id.layoutRank);
+        layoutRankExpandido = view.findViewById(R.id.layoutRankExpandido);
+        ivExpandir = view.findViewById(R.id.ivExpandir);
+        frameRank = view.findViewById(R.id.frameRank);
 
-        List<PieEntry> entries = new ArrayList<>();
-        entries.add(new PieEntry(28.5f, "PS3"));
-        entries.add(new PieEntry(57.3f, "PS4"));
-        entries.add(new PieEntry(14.2f, "PSVita"));
-
-        PieDataSet set = new PieDataSet(entries, "Consoles");
-        set.setColors(view.getResources().getColor(R.color.Green_Emerald),
-                view.getResources().getColor(R.color.Yellow_Royal),
-                view.getResources().getColor(R.color.Red_Persian));
-        PieData data = new PieData(set);
-        graficoTorta.setData(data);
-        graficoTorta.invalidate();
+        ivExpandir.setOnClickListener(onClickLayoutRank());
 
         return view;
+    }
+
+    private View.OnClickListener onClickLayoutRank() {
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TransitionManager.beginDelayedTransition(frameRank);
+                if (!rankAberto){
+                    layoutRankExpandido.setVisibility(View.VISIBLE);
+                    ivExpandir.setImageDrawable(getResources().getDrawable(R.drawable.ic_comprimir_estatisticas));
+                    rankAberto = true;
+                } else {
+                    layoutRankExpandido.setVisibility(View.GONE);
+                    ivExpandir.setImageDrawable(getResources().getDrawable(R.drawable.ic_expandir_estatisticas));
+                    rankAberto = false;
+                }
+            }
+        };
     }
 }
