@@ -6,6 +6,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -32,7 +33,7 @@ public class DetalheUsuarioActivity extends AppCompatActivity {
     private TextView lbSilver;
     private TextView lbBronze;
     private TextView lbLevel;
-    private SeekBar sbLevel;
+    private ProgressBar pbLevel;
     private ImageView ivAvatar;
 
     private Usuario usuario;
@@ -51,9 +52,8 @@ public class DetalheUsuarioActivity extends AppCompatActivity {
         lbSilver = findViewById(R.id.lbSilver);
         lbBronze = findViewById(R.id.lbBronze);
         lbLevel = findViewById(R.id.lbLevel);
-        sbLevel = findViewById(R.id.sbLevel);
+        pbLevel = findViewById(R.id.pbLevel);
         ivAvatar = findViewById(R.id.ivAvatar);
-        sbLevel.getThumb().mutate().setAlpha(0);
 
         Intent i = this.getIntent();
         String psnId = i.getExtras().getString("psnId");
@@ -72,6 +72,13 @@ public class DetalheUsuarioActivity extends AppCompatActivity {
         Bundle bundle = new Bundle();
         bundle.putString("psnId", psnId);
         bundle.putInt("totalTrofeus", usuario.getTotal());
+        bundle.putInt("rankMundial", usuario.getRankMundial());
+        bundle.putInt("rankPais", usuario.getRankPais());
+        bundle.putFloat("eficiencia", usuario.getEficiencia());
+        bundle.putInt("totalTrofeusPossiveis", usuario.getTotalTrofeuPossivel());
+//        bundle.putInt("ps3Games", usuario.getPs3Games());
+//        bundle.putInt("ps4Games", usuario.getPs4Games());
+//        bundle.putInt("psVitaGames", usuario.getPsVitaGames());
         ListaJogosFragment listaJogosFragment = new ListaJogosFragment();
         listaJogosFragment.setArguments(bundle);
         EstatisticasFragment estatisticasFragment = new EstatisticasFragment();
@@ -97,7 +104,7 @@ public class DetalheUsuarioActivity extends AppCompatActivity {
         lbGold.setText(String.valueOf(usuario.getGold()));
         lbSilver.setText(String.valueOf(usuario.getSilver()));
         lbBronze.setText(String.valueOf(usuario.getBronze()));
-        sbLevel.setProgress(usuario.getProgress());
+        pbLevel.setProgress(usuario.getProgress());
         lbLevel.setText(String.valueOf(usuario.getLevel()));
         Glide.with(this).load(usuario.getAvatar()).into(ivAvatar);
     }

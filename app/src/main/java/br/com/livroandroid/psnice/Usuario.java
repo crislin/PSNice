@@ -18,6 +18,69 @@ public class Usuario implements Serializable{
     private int silver;
     private int bronze;
     private int progress;
+    private int rankMundial;
+    private int rankPais;
+    private float eficiencia;
+    private int totalTrofeuPossivel;
+//    private int ps4Games;
+//    private int ps3Games;
+//    private int psVitaGames;
+//
+//    public int getPs4Games() {
+//        return ps4Games;
+//    }
+//
+//    public void setPs4Games(int ps4Games) {
+//        this.ps4Games = ps4Games;
+//    }
+
+//    public int getPs3Games() {
+//        return ps3Games;
+//    }
+//
+//    public void setPs3Games(int ps3Games) {
+//        this.ps3Games = ps3Games;
+//    }
+//
+//    public int getPsVitaGames() {
+//        return psVitaGames;
+//    }
+//
+//    public void setPsVitaGames(int psVitaGames) {
+//        this.psVitaGames = psVitaGames;
+//    }
+
+    public int getRankMundial() {
+        return rankMundial;
+    }
+
+    public void setRankMundial(int rankMundial) {
+        this.rankMundial = rankMundial;
+    }
+
+    public int getRankPais() {
+        return rankPais;
+    }
+
+    public void setRankPais(int rankPais) {
+        this.rankPais = rankPais;
+    }
+
+    public float getEficiencia() {
+        return eficiencia;
+    }
+
+    public void setEficiencia(float eficiencia) {
+        this.eficiencia = eficiencia;
+    }
+
+    public int getTotalTrofeuPossivel() {
+        return totalTrofeuPossivel;
+    }
+
+    public void setTotalTrofeuPossivel(int totalTrofeuPossivel) {
+        this.totalTrofeuPossivel = totalTrofeuPossivel;
+    }
 
     public String getPsnId() {
         return psnId;

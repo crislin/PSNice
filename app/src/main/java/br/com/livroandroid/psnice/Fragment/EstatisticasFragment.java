@@ -41,11 +41,26 @@ public class EstatisticasFragment extends Fragment {
     private TextView tvEficiencia;
     private TextView tvTotalTrofeus;
     private TextView tvTotalPossivel;
+    private TextView tvNumeroRankMundial;
+    private TextView tvNumeroRankPais;
+    private TextView tvPs4Porcentagem;
+    private TextView tvPs4Jogos;
+    private TextView tvPs3Porcentagem;
+    private TextView tvPs3Jogos;
+    private TextView tvPsVitaPorcentagem;
+    private TextView tvPsVitaJogos;
 
     private boolean rankAberto = false;
     private boolean gamesConsoleAberto = false;
     private boolean detalhesAberto = false;
     private int totalTrofeus;
+    private int rankMundial;
+    private int rankPais;
+    private float eficiencia;
+    private int totalTrofeusPossiveis;
+    private int ps3Games;
+    private int ps4Games;
+    private int psVitaGames;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -63,12 +78,27 @@ public class EstatisticasFragment extends Fragment {
         tvEficiencia = view.findViewById(R.id.tvEficiencia);
         tvTotalTrofeus = view.findViewById(R.id.tvTotalTrofeus);
         tvTotalPossivel = view.findViewById(R.id.tvTotalPossivel);
+        tvNumeroRankMundial = view.findViewById(R.id.tvNumeroRankMundial);
+        tvNumeroRankPais = view.findViewById(R.id.tvNumeroRankPais);
+        tvPs4Porcentagem = view.findViewById(R.id.tvPs4Porcentagem);
+        tvPs4Jogos = view.findViewById(R.id.tvPs4Jogos);
+        tvPs3Porcentagem = view.findViewById(R.id.tvPs3Porcentagem);
+        tvPs3Jogos = view.findViewById(R.id.tvPs3Jogos);
+        tvPsVitaPorcentagem = view.findViewById(R.id.tvPsVitaPorcentagem);
+        tvPsVitaJogos = view.findViewById(R.id.tvPsVitaJogos);
 
         ivExpandirRank.setOnClickListener(onClickLayoutRank());
         ivExpandirJogosConsole.setOnClickListener(onClickLayoutGamesConsole());
         ivExpandirDetalhes.setOnClickListener(onClickLayoutDetalhes());
 
         totalTrofeus = getArguments().getInt("totalTrofeus");
+        rankMundial = getArguments().getInt("rankMundial");
+        rankPais = getArguments().getInt("rankPais");
+        eficiencia = getArguments().getFloat("eficiencia");
+        totalTrofeusPossiveis = getArguments().getInt("totalTrofeusPossiveis");
+//        ps3Games = getArguments().getInt("ps3Games");
+//        ps4Games = getArguments().getInt("ps4Games");
+//        psVitaGames = getArguments().getInt("psVitaGames");
 
         carregaDetalhes();
 
@@ -131,5 +161,23 @@ public class EstatisticasFragment extends Fragment {
 
     private void carregaDetalhes(){
         tvTotalTrofeus.setText(String.valueOf(totalTrofeus));
+        tvEficiencia.setText(String.valueOf(eficiencia).replace(".", ","));
+        tvTotalPossivel.setText(String.valueOf(totalTrofeusPossiveis));
+        tvNumeroRankMundial.setText(String.valueOf(rankMundial));
+        tvNumeroRankPais.setText(String.valueOf(rankPais));
+//        tvPs3Jogos.setText(String.valueOf(ps3Games));
+//        tvPs4Jogos.setText(String.valueOf(ps4Games));
+//        tvPsVitaJogos.setText(String.valueOf(psVitaGames));
+//        calculaJogos();
     }
+
+//    private void calculaJogos(){
+//        int totalJogos = ps3Games + ps4Games + psVitaGames;
+//        int umPorCento = totalJogos / 100;
+//        tvPs4Porcentagem.setText(String.valueOf(ps4Games * umPorCento));
+//        tvPs3Porcentagem.setText(String.valueOf(ps3Games * umPorCento));
+//        tvPsVitaPorcentagem.setText(String.valueOf(psVitaGames * umPorCento));
+//        pbGamesConsole.setProgress(ps4Games * umPorCento);
+//        pbGamesConsole.setSecondaryProgress((ps4Games * umPorCento) + (ps3Games * umPorCento));
+//    }
 }

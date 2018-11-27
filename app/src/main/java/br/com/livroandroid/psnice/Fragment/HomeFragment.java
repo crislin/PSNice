@@ -91,6 +91,13 @@ public class HomeFragment extends Fragment {
         bundle.putString("psnId", psnId);
         bundle.putBoolean("logado", logado);
         bundle.putInt("totalTrofeus", usuario.getTotal());
+        bundle.putInt("rankMundial", usuario.getRankMundial());
+        bundle.putInt("rankPais", usuario.getRankPais());
+        bundle.putFloat("eficiencia", usuario.getEficiencia());
+        bundle.putInt("totalTrofeusPossiveis", usuario.getTotalTrofeuPossivel());
+//        bundle.putInt("ps3Games", usuario.getPs3Games());
+//        bundle.putInt("ps4Games", usuario.getPs4Games());
+//        bundle.putInt("psVitaGames", usuario.getPsVitaGames());
         ListaJogosFragment listaJogosFragment = new ListaJogosFragment();
         listaJogosFragment.setArguments(bundle);
         EstatisticasFragment estatisticasFragment = new EstatisticasFragment();
