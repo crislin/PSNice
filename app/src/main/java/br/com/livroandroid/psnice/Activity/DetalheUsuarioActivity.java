@@ -71,11 +71,14 @@ public class DetalheUsuarioActivity extends AppCompatActivity {
         AbasPerfilAdapter adapter = new AbasPerfilAdapter(getSupportFragmentManager());
         Bundle bundle = new Bundle();
         bundle.putString("psnId", psnId);
+        bundle.putInt("totalTrofeus", usuario.getTotal());
         ListaJogosFragment listaJogosFragment = new ListaJogosFragment();
         listaJogosFragment.setArguments(bundle);
+        EstatisticasFragment estatisticasFragment = new EstatisticasFragment();
+        estatisticasFragment.setArguments(bundle);
 
         adapter.adicionar( listaJogosFragment , "Jogos");
-        adapter.adicionar( new EstatisticasFragment(), "Estatisticas");
+        adapter.adicionar( estatisticasFragment, "Estatisticas");
 
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);

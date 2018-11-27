@@ -90,11 +90,14 @@ public class HomeFragment extends Fragment {
         Bundle bundle = new Bundle();
         bundle.putString("psnId", psnId);
         bundle.putBoolean("logado", logado);
+        bundle.putInt("totalTrofeus", usuario.getTotal());
         ListaJogosFragment listaJogosFragment = new ListaJogosFragment();
         listaJogosFragment.setArguments(bundle);
+        EstatisticasFragment estatisticasFragment = new EstatisticasFragment();
+        estatisticasFragment.setArguments(bundle);
 
         adapter.adicionar( listaJogosFragment , "Jogos");
-        adapter.adicionar( new EstatisticasFragment(), "Estatisticas");
+        adapter.adicionar( estatisticasFragment, "Estatisticas");
         if (logado){
             adapter.adicionar( new ListaAmigosFragment(), "Amigos");
         }

@@ -84,7 +84,7 @@ public class PSNiceService {
         List<Jogo> lista = new ArrayList<>();
         String jsonResponse;
         try {
-            jsonResponse = loadJSONFromAsset(context, "TodosOsJogos.json");
+            jsonResponse = loadJSONFromAsset(context, "TodosOsJogosv2.json");
             lista = Parser.parserTodosJogos(jsonResponse);
             if (lista != null){
                 return lista;
@@ -124,7 +124,7 @@ public class PSNiceService {
         List<Trofeu> lista = new ArrayList<>();
         String jsonResponse;
         try {
-            jsonResponse = loadJSONFromAsset(context, "TodosOsJogos.json");
+            jsonResponse = loadJSONFromAsset(context, "TodosOsJogosv2.json");
             lista = Parser.parserTrofeusVazio(jsonResponse, nomeJogo);
             if (lista != null){
                 return lista;
@@ -154,7 +154,7 @@ public class PSNiceService {
         List<Jogo> lista = new ArrayList<>();
         String jsonResponse;
         try {
-            jsonResponse = loadJSONFromAsset(context, "TodosJogosPesquisa.json");
+            jsonResponse = loadJSONFromAsset(context, "TodosJogosPesquisav2.json");
             lista = Parser.parserListaJogos(jsonResponse);
             if (lista != null){
                 return lista;
