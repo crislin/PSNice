@@ -28,7 +28,10 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.json.JSONException;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import br.com.livroandroid.psnice.Adapter.ComentarioAdapter;
@@ -107,6 +110,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
         Glide.with(this).load(imagem).into(imagemTrofeu);
         nomeTrofeu.setText(nome);
         descricaoTrofeu.setText(descricao);
+        tvTotalComentarios.setText(String.valueOf(0));
         if (earned){
             imagemTrofeu.setPadding(3,3,3,3);
             imagemTrofeu.setBackgroundColor(this.getResources().getColor(R.color.trophie_earned));
@@ -119,7 +123,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
         }
         comentarioAberto = false;
 
-        atualizaComentarios();
+//        atualizaComentarios();
         listaComentarios.clear();
     }
 
@@ -149,9 +153,8 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
             public void onClick(View v) {
 
                 if (psnId != null){
-                    Comentario comentario = new Comentario(psnId, etComentario.getText().toString(), "24-12-2018", 0);
+                    Comentario comentario = new Comentario(psnId, etComentario.getText().toString(), formaData(), 0);
                     etComentario.setText("");
-
                     enviarProFirebase(comentario);
 
                     TransitionManager.beginDelayedTransition(layoutPai);
@@ -199,6 +202,13 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
         mRecyclerView.setAdapter(listAdapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
+    }
+
+    public String formaData(){
+        Date currentTime = Calendar.getInstance().getTime();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        String dataFormatada = sdf.format(currentTime);
+        return dataFormatada;
     }
 
     public void enviarProFirebase(Comentario comentario){
