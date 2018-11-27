@@ -49,14 +49,17 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
     private LinearLayout campoComentario;
     private LinearLayout btEnviarComentario;
     private LinearLayout layoutPai;
+    private LinearLayout layoutConquistou;
     private EditText etComentario;
     private RecyclerView mRecyclerView;
     private TextView tvTotalComentarios;
+    private TextView tvDataConquistada;
 
     private String imagem;
     private String nome;
     private String nomeJogo;
     private String descricao;
+    private String dataConquistada;
     private String psnId;
     private boolean earned;
     private boolean logado;
@@ -85,6 +88,8 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
         mRecyclerView = findViewById(R.id.recycler_view_layour_recycler_comentarios);
         tvTotalComentarios = findViewById(R.id.tvTotalComentarios);
         layoutPai = findViewById(R.id.layoutPai);
+        layoutConquistou = findViewById(R.id.layoutConquistou);
+        tvDataConquistada = findViewById(R.id.tvDataConquistada);
 
         fabComentario.setOnClickListener(abrirCampoComentario());
         btEnviarComentario.setOnClickListener(enviarComentario());
@@ -98,6 +103,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
         nomeJogo = i.getExtras().getString("nomeJogo");
         psnId = i.getExtras().getString("psnId");
         logado = i.getExtras().getBoolean("logado");
+        dataConquistada = i.getExtras().getString("dataConquistada");
         firebaseStore = FirebaseFirestore.getInstance();
 
         mTrofeuReference = mComentarioReference.child(nomeJogo).child(nome);
@@ -114,6 +120,8 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
         if (earned){
             imagemTrofeu.setPadding(3,3,3,3);
             imagemTrofeu.setBackgroundColor(this.getResources().getColor(R.color.trophie_earned));
+            layoutConquistou.setVisibility(View.VISIBLE);
+            tvDataConquistada.setText(dataConquistada);
         }
         if (!earned){
             imagemTrofeu.setAlpha((float) 0.5);

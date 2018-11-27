@@ -97,6 +97,7 @@ public class TrofeusAdapter extends RecyclerView.Adapter<TrofeusListViewHolder> 
         i.putExtra("nomeJogo", nomeJogo);
         i.putExtra("psnId", psnId);
         i.putExtra("logado", logado);
+        i.putExtra("dataConquistada", listaTrofeus.get(posicion).getDayEarned() + "  " + listaTrofeus.get(posicion).getHourEarned());
         context.startActivity(i);
     }
 
