@@ -16,13 +16,14 @@ public class Comentario {
     private String avatar;
     private List<UsuarioLikes> votos;
 
-    public Comentario(String idComentario, String comentario, String data, int likes, int deslikes, String avatar) {
+    public Comentario(String idComentario, String comentario, String data, int likes, int deslikes, String avatar, List<UsuarioLikes> votos) {
         this.idComentario = idComentario;
         this.comentario = comentario;
         this.data = data;
         this.likes = likes;
         this.deslikes = deslikes;
         this.avatar = avatar;
+        this.votos = votos;
     }
 
     public Comentario(){}

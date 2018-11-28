@@ -39,6 +39,7 @@ import br.com.livroandroid.psnice.Comentario;
 import br.com.livroandroid.psnice.R;
 import br.com.livroandroid.psnice.Service.PSNiceService;
 import br.com.livroandroid.psnice.Usuario;
+import br.com.livroandroid.psnice.UsuarioLikes;
 
 public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEventListener {
 
@@ -168,7 +169,8 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
             public void onClick(View v) {
 
                 if (psnId != null){
-                    Comentario comentario = new Comentario(psnId, etComentario.getText().toString(), formaData(), 0, 0, usuario.getAvatar());
+                    List<UsuarioLikes> votos = new ArrayList<>();
+                    Comentario comentario = new Comentario(psnId, etComentario.getText().toString(), formaData(), 0, 0, usuario.getAvatar(),votos);
                     etComentario.setText("");
                     enviarProFirebase(comentario);
 
@@ -213,7 +215,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
     public void atualizaComentarios(){
         tvTotalComentarios.setText(String.valueOf(listaComentarios.size()));
 
-        ComentarioAdapter listAdapter = new ComentarioAdapter(listaComentarios, nomeJogo, nome, this);
+        ComentarioAdapter listAdapter = new ComentarioAdapter(listaComentarios, nomeJogo, nome, this, psnId);
         mRecyclerView.setAdapter(listAdapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);

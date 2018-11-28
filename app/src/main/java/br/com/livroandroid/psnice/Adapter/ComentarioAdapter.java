@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.google.firebase.database.DatabaseReference;
@@ -21,6 +22,7 @@ import java.util.List;
 import br.com.livroandroid.psnice.Activity.DetalheTrofeuActivity;
 import br.com.livroandroid.psnice.Comentario;
 import br.com.livroandroid.psnice.R;
+import br.com.livroandroid.psnice.UsuarioLikes;
 
 /**
  * Created by livetouch on 01/10/18.
@@ -31,17 +33,19 @@ public class ComentarioAdapter extends RecyclerView.Adapter<ComentarioListViewHo
     private List<Comentario> comentarios = new ArrayList<>();
     private String nomeJogo;
     private String nomeTrofeu;
+    private String psnId;
     private Context context;
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference mRootReference = firebaseDatabase.getReference();
     private DatabaseReference mComentarioReference = mRootReference.child("comentarios");
     private DatabaseReference mTrofeuReference;
 
-    public ComentarioAdapter(List<Comentario> comentarios, String nomeJogo, String nomeTrofeu, Context context){
+    public ComentarioAdapter(List<Comentario> comentarios, String nomeJogo, String nomeTrofeu, Context context, String psnId){
         this.comentarios = comentarios;
         this.nomeJogo = nomeJogo;
         this.nomeTrofeu = nomeTrofeu;
         this.context = context;
+        this.psnId = psnId;
     }
 
     @NonNull
@@ -60,29 +64,92 @@ public class ComentarioAdapter extends RecyclerView.Adapter<ComentarioListViewHo
         holder.tvLikes.setText(String.valueOf(comentarios.get(position).getLikes()));
         holder.tvDeslikes.setText(String.valueOf(comentarios.get(position).getDeslikes()));
         Glide.with(context).load(comentarios.get(position).getAvatar()).into(holder.miniAvatar);
+        if (comentarios.get(position).getLikes() > 0){
+            holder.tvLikes.setTextColor(context.getResources().getColor(R.color.Green_Playstation));
+        }
+        if (comentarios.get(position).getDeslikes() > 0){
+            holder.tvDeslikes.setTextColor(context.getResources().getColor(R.color.Red_Playstation));
+        }
+        if (jaVotou(position)){
+            if ("like".equalsIgnoreCase(retornaTipoVoto(position))){
+                holder.upvote.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_like_votado));
+            } else {
+                holder.downvote.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_deslike_votado));
+            }
+        }
 
 
         holder.upvote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int likes = comentarios.get(position).getLikes();
-                likes++;
-                comentarios.get(position).setLikes(likes);
-                mTrofeuReference.child(comentarios.get(position).getKey()).setValue(comentarios.get(position));
-                holder.tvLikes.setText(String.valueOf(comentarios.get(position).getLikes()));
+                if (!jaVotou(position)) {
+                    int likes = comentarios.get(position).getLikes();
+                    likes++;
+                    comentarios.get(position).setLikes(likes);
+                    List<UsuarioLikes> lista;
+                    if (comentarios.get(position).getVotos() != null) {
+                        lista = comentarios.get(position).getVotos();
+                    } else {
+                        lista = new ArrayList<>();
+                    }
+                    lista.add(new UsuarioLikes(psnId, "like"));
+                    comentarios.get(position).setVotos(lista);
+                    mTrofeuReference.child(comentarios.get(position).getKey()).setValue(comentarios.get(position));
+                    holder.tvLikes.setText(String.valueOf(comentarios.get(position).getLikes()));
+                    holder.upvote.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_like_votado));
+                    holder.tvLikes.setTextColor(context.getResources().getColor(R.color.Green_Playstation));
+                } else {
+                    Toast.makeText(context, "Já votou", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
         holder.downvote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int deslikes = comentarios.get(position).getDeslikes();
-                deslikes++;
-                comentarios.get(position).setDeslikes(deslikes);
-                mTrofeuReference.child(comentarios.get(position).getKey()).setValue(comentarios.get(position));
-                holder.tvDeslikes.setText(String.valueOf(comentarios.get(position).getDeslikes()));
+                if (!jaVotou(position)) {
+                    int deslikes = comentarios.get(position).getDeslikes();
+                    deslikes++;
+                    comentarios.get(position).setDeslikes(deslikes);
+                    List<UsuarioLikes> lista;
+                    if (comentarios.get(position).getVotos() != null) {
+                        lista = comentarios.get(position).getVotos();
+                    } else {
+                        lista = new ArrayList<>();
+                    }
+                    lista.add(new UsuarioLikes(psnId, "deslike"));
+                    comentarios.get(position).setVotos(lista);
+                    mTrofeuReference.child(comentarios.get(position).getKey()).setValue(comentarios.get(position));
+                    holder.tvDeslikes.setText(String.valueOf(comentarios.get(position).getDeslikes()));
+                    holder.downvote.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_deslike_votado));
+                    holder.tvDeslikes.setTextColor(context.getResources().getColor(R.color.Red_Playstation));
+                } else {
+                    Toast.makeText(context, "Já votou", Toast.LENGTH_SHORT).show();
+                }
             }
         });
+    }
+
+    public boolean jaVotou(int position){
+        if (comentarios.get(position).getVotos() != null) {
+            for (int i = 0; i < comentarios.get(position).getVotos().size(); i++) {
+                if (psnId.equalsIgnoreCase(comentarios.get(position).getVotos().get(i).getPsnId())) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public String retornaTipoVoto(int position){
+        if (comentarios.get(position).getVotos() != null) {
+            for (int i = 0; i < comentarios.get(position).getVotos().size(); i++) {
+                if (psnId.equalsIgnoreCase(comentarios.get(position).getVotos().get(i).getPsnId())) {
+                    return comentarios.get(position).getVotos().get(i).getTipoVoto();
+                }
+            }
+        }
+        return "";
     }
 
     @Override
