@@ -8,14 +8,18 @@ public class Comentario {
     private String idComentario;
     private String comentario;
     private String data;
-    private int totalVotos;
+    private int likes;
+    private int deslikes;
     private String key;
+    private String avatar;
 
-    public Comentario(String idComentario, String comentario, String data, int totalVotos) {
+    public Comentario(String idComentario, String comentario, String data, int likes, int deslikes, String avatar) {
         this.idComentario = idComentario;
         this.comentario = comentario;
         this.data = data;
-        this.totalVotos = totalVotos;
+        this.likes = likes;
+        this.deslikes = deslikes;
+        this.avatar = avatar;
     }
 
     public Comentario(){}
@@ -52,11 +56,27 @@ public class Comentario {
         this.data = data;
     }
 
-    public int getTotalVotos() {
-        return totalVotos;
+    public int getLikes() {
+        return likes;
     }
 
-    public void setTotalVotos(int totalVotos) {
-        this.totalVotos = totalVotos;
+    public void setLikes(int likes) {
+        this.likes = likes;
+    }
+
+    public int getDeslikes() {
+        return deslikes;
+    }
+
+    public void setDeslikes(int deslikes) {
+        this.deslikes = deslikes;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 }

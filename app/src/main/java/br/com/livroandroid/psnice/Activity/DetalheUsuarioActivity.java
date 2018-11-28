@@ -37,7 +37,6 @@ public class DetalheUsuarioActivity extends AppCompatActivity {
     private ImageView ivAvatar;
 
     private Usuario usuario;
-    private String psnId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

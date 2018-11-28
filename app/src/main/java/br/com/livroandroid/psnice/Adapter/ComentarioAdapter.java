@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -30,15 +31,17 @@ public class ComentarioAdapter extends RecyclerView.Adapter<ComentarioListViewHo
     private List<Comentario> comentarios = new ArrayList<>();
     private String nomeJogo;
     private String nomeTrofeu;
+    private Context context;
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference mRootReference = firebaseDatabase.getReference();
     private DatabaseReference mComentarioReference = mRootReference.child("comentarios");
     private DatabaseReference mTrofeuReference;
 
-    public ComentarioAdapter(List<Comentario> comentarios, String nomeJogo, String nomeTrofeu){
+    public ComentarioAdapter(List<Comentario> comentarios, String nomeJogo, String nomeTrofeu, Context context){
         this.comentarios = comentarios;
         this.nomeJogo = nomeJogo;
         this.nomeTrofeu = nomeTrofeu;
+        this.context = context;
     }
 
     @NonNull
@@ -54,29 +57,30 @@ public class ComentarioAdapter extends RecyclerView.Adapter<ComentarioListViewHo
         holder.tvIdComentario.setText(comentarios.get(position).getIdComentario());
         holder.tvComentario.setText(comentarios.get(position).getComentario());
         holder.tvData.setText(comentarios.get(position).getData());
-        holder.tvTotalUpDownVotes.setText(String.valueOf(comentarios.get(position).getTotalVotos()));
+        holder.tvLikes.setText(String.valueOf(comentarios.get(position).getLikes()));
+        holder.tvDeslikes.setText(String.valueOf(comentarios.get(position).getDeslikes()));
+        Glide.with(context).load(comentarios.get(position).getAvatar()).into(holder.miniAvatar);
 
 
         holder.upvote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TransitionManager.beginDelayedTransition(holder.layoutPaiVotos);
-                int votos = comentarios.get(position).getTotalVotos();
-                votos++;
-                comentarios.get(position).setTotalVotos(votos);
+                int likes = comentarios.get(position).getLikes();
+                likes++;
+                comentarios.get(position).setLikes(likes);
                 mTrofeuReference.child(comentarios.get(position).getKey()).setValue(comentarios.get(position));
-                holder.tvTotalUpDownVotes.setText(String.valueOf(comentarios.get(position).getTotalVotos()));
+                holder.tvLikes.setText(String.valueOf(comentarios.get(position).getLikes()));
             }
         });
 
         holder.downvote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int votos = comentarios.get(position).getTotalVotos();
-                votos--;
-                comentarios.get(position).setTotalVotos(votos);
+                int deslikes = comentarios.get(position).getDeslikes();
+                deslikes++;
+                comentarios.get(position).setDeslikes(deslikes);
                 mTrofeuReference.child(comentarios.get(position).getKey()).setValue(comentarios.get(position));
-                holder.tvTotalUpDownVotes.setText(String.valueOf(comentarios.get(position).getTotalVotos()));
+                holder.tvDeslikes.setText(String.valueOf(comentarios.get(position).getDeslikes()));
             }
         });
     }
@@ -91,19 +95,21 @@ class ComentarioListViewHolder extends RecyclerView.ViewHolder{
     public TextView tvIdComentario;
     public TextView tvComentario;
     public TextView tvData;
-    public TextView tvTotalUpDownVotes;
+    public TextView tvLikes;
+    public TextView tvDeslikes;
     public ImageView upvote;
     public ImageView downvote;
-    public LinearLayout layoutPaiVotos;
+    public ImageView miniAvatar;
 
     public ComentarioListViewHolder(View itemView) {
         super(itemView);
         tvIdComentario = itemView.findViewById(R.id.tvIdComentario);
         tvComentario = itemView.findViewById(R.id.tvComentario);
         tvData = itemView.findViewById(R.id.tvData);
-        tvTotalUpDownVotes = itemView.findViewById(R.id.tvTotalUpDownVotes);
+        tvLikes = itemView.findViewById(R.id.tvLikes);
+        tvDeslikes = itemView.findViewById(R.id.tvDeslikes);
         upvote = itemView.findViewById(R.id.upvote);
         downvote = itemView.findViewById(R.id.downvote);
-        layoutPaiVotos = itemView.findViewById(R.id.layoutPaiVotos);
+        miniAvatar = itemView.findViewById(R.id.miniAvatar);
     }
 }

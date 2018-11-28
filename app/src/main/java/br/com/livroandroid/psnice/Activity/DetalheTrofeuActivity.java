@@ -70,6 +70,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
     private DatabaseReference mRootReference = firebaseDatabase.getReference();
     private DatabaseReference mComentarioReference = mRootReference.child("comentarios");
     private DatabaseReference mTrofeuReference;
+    private Usuario usuario;
 
     public static List<Comentario> listaComentarios = new ArrayList<>();
 
@@ -105,6 +106,12 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
         logado = i.getExtras().getBoolean("logado");
         dataConquistada = i.getExtras().getString("dataConquistada");
         firebaseStore = FirebaseFirestore.getInstance();
+
+        try {
+            usuario = PSNiceService.getUsuario(this, psnId);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
         mTrofeuReference = mComentarioReference.child(nomeJogo).child(nome);
         mTrofeuReference.addChildEventListener(childEventListener);
@@ -161,7 +168,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
             public void onClick(View v) {
 
                 if (psnId != null){
-                    Comentario comentario = new Comentario(psnId, etComentario.getText().toString(), formaData(), 0);
+                    Comentario comentario = new Comentario(psnId, etComentario.getText().toString(), formaData(), 0, 0, usuario.getAvatar());
                     etComentario.setText("");
                     enviarProFirebase(comentario);
 
@@ -206,7 +213,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
     public void atualizaComentarios(){
         tvTotalComentarios.setText(String.valueOf(listaComentarios.size()));
 
-        ComentarioAdapter listAdapter = new ComentarioAdapter(listaComentarios, nomeJogo, nome);
+        ComentarioAdapter listAdapter = new ComentarioAdapter(listaComentarios, nomeJogo, nome, this);
         mRecyclerView.setAdapter(listAdapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
