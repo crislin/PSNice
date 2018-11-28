@@ -67,7 +67,8 @@
                         android:id="@+id/upvote"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_upvote"/>
+                        android:src="@drawable/ic_like_cinza_comentario"
+                        android:layout_marginRight="5dp"/>
                     <TextView
                         android:id="@+id/tvLikes"
                         android:layout_width="wrap_content"
@@ -80,7 +81,9 @@
                         android:id="@+id/downvote"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_downvote"/>
+                        android:src="@drawable/ic_deslike_cinza_comentario"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="8dp"/>
                     <TextView
                         android:id="@+id/tvDeslikes"
                         android:layout_width="wrap_content"
@@ -92,5 +95,13 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/Menu_Ativo"
+        android:layout_marginTop="3dp"
+        android:layout_marginHorizontal="20dp">
+
     </LinearLayout>
 </LinearLayout>

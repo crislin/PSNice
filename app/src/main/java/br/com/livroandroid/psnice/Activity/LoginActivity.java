@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -110,6 +111,9 @@ public class LoginActivity extends AppCompatActivity {
         for (int i = 0; i < listaCadastrados.size(); i++){
             if (etLogin.getText().toString().equalsIgnoreCase(listaCadastrados.get(i).getPsnId()) && etSenha.getText().toString().equalsIgnoreCase(listaCadastrados.get(i).getSenha())){
                 return true;
+            }
+            if (etLogin.getText().toString().equalsIgnoreCase(listaCadastrados.get(i).getPsnId()) && !etSenha.getText().toString().equalsIgnoreCase(listaCadastrados.get(i).getSenha())){
+                Toast.makeText(this, "Senha errada.", Toast.LENGTH_SHORT).show();
             }
         }
         return false;

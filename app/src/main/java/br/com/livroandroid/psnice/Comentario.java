@@ -1,5 +1,7 @@
 package br.com.livroandroid.psnice;
 
+import java.util.List;
+
 /**
  * Created by livetouch on 03/10/18.
  */
@@ -12,6 +14,7 @@ public class Comentario {
     private int deslikes;
     private String key;
     private String avatar;
+    private List<UsuarioLikes> votos;
 
     public Comentario(String idComentario, String comentario, String data, int likes, int deslikes, String avatar) {
         this.idComentario = idComentario;
@@ -78,5 +81,13 @@ public class Comentario {
 
     public void setAvatar(String avatar) {
         this.avatar = avatar;
+    }
+
+    public List<UsuarioLikes> getVotos() {
+        return votos;
+    }
+
+    public void setVotos(List<UsuarioLikes> votos) {
+        this.votos = votos;
     }
 }

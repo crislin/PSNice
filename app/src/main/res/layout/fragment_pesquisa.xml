@@ -20,7 +20,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="18sp"
-            android:backgroundTint="@color/Menu_Ativo"/>
+            android:backgroundTint="@color/Menu_Ativo"
+            android:hint="Digite nome do jogo"
+            android:textCursorDrawable="@drawable/cursor_color"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
