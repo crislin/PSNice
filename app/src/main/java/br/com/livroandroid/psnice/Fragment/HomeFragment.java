@@ -38,6 +38,7 @@ public class HomeFragment extends Fragment {
     private TextView lbSilver;
     private TextView lbBronze;
     private TextView lbLevel;
+    private TextView tvPorcentagem;
     private ImageView ivAvatar;
     private View view;
     private ProgressBar pbLevel;
@@ -62,6 +63,7 @@ public class HomeFragment extends Fragment {
         lbLevel = view.findViewById(R.id.lbLevel);
         ivAvatar = view.findViewById(R.id.ivAvatar);
         pbLevel = view.findViewById(R.id.pbLevel);
+        tvPorcentagem = view.findViewById(R.id.tvPorcentagem);
 
         psnId = getArguments().getString("psnId");
         logado = getArguments().getBoolean("logado");
@@ -121,6 +123,7 @@ public class HomeFragment extends Fragment {
         lbSilver.setText(String.valueOf(usuario.getSilver()));
         lbBronze.setText(String.valueOf(usuario.getBronze()));
         pbLevel.setProgress(usuario.getProgress());
+        tvPorcentagem.setText(String.valueOf(usuario.getProgress()));
         lbLevel.setText(String.valueOf(usuario.getLevel()));
         Glide.with(view).load(usuario.getAvatar()).into(ivAvatar);
     }

@@ -33,6 +33,7 @@ public class DetalheUsuarioActivity extends AppCompatActivity {
     private TextView lbSilver;
     private TextView lbBronze;
     private TextView lbLevel;
+    private TextView tvPorcentagem;
     private ProgressBar pbLevel;
     private ImageView ivAvatar;
 
@@ -53,6 +54,7 @@ public class DetalheUsuarioActivity extends AppCompatActivity {
         lbLevel = findViewById(R.id.lbLevel);
         pbLevel = findViewById(R.id.pbLevel);
         ivAvatar = findViewById(R.id.ivAvatar);
+        tvPorcentagem = findViewById(R.id.tvPorcentagem);
 
         Intent i = this.getIntent();
         String psnId = i.getExtras().getString("psnId");
@@ -109,6 +111,7 @@ public class DetalheUsuarioActivity extends AppCompatActivity {
         lbBronze.setText(String.valueOf(usuario.getBronze()));
         pbLevel.setProgress(usuario.getProgress());
         lbLevel.setText(String.valueOf(usuario.getLevel()));
+        tvPorcentagem.setText(String.valueOf(usuario.getProgress()));
         Glide.with(this).load(usuario.getAvatar()).into(ivAvatar);
     }
 }
