@@ -114,14 +114,29 @@
                         android:layout_marginVertical="6dp"/>
                 </LinearLayout>
             </LinearLayout>
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycler_view_layour_recycler_comentarios"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="60dp"
-                android:background="@color/Nao_Branco"
-                tools:listitem="@layout/lista_comentarios"
-                android:layout_marginHorizontal="5dp"/>
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_layour_recycler_comentarios"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="60dp"
+                    android:background="@color/Nao_Branco"
+                    tools:listitem="@layout/lista_comentarios"
+                    android:layout_marginHorizontal="5dp"/>
+                <LinearLayout
+                    android:id="@+id/llProgress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:visibility="gone">
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </FrameLayout>
+
         </LinearLayout>
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fabComentario"

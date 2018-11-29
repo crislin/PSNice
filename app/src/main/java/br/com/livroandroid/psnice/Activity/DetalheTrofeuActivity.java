@@ -51,6 +51,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
     private LinearLayout btEnviarComentario;
     private LinearLayout layoutPai;
     private LinearLayout layoutConquistou;
+    private LinearLayout llProgress;
     private EditText etComentario;
     private RecyclerView mRecyclerView;
     private TextView tvTotalComentarios;
@@ -92,6 +93,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
         layoutPai = findViewById(R.id.layoutPai);
         layoutConquistou = findViewById(R.id.layoutConquistou);
         tvDataConquistada = findViewById(R.id.tvDataConquistada);
+        llProgress = findViewById(R.id.llProgress);
 
         fabComentario.setOnClickListener(abrirCampoComentario());
         btEnviarComentario.setOnClickListener(enviarComentario());
@@ -119,6 +121,16 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
 
         mTrofeuReference = mComentarioReference.child(nomeJogo).child(nome);
         mTrofeuReference.addChildEventListener(childEventListener);
+        mTrofeuReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                llProgress.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 
     @Override
@@ -322,9 +334,12 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
 
         @Override
         public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+            llProgress.setVisibility(View.VISIBLE);
             Comentario comentario = dataSnapshot.getValue(Comentario.class);
             comentario.setKey(dataSnapshot.getKey());
-            listaComentarios.add(comentario);
+            if (!comentarioJaEstaNaLista(comentario)) {
+                listaComentarios.add(comentario);
+            }
             atualizaComentarios();
         }
 
@@ -348,5 +363,14 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
 
         }
     };
+
+    public boolean comentarioJaEstaNaLista(Comentario comentario){
+        for (int i = 0; i < listaComentarios.size(); i++){
+            if (listaComentarios.get(i).getData().equalsIgnoreCase(comentario.getData())){
+                return true;
+            }
+        }
+        return false;
+    }
 }
 
