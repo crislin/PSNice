@@ -130,7 +130,7 @@ public class CadastroActivity extends AppCompatActivity {
             etPsnId.setText("");
             etSenha.setText("");
             etConfirmarSenha.setText("");
-            Intent it = new Intent(CadastroActivity.this, MainActivity.class);
+            Intent it = new Intent(CadastroActivity.this, LoginActivity.class);
             startActivity(it);
         } else {
             Toast.makeText(CadastroActivity.this, "Id ja cadastrado", Toast.LENGTH_SHORT).show();

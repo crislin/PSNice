@@ -71,10 +71,14 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (loginHabilitado){
                     if (verificaSeCadastrado()){
+                        etLogin.setText("");
+                        etSenha.setText("");
                         Intent it = new Intent(LoginActivity.this, MainActivity.class);
                         it.putExtra("logado", true);
                         it.putExtra("psnId", etLogin.getText().toString());
                         startActivity(it);
+                    } else {
+                        Toast.makeText(LoginActivity.this, "Usuario não cadastrado", Toast.LENGTH_SHORT).show();
                     }
                 }
             }

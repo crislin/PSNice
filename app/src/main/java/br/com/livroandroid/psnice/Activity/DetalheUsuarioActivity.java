@@ -56,6 +56,8 @@ public class DetalheUsuarioActivity extends AppCompatActivity {
 
         Intent i = this.getIntent();
         String psnId = i.getExtras().getString("psnId");
+        String psnIdLogado = i.getExtras().getString("psnIdLogado");
+        boolean logado = i.getExtras().getBoolean("logado");
 
         try {
             usuario = PSNiceService.getUsuario(this, psnId);
@@ -70,6 +72,8 @@ public class DetalheUsuarioActivity extends AppCompatActivity {
         AbasPerfilAdapter adapter = new AbasPerfilAdapter(getSupportFragmentManager());
         Bundle bundle = new Bundle();
         bundle.putString("psnId", psnId);
+        bundle.putString("psnIdLogado", psnIdLogado);
+        bundle.putBoolean("logado", logado);
         bundle.putInt("totalTrofeus", usuario.getTotal());
         bundle.putInt("rankMundial", usuario.getRankMundial());
         bundle.putInt("rankPais", usuario.getRankPais());

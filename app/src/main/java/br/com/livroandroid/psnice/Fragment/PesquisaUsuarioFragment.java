@@ -32,6 +32,7 @@ public class PesquisaUsuarioFragment extends Fragment {
     private List<Usuario> listaUsuarios = new ArrayList<>();
     private List<Usuario> listaUsuariosParaRecycler = new ArrayList<>();
     private String psnId;
+    private boolean logado;
     private LinearLayout textoResultado;
 
     @Override
@@ -42,6 +43,7 @@ public class PesquisaUsuarioFragment extends Fragment {
         textoResultado = view.findViewById(R.id.textoResultado);
         mRecyclerView = view.findViewById(R.id.recycler_view_layour_recycler);
         psnId = getArguments().getString("psnId");
+        logado = getArguments().getBoolean("logado");
 
         try {
             listaUsuarios = PSNiceService.getListaUsuarios(view.getContext());
@@ -98,7 +100,7 @@ public class PesquisaUsuarioFragment extends Fragment {
     }
 
     public void mostraLista(List<Usuario> lista){
-        UsuariosAdapter listAdapter = new UsuariosAdapter(getActivity(), lista);
+        UsuariosAdapter listAdapter = new UsuariosAdapter(getActivity(), lista, psnId, logado);
         mRecyclerView.setAdapter(listAdapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(layoutManager);

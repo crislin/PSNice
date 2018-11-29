@@ -24,6 +24,7 @@ public class ListaJogosFragment extends Fragment {
     RecyclerView mRecyclerView;
     private List<Jogo> listaDosJogos = new ArrayList<>();
     private String psnId;
+    private String psnIdLogado;
     private boolean logado;
 
     @Override
@@ -31,6 +32,9 @@ public class ListaJogosFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_lista_jogos, container, false);
 
         mRecyclerView = view.findViewById(R.id.recycler_view_layour_recycler);
+        if (getArguments().getString("psnIdLogado") != null){
+            psnIdLogado = getArguments().getString("psnIdLogado");
+        }
         psnId = getArguments().getString("psnId");
         logado = getArguments().getBoolean("logado");
 
@@ -40,7 +44,12 @@ public class ListaJogosFragment extends Fragment {
             e.printStackTrace();
         }
 
-        JogosAdapter listAdapter = new JogosAdapter(getActivity(), listaDosJogos, psnId, logado);
+        JogosAdapter listAdapter;
+        if (psnIdLogado == null) {
+            listAdapter = new JogosAdapter(getActivity(), listaDosJogos, psnId, logado);
+        } else {
+            listAdapter = new JogosAdapter(getActivity(), listaDosJogos, psnId, logado, psnIdLogado);
+        }
         mRecyclerView.setAdapter(listAdapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(layoutManager);

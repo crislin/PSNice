@@ -34,6 +34,7 @@ import static android.support.v4.content.ContextCompat.startActivity;
 public class JogosAdapter extends RecyclerView.Adapter<JogosListViewHolder> {
 
     private String psnId;
+    private String psnIdLogado;
     private Context context;
     private boolean logado;
     private List<Jogo> listaDosJogos = new ArrayList<>();
@@ -43,6 +44,14 @@ public class JogosAdapter extends RecyclerView.Adapter<JogosListViewHolder> {
         this.listaDosJogos = listaDosJogos;
         this.psnId = psnId;
         this.logado = logado;
+    }
+
+    public JogosAdapter(Context context,List<Jogo> listaDosJogos, String psnId, boolean logado, String psnIdLogado) {
+        this.psnId = psnId;
+        this.psnIdLogado = psnIdLogado;
+        this.context = context;
+        this.logado = logado;
+        this.listaDosJogos = listaDosJogos;
     }
 
     public JogosAdapter(Context c, List<Jogo> listaDosJogos){
@@ -85,6 +94,7 @@ public class JogosAdapter extends RecyclerView.Adapter<JogosListViewHolder> {
         i.putExtra("imagem", listaDosJogos.get(position).getImagem());
         i.putExtra("psnId", psnId);
         i.putExtra("logado", logado);
+        i.putExtra("psnIdLogado", psnIdLogado);
         i.putExtra("usuarioTemEsseJogo", true);
         i.putExtra("totalTrofeus", String.valueOf(listaDosJogos.get(position).getGameTotal()));
         i.putExtra("desenvolvedora", listaDosJogos.get(position).getDesenvolvedora());

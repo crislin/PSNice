@@ -26,11 +26,15 @@ import br.com.livroandroid.psnice.Usuario;
 public class UsuariosAdapter extends RecyclerView.Adapter<UsuariosListViewHolder> {
 
     Context context;
+    private boolean logado;
+    private String psnIdLogado;
     private List<Usuario> listaUsuarios = new ArrayList<>();
 
-    public UsuariosAdapter(Context context, List<Usuario> listaUsuarios){
+    public UsuariosAdapter(Context context, List<Usuario> listaUsuarios, String psnIdLogado, boolean logado){
         this.context = context;
         this.listaUsuarios = listaUsuarios;
+        this.psnIdLogado = psnIdLogado;
+        this.logado = logado;
     }
 
     @NonNull
@@ -57,6 +61,8 @@ public class UsuariosAdapter extends RecyclerView.Adapter<UsuariosListViewHolder
     private void openDetailActivity(int position) {
         Intent i = new Intent(context, DetalheUsuarioActivity.class);
         i.putExtra("psnId", listaUsuarios.get(position).getPsnId());
+        i.putExtra("psnIdLogado", psnIdLogado);
+        i.putExtra("logado", logado);
         context.startActivity(i);
     }
 

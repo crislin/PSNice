@@ -104,6 +104,9 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
         earned = i.getExtras().getBoolean("earned");
         nomeJogo = i.getExtras().getString("nomeJogo");
         psnId = i.getExtras().getString("psnId");
+        if (i.getExtras().getString("psnIdLogado") != null){
+            psnId = i.getExtras().getString("psnIdLogado");
+        }
         logado = i.getExtras().getBoolean("logado");
         dataConquistada = i.getExtras().getString("dataConquistada");
         firebaseStore = FirebaseFirestore.getInstance();

@@ -65,6 +65,7 @@ public class LogarComIdActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (updateHabilitado){
                     if (verificaId(etPsnId.getText().toString())){
+                        etPsnId.setText("");
                         Intent it = new Intent(LogarComIdActivity.this, MainActivity.class);
                         it.putExtra("logado", false);
                         it.putExtra("psnId", etPsnId.getText().toString());

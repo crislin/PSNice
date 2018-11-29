@@ -84,7 +84,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="25dp"
                     android:orientation="horizontal"
-                    android:background="@color/Nao_Branco">
+                    android:background="@color/Nao_Branco"
+                    android:layout_marginHorizontal="5dp">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -118,8 +119,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="60dp"
-                android:background="#FFFFFF"
-                tools:listitem="@layout/lista_comentarios" />
+                android:background="@color/Nao_Branco"
+                tools:listitem="@layout/lista_comentarios"
+                android:layout_marginHorizontal="5dp"/>
         </LinearLayout>
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fabComentario"
@@ -128,7 +130,7 @@
             android:layout_gravity="end|bottom"
             android:layout_margin="10dp"
             android:src="@drawable/ic_comentario"
-            app:backgroundTint="#2b81e4"
+            app:backgroundTint="@color/Menu_Ativo"
             android:visibility="gone"/>
     </FrameLayout>
     <LinearLayout
