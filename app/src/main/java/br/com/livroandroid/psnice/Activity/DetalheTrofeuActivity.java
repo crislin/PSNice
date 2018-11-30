@@ -123,7 +123,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
         mTrofeuReference.addChildEventListener(childEventListener);
         mTrofeuReference.addListenerForSingleValueEvent(new ValueEventListener() {
             public void onDataChange(DataSnapshot dataSnapshot) {
-                llProgress.setVisibility(View.GONE);
+//                llProgress.setVisibility(View.GONE);
             }
 
             @Override
@@ -334,7 +334,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
 
         @Override
         public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-            llProgress.setVisibility(View.VISIBLE);
+//            llProgress.setVisibility(View.VISIBLE);
             Comentario comentario = dataSnapshot.getValue(Comentario.class);
             comentario.setKey(dataSnapshot.getKey());
             if (!comentarioJaEstaNaLista(comentario)) {
