@@ -31,7 +31,7 @@ import br.com.livroandroid.psnice.UsuarioLikes;
 public class ComentarioAdapter extends RecyclerView.Adapter<ComentarioListViewHolder> {
 
     private List<Comentario> comentarios = new ArrayList<>();
-    private String nomeJogo;
+    private String idJogo;
     private String nomeTrofeu;
     private String psnId;
     private Context context;
@@ -40,9 +40,9 @@ public class ComentarioAdapter extends RecyclerView.Adapter<ComentarioListViewHo
     private DatabaseReference mComentarioReference = mRootReference.child("comentarios");
     private DatabaseReference mTrofeuReference;
 
-    public ComentarioAdapter(List<Comentario> comentarios, String nomeJogo, String nomeTrofeu, Context context, String psnId){
+    public ComentarioAdapter(List<Comentario> comentarios, String idJogo, String nomeTrofeu, Context context, String psnId){
         this.comentarios = comentarios;
-        this.nomeJogo = nomeJogo;
+        this.idJogo = idJogo;
         this.nomeTrofeu = nomeTrofeu;
         this.context = context;
         this.psnId = psnId;
@@ -52,7 +52,7 @@ public class ComentarioAdapter extends RecyclerView.Adapter<ComentarioListViewHo
     @Override
     public ComentarioListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.lista_comentarios, parent, false);
-        mTrofeuReference = mComentarioReference.child(nomeJogo).child(nomeTrofeu);
+        mTrofeuReference = mComentarioReference.child(idJogo).child(nomeTrofeu);
         return new ComentarioListViewHolder(view);
     }
 

@@ -59,7 +59,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
 
     private String imagem;
     private String nome;
-    private String nomeJogo;
+    private String idJogo;
     private String descricao;
     private String dataConquistada;
     private String psnId;
@@ -104,7 +104,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
         nome = i.getExtras().getString("nomeTrofeu");
         descricao = i.getExtras().getString("descricao");
         earned = i.getExtras().getBoolean("earned");
-        nomeJogo = i.getExtras().getString("nomeJogo");
+        idJogo = i.getExtras().getString("idJogo");
         psnId = i.getExtras().getString("psnId");
         if (i.getExtras().getString("psnIdLogado") != null){
             psnId = i.getExtras().getString("psnIdLogado");
@@ -119,7 +119,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
             e.printStackTrace();
         }
 
-        mTrofeuReference = mComentarioReference.child(nomeJogo).child(nome);
+        mTrofeuReference = mComentarioReference.child(idJogo).child(nome);
         mTrofeuReference.addChildEventListener(childEventListener);
         mTrofeuReference.addListenerForSingleValueEvent(new ValueEventListener() {
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -230,7 +230,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
     public void atualizaComentarios(){
         tvTotalComentarios.setText(String.valueOf(listaComentarios.size()));
 
-        ComentarioAdapter listAdapter = new ComentarioAdapter(listaComentarios, nomeJogo, nome, this, psnId);
+        ComentarioAdapter listAdapter = new ComentarioAdapter(listaComentarios, idJogo, nome, this, psnId);
         mRecyclerView.setAdapter(listAdapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
@@ -244,7 +244,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
     }
 
     public void enviarProFirebase(Comentario comentario){
-        DatabaseReference mComentReference = mComentarioReference.child(nomeJogo).child(nome);
+        DatabaseReference mComentReference = mComentarioReference.child(idJogo).child(nome);
 //        mComentReference.setValue(comentario);
 
         mComentReference.push().setValue(comentario);

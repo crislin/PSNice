@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     tools:context="br.com.livroandroid.psnice.Fragment.LogoutFragment"
     android:orientation="vertical"
-    android:background="@drawable/bg_poligonos"
+    android:background="@drawable/bg_poligonos_v3"
     android:gravity="center">
     <LinearLayout
         android:id="@+id/btLogout"

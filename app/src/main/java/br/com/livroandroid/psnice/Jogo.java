@@ -9,7 +9,11 @@ import java.util.List;
 public class Jogo {
     private String nome;
     private String imagem;
+    private String idJogo;
     private boolean hasPlatinum;
+    private boolean isAPs4Game;
+    private boolean isAPs3Game;
+    private boolean isAPsVitaGame;
     private int gamePlatinum;
     private int gameGold;
     private int gameSilver;
@@ -21,6 +25,38 @@ public class Jogo {
     private String desenvolvedora;
     private String genero;
     private String quantidadeJogadores;
+
+    public String getIdJogo() {
+        return idJogo;
+    }
+
+    public void setIdJogo(String idJogo) {
+        this.idJogo = idJogo;
+    }
+
+    public boolean isAPs4Game() {
+        return isAPs4Game;
+    }
+
+    public void setAPs4Game(boolean APs4Game) {
+        isAPs4Game = APs4Game;
+    }
+
+    public boolean isAPs3Game() {
+        return isAPs3Game;
+    }
+
+    public void setAPs3Game(boolean APs3Game) {
+        isAPs3Game = APs3Game;
+    }
+
+    public boolean isAPsVitaGame() {
+        return isAPsVitaGame;
+    }
+
+    public void setAPsVitaGame(boolean APsVitaGame) {
+        isAPsVitaGame = APsVitaGame;
+    }
 
     public String getDesenvolvedora() {
         return desenvolvedora;

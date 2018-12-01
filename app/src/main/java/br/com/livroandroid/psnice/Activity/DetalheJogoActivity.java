@@ -51,6 +51,7 @@ public class DetalheJogoActivity extends AppCompatActivity {
         Intent i = this.getIntent();
         String imagem = i.getExtras().getString("imagem");
         String nome = i.getExtras().getString("nome");
+        String idJogo = i.getExtras().getString("idJogo");
         String psnIdLogado = null;
         if (i.getExtras().getString("psnIdLogado") != null){
             psnIdLogado = i.getExtras().getString("psnIdLogado");
@@ -83,9 +84,9 @@ public class DetalheJogoActivity extends AppCompatActivity {
 
         TrofeusAdapter listAdapter;
         if (psnIdLogado == null){
-            listAdapter = new TrofeusAdapter(this, listaTrofeus, nome, psnId, logado);
+            listAdapter = new TrofeusAdapter(this, listaTrofeus, idJogo, psnId, logado);
         } else {
-            listAdapter = new TrofeusAdapter(this, listaTrofeus, nome, psnId, logado, psnIdLogado);
+            listAdapter = new TrofeusAdapter(this, listaTrofeus, idJogo, psnId, logado, psnIdLogado);
         }
 
         mRecyclerView.setAdapter(listAdapter);

@@ -68,6 +68,7 @@ public class JogosPesquisaAdapter extends RecyclerView.Adapter<JogosPesquisaList
         i.putExtra("logado", logado);
         i.putExtra("psnId", psnId);
         i.putExtra("nome", listaJogos.get(position).getNome());
+        i.putExtra("idJogo", listaJogos.get(position).getIdJogo());
         i.putExtra("usuarioTemEsseJogo", retornaSeTemOJogo(position));
         i.putExtra("totalTrofeus", String.valueOf(listaJogos.get(position).getGameTotal()));
         i.putExtra("desenvolvedora", listaJogos.get(position).getDesenvolvedora());

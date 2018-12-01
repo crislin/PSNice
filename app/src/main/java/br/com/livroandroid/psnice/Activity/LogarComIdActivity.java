@@ -170,4 +170,9 @@ public class LogarComIdActivity extends AppCompatActivity {
 
         }
     };
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }

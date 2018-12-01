@@ -50,6 +50,7 @@ public class Parser {
             JSONObject jsonObjectJogo = jsonArray.getJSONObject(i);
             jogo.setNome(jsonObjectJogo.optString("nome"));
             jogo.setImagem(jsonObjectJogo.optString("imagem"));
+            jogo.setIdJogo(jsonObjectJogo.optString("id"));
             jogo.setHasPlatinum(Boolean.parseBoolean(jsonObjectJogo.optString("has_platinum")));
             jogo.setGamePlatinum(Integer.valueOf(jsonObjectJogo.optString("game_platinum")));
             jogo.setGameGold(Integer.valueOf(jsonObjectJogo.optString("game_gold")));
@@ -75,6 +76,7 @@ public class Parser {
             JSONObject jsonObjectJogo = jsonArray.getJSONObject(i);
             jogo.setNome(jsonObjectJogo.optString("nome"));
             jogo.setImagem(jsonObjectJogo.optString("imagem"));
+            jogo.setIdJogo(jsonObjectJogo.optString("id"));
             jogo.setHasPlatinum(Boolean.parseBoolean(jsonObjectJogo.optString("has_platinum")));
             jogo.setGamePlatinum(Integer.valueOf(jsonObjectJogo.optString("game_platinum")));
             jogo.setGameGold(Integer.valueOf(jsonObjectJogo.optString("game_gold")));
@@ -114,6 +116,7 @@ public class Parser {
             Jogo jogo = new Jogo();
             JSONObject jsonObjectJogo = jsonArray.getJSONObject(i);
             jogo.setNome(jsonObjectJogo.optString("nome"));
+            jogo.setIdJogo(jsonObjectJogo.optString("id"));
             jogo.setImagem(jsonObjectJogo.optString("imagem"));
             jogo.setGameTotal(Integer.valueOf(jsonObjectJogo.optString("game_total")));
             jogo.setDesenvolvedora(jsonObjectJogo.optString("developer"));

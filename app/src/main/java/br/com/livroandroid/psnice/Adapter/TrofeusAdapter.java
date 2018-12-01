@@ -30,24 +30,24 @@ import br.com.livroandroid.psnice.Trofeu;
 public class TrofeusAdapter extends RecyclerView.Adapter<TrofeusListViewHolder> {
 
     private Context context;
-    private String nomeJogo;
+    private String idJogo;
     private String psnId;
     private String psnIdLogado;
     private boolean logado;
     private List<Trofeu> listaTrofeus = new ArrayList<>();
 
-    public TrofeusAdapter(Context c, List<Trofeu> listaTrofeus, String nomeJogo, String psnId, boolean logado){
+    public TrofeusAdapter(Context c, List<Trofeu> listaTrofeus, String idJogo, String psnId, boolean logado){
         context = c;
         this.listaTrofeus = listaTrofeus;
-        this.nomeJogo = nomeJogo;
+        this.idJogo = idJogo;
         this.psnId = psnId;
         this.logado = logado;
     }
 
-    public TrofeusAdapter(Context c, List<Trofeu> listaTrofeus, String nomeJogo, String psnId, boolean logado, String psnIdLogado){
+    public TrofeusAdapter(Context c, List<Trofeu> listaTrofeus, String idJogo, String psnId, boolean logado, String psnIdLogado){
         context = c;
         this.listaTrofeus = listaTrofeus;
-        this.nomeJogo = nomeJogo;
+        this.idJogo = idJogo;
         this.psnId = psnId;
         this.logado = logado;
         this.psnIdLogado = psnIdLogado;
@@ -104,7 +104,7 @@ public class TrofeusAdapter extends RecyclerView.Adapter<TrofeusListViewHolder> 
         i.putExtra("nomeTrofeu", listaTrofeus.get(posicion).getNome());
         i.putExtra("descricao", listaTrofeus.get(posicion).getDescricao());
         i.putExtra("earned", listaTrofeus.get(posicion).getEarned());
-        i.putExtra("nomeJogo", nomeJogo);
+        i.putExtra("idJogo", idJogo);
         i.putExtra("psnId", psnId);
         i.putExtra("logado", logado);
         i.putExtra("psnIdLogado", psnIdLogado);
