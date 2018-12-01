@@ -44,6 +44,7 @@ import br.com.livroandroid.psnice.UsuarioLikes;
 public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEventListener {
 
     private ImageView imagemTrofeu;
+    private ImageView ivMiniTrofeu;
     private TextView nomeTrofeu;
     private TextView descricaoTrofeu;
     private FloatingActionButton fabComentario;
@@ -59,6 +60,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
 
     private String imagem;
     private String nome;
+    private String tipo;
     private String idJogo;
     private String descricao;
     private String dataConquistada;
@@ -94,6 +96,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
         layoutConquistou = findViewById(R.id.layoutConquistou);
         tvDataConquistada = findViewById(R.id.tvDataConquistada);
         llProgress = findViewById(R.id.llProgress);
+        ivMiniTrofeu = findViewById(R.id.ivMiniTrofeu);
 
         fabComentario.setOnClickListener(abrirCampoComentario());
         btEnviarComentario.setOnClickListener(enviarComentario());
@@ -102,6 +105,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
         Intent i = this.getIntent();
         imagem = i.getExtras().getString("imagem");
         nome = i.getExtras().getString("nomeTrofeu");
+        tipo = i.getExtras().getString("tipo");
         descricao = i.getExtras().getString("descricao");
         earned = i.getExtras().getBoolean("earned");
         idJogo = i.getExtras().getString("idJogo");
@@ -112,6 +116,19 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
         logado = i.getExtras().getBoolean("logado");
         dataConquistada = i.getExtras().getString("dataConquistada");
         firebaseStore = FirebaseFirestore.getInstance();
+
+        if ("bronze".equalsIgnoreCase(tipo)){
+            ivMiniTrofeu.setImageDrawable(getResources().getDrawable(R.drawable.trofeu_bronze));
+        }
+        if ("silver".equalsIgnoreCase(tipo)){
+            ivMiniTrofeu.setImageDrawable(getResources().getDrawable(R.drawable.trofeu_prata));
+        }
+        if ("gold".equalsIgnoreCase(tipo)){
+            ivMiniTrofeu.setImageDrawable(getResources().getDrawable(R.drawable.trofeu_ouro));
+        }
+        if ("platinum".equalsIgnoreCase(tipo)){
+            ivMiniTrofeu.setImageDrawable(getResources().getDrawable(R.drawable.trofeu_platina));
+        }
 
         try {
             usuario = PSNiceService.getUsuario(this, psnId);

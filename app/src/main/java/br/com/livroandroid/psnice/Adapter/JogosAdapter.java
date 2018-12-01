@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -74,6 +75,15 @@ public class JogosAdapter extends RecyclerView.Adapter<JogosListViewHolder> {
         holder.totalTrofeus.setText(String.valueOf(listaDosJogos.get(position).getGameTotal()));
         holder.porcentagem.setText(String.valueOf(listaDosJogos.get(position).getGameProgress()));
         holder.pbPorcentagem.setProgress(listaDosJogos.get(position).getGameProgress());
+        if (listaDosJogos.get(position).isAPs4Game()){
+            holder.tagPs4.setVisibility(View.VISIBLE);
+        }
+        if (listaDosJogos.get(position).isAPs3Game()){
+            holder.tagPs3.setVisibility(View.VISIBLE);
+        }
+        if (listaDosJogos.get(position).isAPsVitaGame()){
+            holder.tagPsVita.setVisibility(View.VISIBLE);
+        }
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,6 +104,9 @@ public class JogosAdapter extends RecyclerView.Adapter<JogosListViewHolder> {
         i.putExtra("imagem", listaDosJogos.get(position).getImagem());
         i.putExtra("psnId", psnId);
         i.putExtra("idJogo", listaDosJogos.get(position).getIdJogo());
+        i.putExtra("tagPs4", listaDosJogos.get(position).isAPs4Game());
+        i.putExtra("tagPs3", listaDosJogos.get(position).isAPs3Game());
+        i.putExtra("tagPsVita", listaDosJogos.get(position).isAPsVitaGame());
         i.putExtra("logado", logado);
         i.putExtra("psnIdLogado", psnIdLogado);
         i.putExtra("usuarioTemEsseJogo", true);
@@ -112,6 +125,9 @@ class JogosListViewHolder extends RecyclerView.ViewHolder{
     public TextView totalTrofeus;
     public TextView porcentagem;
     public ProgressBar pbPorcentagem;
+    public LinearLayout tagPs4;
+    public LinearLayout tagPs3;
+    public LinearLayout tagPsVita;
 
     public  JogosListViewHolder(View itemView){
         super(itemView);
@@ -121,5 +137,8 @@ class JogosListViewHolder extends RecyclerView.ViewHolder{
         totalTrofeus = itemView.findViewById(R.id.tvTotalTrofeus);
         porcentagem = itemView.findViewById(R.id.porcentagem);
         pbPorcentagem = itemView.findViewById(R.id.pbPorcentagem);
+        tagPs4 = itemView.findViewById(R.id.tagPs4);
+        tagPs3 = itemView.findViewById(R.id.tagPs3);
+        tagPsVita = itemView.findViewById(R.id.tagPsVita);
     }
 }

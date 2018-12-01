@@ -1,411 +1,27 @@
 {
-    "country": "se",
-    "avatar": "https://i.psnprofiles.com/avatars/m/G690bff169.png",
-    "psnplus": "0",
-    "points": "45637",
-    "level": "12",
-    "base": "57869",
-    "next": "100000",
-    "progress": "35",
-    "platinum": "3",
-    "gold": "14",
-    "silver": "29",
-    "bronze": "116",
-    "total": "162",
-    "total_game_ps4": "25",
-    "total_game_ps3": "10",
-    "total_game_vita": "0",
-    "psn_id": "ferryJans",
-    "completion_percentage": "9.45",
-    "worldrank": "108908",
-    "regionrank": "12097",
-    "total_possible_trophies": "17867",
+    "country": "hk",
+    "avatar": "http://www.psnleaderboard.com/images/avatars/UP20241107S01_0627921452B0A8D30701_L.png",
+    "psnplus": "1",
+    "points": "8685",
+    "level": "8",
+    "base": "8000",
+    "next": "10000",
+    "progress": "34",
+    "platinum": "15",
+    "gold": "78",
+    "silver": "204",
+    "bronze": "890",
+    "total": "1187",
+    "total_game_ps4": "43",
+    "total_game_ps3": "57",
+    "total_game_vita": "10",
+    "psn_id": "AG-WarFighter",
+    "completion_percentage": "45.10",
+    "worldrank": "14078",
+    "regionrank": "1890",
+    "total_possible_trophies": "1278",
     "success": "1",
     "jogos": [
-    {
-        "nome": "Resident Evil",
-        "id": "CUSA01117",
-        "ps4_label": "true",
-        "ps3_label": "true",
-        "psv_label": "false",
-        "developer": "Capcom",
-        "genre": "Adventure",
-        "players_upto": "1",
-        "imagem": "https://i.imgur.com/lFzz9yJ.png",
-        "game_platinum": "0",
-        "game_gold": "0",
-        "game_silver": "0",
-        "game_bronze": "10",
-        "game_total": "45",
-        "game_progress": "15",
-		"release_date": "20/01/2015",
-        "has_platinum": "false",
-        "game_total_earned": "10",
-        "trofeus": [
-        {
-            "nome": "Platinum Splattin' 'Em!",
-            "descricao": "Earn all trophies.",
-            "imagem_trofeu": "https://i.imgur.com/GxJpxT7.png",
-            "tipo": "platinum",
-            "hidden": "false",
-            "earned": "false",
-            "day_earned": "",
-            "hour_earned": ""
-        },
-        {
-            "nome": "Not in the Mood to Die",
-            "descricao": "Finish the game on Easy difficulty or higher.",
-            "imagem_trofeu": "https://i.imgur.com/HVmcHqc.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "false",
-            "day_earned": "",
-            "hour_earned": ""
-        },
-        {
-            "nome": "Take that, Zombies!",
-            "descricao": "Finish the game on Normal difficulty or higher.",
-            "imagem_trofeu": "https://i.imgur.com/5JJgxZQ.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "false",
-            "day_earned": "",
-            "hour_earned": ""
-        },
-        {
-            "nome": "Herbicide",
-            "descricao": "Defeat Plant 42 using Chris.",
-            "imagem_trofeu": "https://i.imgur.com/fxCVXY4.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "false",
-            "day_earned": "",
-            "hour_earned": ""
-        },
-        {
-            "nome": "An End to a Poor Girl's Misery",
-            "descricao": "Defeat Lisa Trevor using Chris.",
-            "imagem_trofeu": "https://i.imgur.com/a9DxFxz.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "false",
-            "day_earned": "",
-            "hour_earned": ""
-        },
-        {
-            "nome": "Grave Digger",
-            "descricao": "Defeat a Crimson Head prototype1 using Jill.",
-            "imagem_trofeu": "https://i.imgur.com/xRhjh69.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "24/03/2018",
-            "hour_earned": "18:00:57"
-        },
-        {
-            "nome": "The Key Master",
-            "descricao": "Obtain the Helmet Key using Jill.",
-            "imagem_trofeu": "https://i.imgur.com/HIxrqnd.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "24/03/2018",
-            "hour_earned": "19:59:30"
-        },
-        {
-            "nome": "Alpha Team's Finest",
-            "descricao": "Finish the game using Jill.",
-            "imagem_trofeu": "https://i.imgur.com/SwuD0qk.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "false",
-            "day_earned": "",
-            "hour_earned": ""
-        },
-        {
-            "nome": "Who's the Hunter Now?",
-            "descricao": "Defeat a Hunter.",
-            "imagem_trofeu": "https://i.imgur.com/T2bCuys.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "24/03/2018",
-            "hour_earned": "20:17:49"
-        },
-        {
-            "nome": "Starsenal",
-            "descricao": "Obtain all weapons (must load grenade launcher with all shell types).",
-            "imagem_trofeu": "https://i.imgur.com/SNWxIXN.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "false",
-            "day_earned": "",
-            "hour_earned": ""
-        }]
-    },
-    {
-        "nome": "SINE MORA",
-        "id": "CUSA01065",
-        "ps4_label": "true",
-        "ps3_label": "false",
-        "psv_label": "true",
-        "developer": "Grasshopper Manufacture, Digital Reality",
-        "genre": "Shooter",
-        "players_upto": "1",
-        "imagem": "https://i.imgur.com/j3XvAif.png",
-        "game_platinum": "0",
-        "game_gold": "1",
-        "game_silver": "2",
-        "game_bronze": "9",
-        "game_total": "12",
-        "game_progress": "100",
-		"release_date": "21/11/2012",
-		"game_total_earned": "12",
-        "has_platinum": "false",
-        "trofeus": [
-        {
-            "nome": "Dies Irae",
-            "descricao": "Promoted to General of the Air Force",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/94c2f1/trophies/10M3654c2.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "29/09/2018",
-            "hour_earned": "19:00:08"
-        },
-        {
-            "nome": "Fortiter Fideliter Feliciter",
-            "descricao": "Promoted to Major General",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/94c2f1/trophies/9M95a97a.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:00:08"
-        },
-        {
-            "nome": "Suaviter In Modo",
-            "descricao": "Promoted to Colonel",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/94c2f1/trophies/8M4e6347.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:00:08"
-        },
-        {
-            "nome": "Nascentes Morimur",
-            "descricao": "Promoted to Airman",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/94c2f1/trophies/1Mee78a6.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:00:08"
-        },
-        {
-            "nome": "Lex Talionis",
-            "descricao": "Promoted to Sergeant",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/94c2f1/trophies/2M17e25b.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:58:08"
-        },
-        {
-            "nome": "Tempus Neminem Manet",
-            "descricao": "Promoted to Master Sergeant",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/94c2f1/trophies/3Ma6fd14.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:52:08"
-        },
-        {
-            "nome": "Salva Veritate",
-            "descricao": "Promoted to Lieutenant",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/94c2f1/trophies/4M3253b8.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:52:08"
-        },
-        {
-            "nome": "Repetitio Est Mater Memoriae",
-            "descricao": "Promoted to First Lieutenant",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/94c2f1/trophies/5Mf47eb9.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:48:08"
-        },
-        {
-            "nome": "Inter Caecos Regnat Strabo",
-            "descricao": "Promoted to Captain",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/94c2f1/trophies/6M20bfdc.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:44:08"
-        },
-        {
-            "nome": "Melius Frangi Quam Flecti",
-            "descricao": "Promoted to Major",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/94c2f1/trophies/7M99890e.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Stercus Accidit",
-            "descricao": "Fail the Prologue",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/94c2f1/trophies/11M4e8b06.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:34:08"
-        },
-        {
-            "nome": "Sine Mora",
-            "descricao": "Destroy everything in the Prologue and remain unharmed",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/94c2f1/trophies/12M487909.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:28:08"
-        }]
-    },
-    {
-        "nome": "Song Of The Deep",
-        "id": "CUSA01105",
-        "ps4_label": "true",
-        "ps3_label": "false",
-        "psv_label": "true",
-        "developer": "Insomniac Games",
-        "genre": "Puzzle | Adventure",
-        "players_upto": "1",
-        "imagem": "https://i.imgur.com/Lj1a2rt.png",
-        "game_platinum": "0",
-        "game_gold": "1",
-        "game_silver": "4",
-        "game_bronze": "5",
-        "game_total": "10",
-        "game_progress": "100",
-		"release_date": "12/07/2016",
-        "has_platinum": "false",
-		"game_total_earned": "10",
-        "trofeus": [
-        {
-            "nome": "Gearhead",
-            "descricao": "Purchase all upgrades",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/8M2bf78c.png",
-            "tipo": "gold",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "29/09/2018",
-            "hour_earned": "19:00:08"
-        },
-        {
-            "nome": "Feast for a Queen",
-            "descricao": "Feed the Queen Leviathan.",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/7M8ac20c.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:00:08"
-        },
-        {
-            "nome": "Sea Saver",
-            "descricao": "Destroy the Forbidden City forever",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/6M9f1e65.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:00:08"
-        },
-        {
-            "nome": "Merryn and Goliath",
-            "descricao": "Kill a Tremorclaw Crab as Merryn",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/9Mefa12c.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:00:08"
-        },
-        {
-            "nome": "Rest in Pieces",
-            "descricao": "Pay your respects to the Watcher and drop a flower on her final resting place.",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/10M226139.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:58:08"
-        },
-        {
-            "nome": "The Last Merrow",
-            "descricao": "Meet the Merrow",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/1M2dd02d.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:52:08"
-        },
-        {
-            "nome": "Your Watch is Over",
-            "descricao": "Defeat the Watcher",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/2M8050e8.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:52:08"
-        },
-        {
-            "nome": "Aquatic Laser Show",
-            "descricao": "Activate the Deeplight",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/3Mab054b.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:48:08"
-        },
-        {
-            "nome": "Poor Turtles",
-            "descricao": "Defeat the Fomori Boss",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/4M73e9e4.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:44:08"
-        },
-        {
-            "nome": "The Inner Sanctum",
-            "descricao": "Commune with the giant seahorse",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/5Md1cd31.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        }]
-
-    },
     {
         "nome": "God Of War™",
         "id": "CUSA01219",
@@ -421,10 +37,8 @@
         "game_silver": "9",
         "game_bronze": "22",
         "game_total": "37",
+        "game_total_earned": "37",
         "game_progress": "100",
-		"release_date": "20/04/2018",
-        "has_platinum": "true",
-		"game_total_earned": "37",
         "trofeus": [
         {
             "nome": "Father and Son",
@@ -815,17 +429,15 @@
         "psv_label": "false",
         "developer": "Toys for Bob",
         "genre": "Adventure",
-        "players_upto": "1",
-        "release_date": "12/07/2016",
+        "players_upto": "22",
         "imagem": "https://i.imgur.com/FC9YcM0.png",
-        "has_platinum": "true",
-        "game_platinum": "0",
+        "game_platinum": "1",
         "game_gold": "3",
         "game_silver": "17",
         "game_bronze": "16",
         "game_total": "37",
+        "game_total_earned": "37",
         "game_progress": "100",
-		"game_total_earned": "37",
         "trofeus": [
         {
             "nome": "Gnasty's Demise",
@@ -833,9 +445,9 @@
             "imagem_trofeu": "https://i.imgur.com/PzwJyf8.png",
             "tipo": "platinum",
             "hidden": "false",
-            "earned": "false",
+            "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "I'm in the Money!",
@@ -845,7 +457,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Fly Like an Eagle",
@@ -855,7 +467,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Launch Date",
@@ -865,7 +477,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Egg Hunt",
@@ -875,7 +487,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Dragon and On and On",
@@ -885,7 +497,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "What Really Grinds My Gears",
@@ -895,7 +507,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Jacques-tacular",
@@ -905,7 +517,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Scrap Metal",
@@ -915,7 +527,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "All Puffed Up",
@@ -925,7 +537,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Bad Doggies!",
@@ -935,7 +547,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Gems in the Rough",
@@ -945,7 +557,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "I Believe it is Time for Me to Fly",
@@ -955,7 +567,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Mushroom Hunter",
@@ -965,7 +577,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Gatherer",
@@ -975,7 +587,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Hot Wings 2",
@@ -985,7 +597,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Hoarder",
@@ -995,7 +607,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Hot Wings 1",
@@ -1005,7 +617,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Barnstormer",
@@ -1015,7 +627,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Burnt Toast",
@@ -1025,7 +637,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Pops of the Tops",
@@ -1035,7 +647,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Shoot the Moon",
@@ -1045,7 +657,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Hop, Skip, and Jump",
@@ -1055,7 +667,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Sheep Kebab",
@@ -1065,7 +677,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Ratastic!",
@@ -1075,7 +687,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Light My Fire",
@@ -1085,7 +697,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Leaf on the Wind",
@@ -1095,7 +707,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Arachnophobe",
@@ -1105,7 +717,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Bird Brained",
@@ -1115,7 +727,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Birds of a Feather",
@@ -1125,7 +737,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Triathlon",
@@ -1135,7 +747,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Cage Free",
@@ -1145,7 +757,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Rocketeer",
@@ -1155,7 +767,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "What's in the Box?",
@@ -1165,7 +777,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Comin' Through!",
@@ -1175,7 +787,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         }]
     },
     {
@@ -1187,26 +799,24 @@
         "developer": "Electronic Arts Bucharest",
         "genre": "Sport",
         "players_upto": "22",
-        "release_date": "12/07/2016",
         "imagem": "https://i.imgur.com/aVUw66x.png",
-        "has_platinum": "true",
         "game_platinum": "1",
         "game_gold": "4",
         "game_silver": "8",
         "game_bronze": "29",
         "game_total": "42",
+        "game_total_earned": "42",
         "game_progress": "100",
-		"game_total_earned": "42",
         "trofeus": [
         {
-            "nome": "No 1 Fan",
+            "nome": "No.1 Fan",
             "descricao": "Unlock all other trophies (excluding additional content trophies)",
             "imagem_trofeu": "https://i.psnprofiles.com/games/577b51/trophies/1Mf9644d.png",
             "tipo": "platinum",
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Climbing the Ladder",
@@ -1216,7 +826,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Skill Games Legend",
@@ -1226,7 +836,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "There Can Be Only One",
@@ -1236,7 +846,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "The Champions",
@@ -1246,7 +856,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Tactics Master",
@@ -1256,7 +866,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Skill Games Champion",
@@ -1266,7 +876,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "You Can't Break Me Down",
@@ -1276,7 +886,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Perfectionist",
@@ -1286,7 +896,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Skill Games Frenzy",
@@ -1296,7 +906,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Skill Games Frenzy",
@@ -1306,7 +916,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Made the Headlines",
@@ -1316,7 +926,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Game Changer",
@@ -1326,7 +936,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Cultivating Skills",
@@ -1336,7 +946,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Aim for the Stars",
@@ -1344,9 +954,9 @@
             "imagem_trofeu": "https://i.psnprofiles.com/games/577b51/trophies/28Me4bce2.png",
             "tipo": "bronze",
             "hidden": "false",
-            "earned": "false",
+            "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Playing in the Big League",
@@ -1354,9 +964,9 @@
             "imagem_trofeu": "https://i.psnprofiles.com/games/577b51/trophies/36M8c34a6.png",
             "tipo": "bronze",
             "hidden": "false",
-            "earned": "false",
+            "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Decision Maker",
@@ -1366,7 +976,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Loyalty",
@@ -1376,7 +986,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "No Holding Me Back",
@@ -1386,7 +996,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Playing the Game",
@@ -1396,7 +1006,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Survival of the Fittest",
@@ -1406,7 +1016,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Champion",
@@ -1416,7 +1026,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Rookie",
@@ -1426,7 +1036,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         },
         {
             "nome": "Easy Peasy",
@@ -1436,7 +1046,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "hour_earned": "21:28:08"
         }]
     }]
 }

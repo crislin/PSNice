@@ -5,7 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -30,6 +32,9 @@ public class DetalheJogoActivity extends AppCompatActivity {
     private TextView tvGenero;
     private TextView tvPorcentagem;
     private ProgressBar pbProgresso;
+    public LinearLayout tagPs4;
+    public LinearLayout tagPs3;
+    public LinearLayout tagPsVita;
     private RecyclerView mRecyclerView;
     private List<Trofeu> listaTrofeus = new ArrayList<>();
 
@@ -47,6 +52,9 @@ public class DetalheJogoActivity extends AppCompatActivity {
         tvGenero = findViewById(R.id.tvGenero);
         tvPorcentagem = findViewById(R.id.tvPorcentagem);
         pbProgresso = findViewById(R.id.pbProgresso);
+        tagPs4 = findViewById(R.id.tagPs4);
+        tagPs3 = findViewById(R.id.tagPs3);
+        tagPsVita = findViewById(R.id.tagPsVita);
 
         Intent i = this.getIntent();
         String imagem = i.getExtras().getString("imagem");
@@ -62,6 +70,9 @@ public class DetalheJogoActivity extends AppCompatActivity {
         String genero = i.getExtras().getString("genero");
         String porcentagem = i.getExtras().getString("porcentagem");
         boolean logado = i.getExtras().getBoolean("logado");
+        boolean isPs4 = i.getExtras().getBoolean("tagPs4");
+        boolean isPs3 = i.getExtras().getBoolean("tagPs3");
+        boolean isPsv = i.getExtras().getBoolean("tagPsVita");
         boolean usuarioTemEsseJogo = i.getExtras().getBoolean("usuarioTemEsseJogo");
 
         Glide.with(this).load(imagem).into(imagemDetalhe);
@@ -71,6 +82,15 @@ public class DetalheJogoActivity extends AppCompatActivity {
         tvGenero.setText(genero);
         tvPorcentagem.setText(porcentagem);
         pbProgresso.setProgress(Integer.valueOf(porcentagem));
+        if (isPs4){
+            tagPs4.setVisibility(View.VISIBLE);
+        }
+        if (isPs3){
+            tagPs3.setVisibility(View.VISIBLE);
+        }
+        if (isPsv){
+            tagPsVita.setVisibility(View.VISIBLE);
+        }
 
         try {
             if (usuarioTemEsseJogo) {

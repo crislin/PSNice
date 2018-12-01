@@ -55,72 +55,138 @@
                     android:id="@+id/tvTotalTrofeus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginRight="10dp"
                     android:text="22"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginLeft="5dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Desenvolvedora: "
-                        android:textSize="10dp"
-                        android:textStyle="bold"/>
-                    <TextView
-                        android:id="@+id/tvDesenvolvedora"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Capcom"
-                        android:textSize="10dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Gênero: "
-                        android:textSize="10dp"
-                        android:textStyle="bold"/>
-                    <TextView
-                        android:id="@+id/tvGenero"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Shooter"
-                        android:textSize="10dp"/>
-                </LinearLayout>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="end">
-                <TextView
-                    android:id="@+id/tvPorcentagem"
+                android:layout_marginLeft="5dp">
+                <LinearLayout
+                    android:id="@+id/tagPs4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="22"/>
-                <TextView
+                    android:background="@drawable/bg_tag_ps4"
+                    android:layout_marginRight="5dp"
+                    android:visibility="gone">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PS4"
+                        android:textSize="9sp"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:layout_marginVertical="1dp"
+                        android:layout_marginHorizontal="8dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/tagPs3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="%"
-                    android:layout_marginRight="10dp"/>
+                    android:background="@drawable/bg_tag_ps3"
+                    android:layout_marginRight="5dp"
+                    android:visibility="gone">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PS3"
+                        android:textSize="9sp"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:layout_marginVertical="1dp"
+                        android:layout_marginHorizontal="8dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/tagPsVita"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_tag_psv"
+                    android:visibility="gone">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PSVITA"
+                        android:textSize="9sp"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:layout_marginVertical="1dp"
+                        android:layout_marginHorizontal="8dp"/>
+                </LinearLayout>
             </LinearLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Desenvolvedora: "
+                            android:textSize="10dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/tvDesenvolvedora"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Capcom"
+                            android:textSize="10dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gênero: "
+                            android:textSize="10dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/tvGenero"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Shooter"
+                            android:textSize="10dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:id="@+id/tvPorcentagem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="22"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="%"
+                        android:layout_marginRight="10dp"/>
+                </LinearLayout>
+            </FrameLayout>
+
             <ProgressBar
                 android:id="@+id/pbProgresso"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                 android:layout_marginTop="0dp"
-                android:layout_marginHorizontal="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="5dp"
                 android:layout_marginBottom="5dp"
                 android:max="100"/>
         </LinearLayout>

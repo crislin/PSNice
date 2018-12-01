@@ -23,7 +23,10 @@
  "success": "1",
  "jogos": [{
 	"nome": "Horizon: Zero Dawn",
-	"id": "CUSA0213",
+	"id": "CUSA01213",
+	"ps4_label": "true",
+	"ps3_label": "false",
+	"psv_label": "false",
 	"developer": "Guerrilla Games",
     "genre": "Role-playing (RPG) | Shooter",
     "players_upto": "1",
@@ -139,7 +142,10 @@
 		}]
 	}, {
 	"nome": "Fallout Shelter",
-	"id": "CUSA0134",
+	"id": "CUSA01134",
+	"ps4_label": "true",
+	"ps3_label": "false",
+	"psv_label": "false",
 	"developer": "Bethesda Game Studios",
     "genre": "Role-playing (RPG) | Simulator | Strategy",
     "players_upto": "1",
@@ -246,7 +252,10 @@
 		}]
 	}, {
 	"nome": "Resident Evil",
-	"id": "CUSA0117",
+	"id": "CUSA01117",
+	"ps4_label": "true",
+	"ps3_label": "true",
+	"psv_label": "false",
 	"developer": "Capcom",
     "genre": "Adventure",
     "players_upto": "1",

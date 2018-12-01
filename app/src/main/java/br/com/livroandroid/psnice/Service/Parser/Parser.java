@@ -51,6 +51,9 @@ public class Parser {
             jogo.setNome(jsonObjectJogo.optString("nome"));
             jogo.setImagem(jsonObjectJogo.optString("imagem"));
             jogo.setIdJogo(jsonObjectJogo.optString("id"));
+            jogo.setAPs4Game(jsonObjectJogo.optBoolean("ps4_label"));
+            jogo.setAPs3Game(jsonObjectJogo.optBoolean("ps3_label"));
+            jogo.setAPsVitaGame(jsonObjectJogo.optBoolean("psv_label"));
             jogo.setHasPlatinum(Boolean.parseBoolean(jsonObjectJogo.optString("has_platinum")));
             jogo.setGamePlatinum(Integer.valueOf(jsonObjectJogo.optString("game_platinum")));
             jogo.setGameGold(Integer.valueOf(jsonObjectJogo.optString("game_gold")));
@@ -80,6 +83,9 @@ public class Parser {
             jogo.setHasPlatinum(Boolean.parseBoolean(jsonObjectJogo.optString("has_platinum")));
             jogo.setGamePlatinum(Integer.valueOf(jsonObjectJogo.optString("game_platinum")));
             jogo.setGameGold(Integer.valueOf(jsonObjectJogo.optString("game_gold")));
+            jogo.setAPs4Game(jsonObjectJogo.optBoolean("ps4_label"));
+            jogo.setAPs3Game(jsonObjectJogo.optBoolean("ps3_label"));
+            jogo.setAPsVitaGame(jsonObjectJogo.optBoolean("psv_label"));
             jogo.setGameSilver(Integer.valueOf(jsonObjectJogo.optString("game_silver")));
             jogo.setGameBronze(Integer.valueOf(jsonObjectJogo.optString("game_bronze")));
             jogo.setGameTotal(Integer.valueOf(jsonObjectJogo.optString("game_total")));
@@ -117,6 +123,9 @@ public class Parser {
             JSONObject jsonObjectJogo = jsonArray.getJSONObject(i);
             jogo.setNome(jsonObjectJogo.optString("nome"));
             jogo.setIdJogo(jsonObjectJogo.optString("id"));
+            jogo.setAPs4Game(jsonObjectJogo.optBoolean("ps4_label"));
+            jogo.setAPs3Game(jsonObjectJogo.optBoolean("ps3_label"));
+            jogo.setAPsVitaGame(jsonObjectJogo.optBoolean("psv_label"));
             jogo.setImagem(jsonObjectJogo.optString("imagem"));
             jogo.setGameTotal(Integer.valueOf(jsonObjectJogo.optString("game_total")));
             jogo.setDesenvolvedora(jsonObjectJogo.optString("developer"));

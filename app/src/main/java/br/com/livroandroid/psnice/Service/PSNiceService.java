@@ -47,6 +47,15 @@ public class PSNiceService {
             if (psnId.equalsIgnoreCase("ferryJans")){
                 fileName = "UsuarioferryJansv4.json";
             }
+            if (psnId.equalsIgnoreCase("Hookan")){
+                fileName = "UsuarioHookanv4.json";
+            }
+            if (psnId.equalsIgnoreCase("AG-WarFighter")){
+                fileName = "UsuarioxAG_Warfighterv4.json";
+            }
+            if (psnId.equalsIgnoreCase("xLukk")){
+                fileName = "UsuarioxLukkv4.json";
+            }
             jsonResponse = loadJSONFromAsset(context, fileName);
             usuario = Parser.parserUsuario(jsonResponse);
             if (usuario != null){
@@ -74,6 +83,15 @@ public class PSNiceService {
             }
             if (psnId.equalsIgnoreCase("ferryJans")){
                 fileName = "UsuarioferryJansv4.json";
+            }
+            if (psnId.equalsIgnoreCase("Hookan")){
+                fileName = "UsuarioHookanv4.json";
+            }
+            if (psnId.equalsIgnoreCase("AG-WarFighter")){
+                fileName = "UsuarioxAG_Warfighterv4.json";
+            }
+            if (psnId.equalsIgnoreCase("xLukk")){
+                fileName = "UsuarioxLukkv4.json";
             }
             jsonResponse = loadJSONFromAsset(context, fileName);
             lista = Parser.parserJogos(jsonResponse);
@@ -117,6 +135,15 @@ public class PSNiceService {
             }
             if (psnId.equalsIgnoreCase("ferryJans")){
                 fileName = "UsuarioferryJansv4.json";
+            }
+            if (psnId.equalsIgnoreCase("Hookan")){
+                fileName = "UsuarioHookanv4.json";
+            }
+            if (psnId.equalsIgnoreCase("AG-WarFighter")){
+                fileName = "UsuarioxAG_Warfighterv4.json";
+            }
+            if (psnId.equalsIgnoreCase("xLukk")){
+                fileName = "UsuarioxLukkv4.json";
             }
             jsonResponse = loadJSONFromAsset(context, fileName);
             lista = Parser.parserTrofeus(jsonResponse, nomeJogo);

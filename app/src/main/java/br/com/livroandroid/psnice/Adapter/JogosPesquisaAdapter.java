@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -53,6 +54,15 @@ public class JogosPesquisaAdapter extends RecyclerView.Adapter<JogosPesquisaList
         holder.tvTotalTrofeus.setText(String.valueOf(listaJogos.get(position).getGameTotal()));
         holder.tvDesenvolvedora.setText(listaJogos.get(position).getDesenvolvedora());
         holder.tvGenero.setText(listaJogos.get(position).getGenero());
+        if (listaJogos.get(position).isAPs4Game()){
+            holder.tagPs4.setVisibility(View.VISIBLE);
+        }
+        if (listaJogos.get(position).isAPs3Game()){
+            holder.tagPs3.setVisibility(View.VISIBLE);
+        }
+        if (listaJogos.get(position).isAPsVitaGame()){
+            holder.tagPsVita.setVisibility(View.VISIBLE);
+        }
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,6 +79,9 @@ public class JogosPesquisaAdapter extends RecyclerView.Adapter<JogosPesquisaList
         i.putExtra("psnId", psnId);
         i.putExtra("nome", listaJogos.get(position).getNome());
         i.putExtra("idJogo", listaJogos.get(position).getIdJogo());
+        i.putExtra("tagPs4", listaJogos.get(position).isAPs4Game());
+        i.putExtra("tagPs3", listaJogos.get(position).isAPs3Game());
+        i.putExtra("tagPsVita", listaJogos.get(position).isAPsVitaGame());
         i.putExtra("usuarioTemEsseJogo", retornaSeTemOJogo(position));
         i.putExtra("totalTrofeus", String.valueOf(listaJogos.get(position).getGameTotal()));
         i.putExtra("desenvolvedora", listaJogos.get(position).getDesenvolvedora());
@@ -107,6 +120,9 @@ class JogosPesquisaListViewHolder extends RecyclerView.ViewHolder{
     public TextView tvTotalTrofeus;
     public TextView tvDesenvolvedora;
     public TextView tvGenero;
+    public LinearLayout tagPs4;
+    public LinearLayout tagPs3;
+    public LinearLayout tagPsVita;
 
     public JogosPesquisaListViewHolder(View itemView) {
         super(itemView);
@@ -115,5 +131,8 @@ class JogosPesquisaListViewHolder extends RecyclerView.ViewHolder{
         tvTotalTrofeus = itemView.findViewById(R.id.tvTotalTrofeus);
         tvDesenvolvedora = itemView.findViewById(R.id.tvDesenvolvedora);
         tvGenero = itemView.findViewById(R.id.tvGenero);
+        tagPs4 = itemView.findViewById(R.id.tagPs4);
+        tagPs3 = itemView.findViewById(R.id.tagPs3);
+        tagPsVita = itemView.findViewById(R.id.tagPsVita);
     }
 }
