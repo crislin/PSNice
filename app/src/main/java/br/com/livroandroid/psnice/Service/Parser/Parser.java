@@ -34,9 +34,9 @@ public class Parser {
         usuario.setRankPais(Integer.valueOf(jsonObject.optString("regionrank")));
         usuario.setEficiencia(Float.valueOf(jsonObject.optString("completion_percentage")));
         usuario.setTotalTrofeuPossivel(Integer.valueOf(jsonObject.optString("total_possible_trophies")));
-//        usuario.setPs3Games(Integer.valueOf(jsonObject.optString("")));
-//        usuario.setPs4Games(Integer.valueOf(jsonObject.optString("")));
-//        usuario.setPsVitaGames(Integer.valueOf(jsonObject.optString("")));
+        usuario.setPs3Games(Integer.valueOf(jsonObject.optString("total_game_ps3")));
+        usuario.setPs4Games(Integer.valueOf(jsonObject.optString("total_game_ps4")));
+        usuario.setPsVitaGames(Integer.valueOf(jsonObject.optString("total_game_vita")));
 
         return usuario;
     }

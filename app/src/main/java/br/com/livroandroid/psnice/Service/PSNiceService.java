@@ -36,13 +36,16 @@ public class PSNiceService {
         try {
             String fileName = "";
             if (psnId.equalsIgnoreCase("vinte_dos_22")){
-                fileName = "UsuarioCassiano.json";
+                fileName = "UsuarioCassiano-v4.json";
             }
             if (psnId.equalsIgnoreCase("debli23")){
                 fileName = "UsuarioAndre.json";
             }
             if (psnId.equalsIgnoreCase("Thigo23")){
                 fileName = "UsuarioThiago.json";
+            }
+            if (psnId.equalsIgnoreCase("ferryJans")){
+                fileName = "UsuarioferryJansv4.json";
             }
             jsonResponse = loadJSONFromAsset(context, fileName);
             usuario = Parser.parserUsuario(jsonResponse);
@@ -61,13 +64,16 @@ public class PSNiceService {
         try {
             String fileName = "";
             if (psnId.equalsIgnoreCase("vinte_dos_22")){
-                fileName = "UsuarioCassiano.json";
+                fileName = "UsuarioCassiano-v4.json";
             }
             if (psnId.equalsIgnoreCase("debli23")){
                 fileName = "UsuarioAndre.json";
             }
             if (psnId.equalsIgnoreCase("Thigo23")){
                 fileName = "UsuarioThiago.json";
+            }
+            if (psnId.equalsIgnoreCase("ferryJans")){
+                fileName = "UsuarioferryJansv4.json";
             }
             jsonResponse = loadJSONFromAsset(context, fileName);
             lista = Parser.parserJogos(jsonResponse);
@@ -84,7 +90,7 @@ public class PSNiceService {
         List<Jogo> lista = new ArrayList<>();
         String jsonResponse;
         try {
-            jsonResponse = loadJSONFromAsset(context, "TodosOsJogosv2.json");
+            jsonResponse = loadJSONFromAsset(context, "TodosOsJogosv3.json");
             lista = Parser.parserTodosJogos(jsonResponse);
             if (lista != null){
                 return lista;
@@ -101,13 +107,16 @@ public class PSNiceService {
         try {
             String fileName = "";
             if (psnId.equalsIgnoreCase("vinte_dos_22")){
-                fileName = "UsuarioCassiano.json";
+                fileName = "UsuarioCassiano-v4.json";
             }
             if (psnId.equalsIgnoreCase("debli23")){
                 fileName = "UsuarioAndre.json";
             }
             if (psnId.equalsIgnoreCase("Thigo23")){
                 fileName = "UsuarioThiago.json";
+            }
+            if (psnId.equalsIgnoreCase("ferryJans")){
+                fileName = "UsuarioferryJansv4.json";
             }
             jsonResponse = loadJSONFromAsset(context, fileName);
             lista = Parser.parserTrofeus(jsonResponse, nomeJogo);
@@ -124,7 +133,7 @@ public class PSNiceService {
         List<Trofeu> lista = new ArrayList<>();
         String jsonResponse;
         try {
-            jsonResponse = loadJSONFromAsset(context, "TodosOsJogosv2.json");
+            jsonResponse = loadJSONFromAsset(context, "TodosOsJogosv3.json");
             lista = Parser.parserTrofeusVazio(jsonResponse, nomeJogo);
             if (lista != null){
                 return lista;
@@ -139,7 +148,7 @@ public class PSNiceService {
         List<Usuario> lista = new ArrayList<>();
         String jsonResponse;
         try {
-            jsonResponse = loadJSONFromAsset(context, "TodosUsuarios.json");
+            jsonResponse = loadJSONFromAsset(context, "TodosUsuariosv3.json");
             lista = Parser.parserTodosUsuarios(jsonResponse);
             if (lista != null){
                 return lista;
@@ -154,7 +163,7 @@ public class PSNiceService {
         List<Jogo> lista = new ArrayList<>();
         String jsonResponse;
         try {
-            jsonResponse = loadJSONFromAsset(context, "TodosJogosPesquisav2.json");
+            jsonResponse = loadJSONFromAsset(context, "TodosJogosPesquisav3.json");
             lista = Parser.parserListaJogos(jsonResponse);
             if (lista != null){
                 return lista;

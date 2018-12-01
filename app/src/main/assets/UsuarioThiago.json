@@ -12,6 +12,9 @@
  "silver": "1545",
  "bronze": "4890",
  "total": "7043",
+ "total_game_ps4": "93",
+ "total_game_ps3": "205",
+ "total_game_vita": "0",
  "psn_id": "Thigo23",
  "completion_percentage": "57.11",
  "worldrank": "16079",
@@ -20,6 +23,7 @@
  "success": "1",
  "jogos": [{
 	"nome": "Horizon: Zero Dawn",
+	"id": "CUSA0213",
 	"developer": "Guerrilla Games",
     "genre": "Role-playing (RPG) | Shooter",
     "players_upto": "1",
@@ -135,6 +139,7 @@
 		}]
 	}, {
 	"nome": "Fallout Shelter",
+	"id": "CUSA0134",
 	"developer": "Bethesda Game Studios",
     "genre": "Role-playing (RPG) | Simulator | Strategy",
     "players_upto": "1",
@@ -241,6 +246,7 @@
 		}]
 	}, {
 	"nome": "Resident Evil",
+	"id": "CUSA0117",
 	"developer": "Capcom",
     "genre": "Adventure",
     "players_upto": "1",

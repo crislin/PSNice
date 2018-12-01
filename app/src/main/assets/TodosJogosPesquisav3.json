@@ -1,0 +1,75 @@
+{
+    "jogos": [
+    {
+        "nome": "Fallout Shelter",
+        "id": "CUSA0134",
+        "game_total": "35",
+        "developer": "Bethesda Game Studios",
+        "imagem": "https://i.imgur.com/WUUodyA.png",
+        "genre": "Role-playing (RPG) | Simulator | Strategy"
+    },
+    {
+        "nome": "FIFA 19",
+        "id": "CUSA0256",
+        "game_total": "42",
+        "developer": "Electronic Arts Bucharest",
+        "imagem": "https://i.imgur.com/aVUw66x.png",
+        "genre": "Sport"
+    },
+    {
+        "nome": "God Of War™",
+        "id": "CUSA0219",
+        "game_total": "37",
+        "developer": "SIE Santa Monica Studio",
+        "imagem": "http://i.imgur.com/rsbmfwf.png",
+        "genre": "Action"
+    },
+    {
+        "nome": "Horizon: Zero Dawn",
+        "id": "CUSA0213",
+        "game_total": "56",
+        "developer": "Guerrilla Games",
+        "imagem": "https://i.imgur.com/qkCSi9s.png",
+        "genre": "Role-playing (RPG) | Shooter"
+    },
+    {
+        "nome": "Kitten Squad",
+        "id": "CUSA0019",
+        "game_total": "9",
+        "developer": "SAGENCY",
+        "imagem": "https://i.imgur.com/91z8UCx.png",
+        "genre": "Shooter"
+    },
+    {
+        "nome": "Resident Evil",
+        "id": "CUSA0117",
+        "game_total": "45",
+        "developer": "Capcom",
+        "imagem": "https://i.imgur.com/lFzz9yJ.png",
+        "genre": "Adventure"
+    },
+    {
+        "nome": "SINE MORA",
+        "id": "CUSA0065",
+        "game_total": "12",
+        "developer": "Grasshopper Manufacture, Digital Reality",
+        "imagem": "https://i.imgur.com/j3XvAif.png",
+        "genre": "Shooter"
+    },
+    {
+        "nome": "Song Of The Deep",
+        "id": "CUSA0105",
+        "game_total": "10",
+        "developer": "Insomniac Games",
+        "imagem": "https://i.imgur.com/Lj1a2rt.png",
+        "genre": "Puzzle | Adventure"
+    },
+    {
+        "nome": "Spyro The Dragon ",
+        "id": "CUSA0298",
+        "game_total": "37",
+        "developer": "Toys for Bob",
+        "imagem": "https://i.imgur.com/FC9YcM0.png",
+        "genre": "Adventure"
+    }]
+}

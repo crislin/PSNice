@@ -1,0 +1,38 @@
+{
+    "usuarios": [
+	{
+        "avatar": "http://www.psnleaderboard.com/images/avatars/UP20241107S01_0627921452B0A8D30701_L.png",
+        "level": "8",
+        "psn_id": "AG-WarFighter"
+    },
+    {
+        "avatar": "https://i.imgur.com/1mhu3AR.png",
+        "level": "16",
+        "psn_id": "debli23"
+    },
+    {
+        "avatar": "https://i.psnprofiles.com/avatars/m/G690bff169.png",
+        "level": "12",
+        "psn_id": "ferryJans"
+    },
+    {
+        "avatar": "https://i.psnprofiles.com/avatars/m/Gc0f4d148c.png",
+        "level": "38",
+        "psn_id": "Hookan"
+    },
+    {
+        "avatar": "https://i.imgur.com/pKvw48B.png",
+        "level": "31",
+        "psn_id": "Thigo23"
+    },
+    {
+        "avatar": "https://i.imgur.com/gUGk83v.png",
+        "level": "38",
+        "psn_id": "vinte_dos_22"
+    },
+    {
+        "avatar": "https://i.psnprofiles.com/avatars/m/Gd8ea5ff89.png",
+        "level": "14",
+        "psn_id": "xLukk"
+    }]
+}

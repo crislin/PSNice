@@ -187,10 +187,10 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="15dp"
                         android:layout_marginHorizontal="15dp"
-                        android:max="100"
+                        android:max="86"
                         android:progressDrawable="@drawable/progress_console_stats"
-                        android:progress="20"
-                        android:secondaryProgress="60"/>
+                        android:progress="24"
+                        android:secondaryProgress="73"/>
                     <LinearLayout
                         android:id="@+id/layoutGamesConsoleExpandido"
                         android:layout_width="match_parent"

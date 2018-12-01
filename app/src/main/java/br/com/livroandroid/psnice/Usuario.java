@@ -22,33 +22,33 @@ public class Usuario implements Serializable{
     private int rankPais;
     private float eficiencia;
     private int totalTrofeuPossivel;
-//    private int ps4Games;
-//    private int ps3Games;
-//    private int psVitaGames;
-//
-//    public int getPs4Games() {
-//        return ps4Games;
-//    }
-//
-//    public void setPs4Games(int ps4Games) {
-//        this.ps4Games = ps4Games;
-//    }
+    private int ps4Games;
+    private int ps3Games;
+    private int psVitaGames;
 
-//    public int getPs3Games() {
-//        return ps3Games;
-//    }
+    public int getPs4Games() {
+        return ps4Games;
+    }
+
+    public void setPs4Games(int ps4Games) {
+        this.ps4Games = ps4Games;
+    }
 //
-//    public void setPs3Games(int ps3Games) {
-//        this.ps3Games = ps3Games;
-//    }
-//
-//    public int getPsVitaGames() {
-//        return psVitaGames;
-//    }
-//
-//    public void setPsVitaGames(int psVitaGames) {
-//        this.psVitaGames = psVitaGames;
-//    }
+    public int getPs3Games() {
+        return ps3Games;
+    }
+
+    public void setPs3Games(int ps3Games) {
+        this.ps3Games = ps3Games;
+    }
+
+    public int getPsVitaGames() {
+        return psVitaGames;
+    }
+
+    public void setPsVitaGames(int psVitaGames) {
+        this.psVitaGames = psVitaGames;
+    }
 
     public int getRankMundial() {
         return rankMundial;

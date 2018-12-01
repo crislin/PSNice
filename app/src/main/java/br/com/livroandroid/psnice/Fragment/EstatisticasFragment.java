@@ -96,9 +96,9 @@ public class EstatisticasFragment extends Fragment {
         rankPais = getArguments().getInt("rankPais");
         eficiencia = getArguments().getFloat("eficiencia");
         totalTrofeusPossiveis = getArguments().getInt("totalTrofeusPossiveis");
-//        ps3Games = getArguments().getInt("ps3Games");
-//        ps4Games = getArguments().getInt("ps4Games");
-//        psVitaGames = getArguments().getInt("psVitaGames");
+        ps3Games = getArguments().getInt("ps3Games");
+        ps4Games = getArguments().getInt("ps4Games");
+        psVitaGames = getArguments().getInt("psVitaGames");
 
         carregaDetalhes();
 
@@ -165,19 +165,21 @@ public class EstatisticasFragment extends Fragment {
         tvTotalPossivel.setText(String.valueOf(totalTrofeusPossiveis));
         tvNumeroRankMundial.setText(String.valueOf(rankMundial));
         tvNumeroRankPais.setText(String.valueOf(rankPais));
-//        tvPs3Jogos.setText(String.valueOf(ps3Games));
-//        tvPs4Jogos.setText(String.valueOf(ps4Games));
-//        tvPsVitaJogos.setText(String.valueOf(psVitaGames));
-//        calculaJogos();
+        tvPs3Jogos.setText(String.valueOf(ps3Games));
+        tvPs4Jogos.setText(String.valueOf(ps4Games));
+        tvPsVitaJogos.setText(String.valueOf(psVitaGames));
+        calculaJogos();
     }
 
-//    private void calculaJogos(){
-//        int totalJogos = ps3Games + ps4Games + psVitaGames;
-//        int umPorCento = totalJogos / 100;
-//        tvPs4Porcentagem.setText(String.valueOf(ps4Games * umPorCento));
-//        tvPs3Porcentagem.setText(String.valueOf(ps3Games * umPorCento));
-//        tvPsVitaPorcentagem.setText(String.valueOf(psVitaGames * umPorCento));
-//        pbGamesConsole.setProgress(ps4Games * umPorCento);
-//        pbGamesConsole.setSecondaryProgress((ps4Games * umPorCento) + (ps3Games * umPorCento));
-//    }
+    private void calculaJogos(){
+        int totalJogos = ps3Games + ps4Games + psVitaGames;
+        float umPorCento = (float)totalJogos/100;
+        tvPs4Porcentagem.setText(String.valueOf((ps4Games * 100)/ totalJogos));
+        tvPs3Porcentagem.setText(String.valueOf((ps3Games * 100)/ totalJogos));
+        tvPsVitaPorcentagem.setText(String.valueOf((psVitaGames * 100)/ totalJogos));
+        int progress = (int)((ps4Games * 100)/ totalJogos);
+        int secondProgress = (int)(((ps4Games * 100)/ totalJogos) + ((ps3Games * 100)/ totalJogos));
+        pbGamesConsole.setProgress(progress);
+        pbGamesConsole.setSecondaryProgress(secondProgress);
+    }
 }
