@@ -24,8 +24,12 @@
                 android:layout_height="wrap_content"
                 android:text="Lista de jogos em comum:"
                 android:layout_gravity="center"
-                android:layout_marginRight="40sp"
+                android:layout_marginHorizontal="5dp"
                 android:textStyle="bold"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
             <ImageView
                 android:id="@+id/ivAvatarLogado"
                 android:layout_width="55dp"

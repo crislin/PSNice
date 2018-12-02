@@ -158,8 +158,8 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
         descricaoTrofeu.setText(descricao);
         tvTotalComentarios.setText(String.valueOf(0));
         if (earned){
-            imagemTrofeu.setPadding(3,3,3,3);
-            imagemTrofeu.setBackgroundColor(this.getResources().getColor(R.color.trophie_earned));
+//            imagemTrofeu.setPadding(3,3,3,3);
+//            imagemTrofeu.setBackgroundColor(this.getResources().getColor(R.color.trophie_earned));
             layoutConquistou.setVisibility(View.VISIBLE);
             tvDataConquistada.setText(dataConquistada);
         }
