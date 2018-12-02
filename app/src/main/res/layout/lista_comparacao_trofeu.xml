@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp">
+    <TextView
+        android:id="@+id/tvNomeJogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nome"
+        android:layout_marginRight="40dp"/>
+    <ImageView
+        android:id="@+id/ivTrofeuLogado"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginRight="40dp"
+        android:src="@drawable/trofeu_bronze"/>
+    <ImageView
+        android:id="@+id/ivTrofeuComparado"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/trofeu_bronze"/>
+
+</LinearLayout>

@@ -5,7 +5,9 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -36,8 +38,12 @@ public class DetalheUsuarioActivity extends AppCompatActivity {
     private TextView tvPorcentagem;
     private ProgressBar pbLevel;
     private ImageView ivAvatar;
+    private LinearLayout layoutComparacao;
 
     private Usuario usuario;
+    private String psnIdLogado;
+    private String psnId;
+    private boolean logado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,11 +61,13 @@ public class DetalheUsuarioActivity extends AppCompatActivity {
         pbLevel = findViewById(R.id.pbLevel);
         ivAvatar = findViewById(R.id.ivAvatar);
         tvPorcentagem = findViewById(R.id.tvPorcentagem);
+        layoutComparacao = findViewById(R.id.layoutComparacao);
+        layoutComparacao.setOnClickListener(vaiPraComparacao());
 
         Intent i = this.getIntent();
-        String psnId = i.getExtras().getString("psnId");
-        String psnIdLogado = i.getExtras().getString("psnIdLogado");
-        boolean logado = i.getExtras().getBoolean("logado");
+        psnId = i.getExtras().getString("psnId");
+        psnIdLogado = i.getExtras().getString("psnIdLogado");
+        logado = i.getExtras().getBoolean("logado");
 
         try {
             usuario = PSNiceService.getUsuario(this, psnId);
@@ -96,6 +104,18 @@ public class DetalheUsuarioActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
     }
 
+    private View.OnClickListener vaiPraComparacao() {
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(DetalheUsuarioActivity.this, ComparacaoJogoActivity.class);
+                i.putExtra("psnId", psnId);
+                i.putExtra("psnIdLogado", psnIdLogado);
+                i.putExtra("logado", logado);
+                startActivity(i);
+            }
+        };
+    }
     @Override
     protected void onResume() {
         super.onResume();
