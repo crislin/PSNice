@@ -10,20 +10,66 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#882627"
-        android:layout_marginBottom="20dp">
-        <ImageView
-            android:id="@+id/ivImagemJogo"
-            android:layout_width="wrap_content"
+        android:background="@drawable/bg_poligonos_v3"
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:minWidth="100dp"
-            android:minHeight="56dp"/>
+            android:background="@color/Nao_Branco"
+            android:layout_margin="5dp"
+            android:gravity="end">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:layout_marginRight="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lista de troféu em comum do jogo:"
+                    android:textStyle="bold"
+                    android:textSize="13dp"/>
+                <TextView
+                    android:id="@+id/tvNomeJogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nome do jogo"
+                    android:textSize="12dp"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivAvatarLogado"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="3dp"
+                android:minWidth="80dp"
+                android:minHeight="80dp"/>
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/Menu_Ativo"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="4dp">
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/ivAvatarComparado"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="3dp"
+                android:minWidth="80dp"
+                android:minHeight="80dp"/>
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_layour_recycler_comparacao_trofeu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/lista_comparacao_trofeu"
+            android:layout_margin="5dp"/>
     </LinearLayout>
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view_layour_recycler_comparacao_trofeu"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/lista_comparacao_trofeu"/>
+
 
 </LinearLayout>

@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 import br.com.livroandroid.psnice.Activity.DetalheTrofeuActivity;
@@ -50,11 +52,30 @@ public class ComparacaoTrofeusAdapter extends RecyclerView.Adapter<ComparacaoTro
     @Override
     public void onBindViewHolder(@NonNull ComparacaoTrofeusListViewHolder holder, final int position) {
         holder.tvNomeJogo.setText(listaLogado.get(position).getNome());
+        holder.tvDescricao.setText(listaLogado.get(position).getDescricao());
+        Glide.with(context).load(listaLogado.get(position).getImagemTrofeu()).into(holder.ivImagemTrofeu);
         if (!listaLogado.get(position).getEarned()){
-            holder.ivTrofeuLogado.setAlpha((float) 0.5);
+            holder.ivTipoLogado.setAlpha((float) 0.5);
         }
         if (!listaComparado.get(position).getEarned()){
-            holder.ivTrofeuComparado.setAlpha((float) 0.5);
+            holder.ivTipoComparado.setAlpha((float) 0.5);
+        }
+        String tipo = listaLogado.get(position).getTipo();
+        if (tipo.equalsIgnoreCase("platinum")){
+            holder.ivTipoLogado.setImageResource(R.drawable.trofeu_platina);
+            holder.ivTipoComparado.setImageResource(R.drawable.trofeu_platina);
+        }
+        if (tipo.equalsIgnoreCase("gold")){
+            holder.ivTipoLogado.setImageResource(R.drawable.trofeu_ouro);
+            holder.ivTipoComparado.setImageResource(R.drawable.trofeu_ouro);
+        }
+        if (tipo.equalsIgnoreCase("silver")){
+            holder.ivTipoLogado.setImageResource(R.drawable.trofeu_prata);
+            holder.ivTipoComparado.setImageResource(R.drawable.trofeu_prata);
+        }
+        if (tipo.equalsIgnoreCase("bronze")){
+            holder.ivTipoLogado.setImageResource(R.drawable.trofeu_bronze);
+            holder.ivTipoComparado.setImageResource(R.drawable.trofeu_bronze);
         }
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -87,13 +108,17 @@ public class ComparacaoTrofeusAdapter extends RecyclerView.Adapter<ComparacaoTro
 }
 class ComparacaoTrofeusListViewHolder extends RecyclerView.ViewHolder{
     public TextView tvNomeJogo;
-    public ImageView ivTrofeuLogado;
-    public ImageView ivTrofeuComparado;
+    public TextView tvDescricao;
+    public ImageView ivTipoLogado;
+    public ImageView ivTipoComparado;
+    public ImageView ivImagemTrofeu;
 
     public ComparacaoTrofeusListViewHolder(View itemView){
         super(itemView);
         tvNomeJogo = itemView.findViewById(R.id.tvNomeJogo);
-        ivTrofeuLogado = itemView.findViewById(R.id.ivTrofeuLogado);
-        ivTrofeuComparado = itemView.findViewById(R.id.ivTrofeuComparado);
+        ivTipoLogado = itemView.findViewById(R.id.ivTipoLogado);
+        ivTipoComparado = itemView.findViewById(R.id.ivTipoComparado);
+        ivImagemTrofeu = itemView.findViewById(R.id.ivImagemTrofeu);
+        tvDescricao = itemView.findViewById(R.id.tvDescricao);
     }
 }
