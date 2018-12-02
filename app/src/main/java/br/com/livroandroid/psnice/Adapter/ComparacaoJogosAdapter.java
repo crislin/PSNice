@@ -7,7 +7,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.List;
 
@@ -45,9 +49,12 @@ public class ComparacaoJogosAdapter extends RecyclerView.Adapter<ComparacaoJogos
 
     @Override
     public void onBindViewHolder(@NonNull ComparacaoJogosListViewHolder holder, final int position) {
+        Glide.with(context).load(listaEmComum.get(position).getImagem()).into(holder.ivImagemJogo);
         holder.tvNomeJogo.setText(listaEmComum.get(position).getNome());
         holder.tvPorcentagemLogado.setText(String.valueOf(listaEmComum.get(position).getGameProgress()));
         holder.tvPorcentagemComparacao.setText(String.valueOf(listaComparado.get(position)));
+        holder.pbPorcentagemLogado.setProgress(listaEmComum.get(position).getGameProgress());
+        holder.pbPorcentagemComparado.setProgress(listaComparado.get(position));
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,11 +83,17 @@ class ComparacaoJogosListViewHolder extends RecyclerView.ViewHolder{
     public TextView tvNomeJogo;
     public TextView tvPorcentagemLogado;
     public TextView tvPorcentagemComparacao;
+    public ImageView ivImagemJogo;
+    public ProgressBar pbPorcentagemLogado;
+    public ProgressBar pbPorcentagemComparado;
 
     public ComparacaoJogosListViewHolder(View itemView){
         super(itemView);
         tvNomeJogo = itemView.findViewById(R.id.tvNomeJogo);
         tvPorcentagemLogado = itemView.findViewById(R.id.tvPorcentagemLogado);
         tvPorcentagemComparacao = itemView.findViewById(R.id.tvPorcentagemComparacao);
+        ivImagemJogo = itemView.findViewById(R.id.ivImagemJogo);
+        pbPorcentagemLogado = itemView.findViewById(R.id.pbPorcentagemLogado);
+        pbPorcentagemComparado = itemView.findViewById(R.id.pbPorcentagemComparado);
     }
 }

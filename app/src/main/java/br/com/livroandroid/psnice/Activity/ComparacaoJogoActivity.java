@@ -7,6 +7,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
+
 import org.json.JSONException;
 
 import java.util.ArrayList;
@@ -16,6 +18,7 @@ import br.com.livroandroid.psnice.Adapter.ComparacaoJogosAdapter;
 import br.com.livroandroid.psnice.Jogo;
 import br.com.livroandroid.psnice.R;
 import br.com.livroandroid.psnice.Service.PSNiceService;
+import br.com.livroandroid.psnice.Usuario;
 
 public class ComparacaoJogoActivity extends AppCompatActivity {
 
@@ -26,7 +29,11 @@ public class ComparacaoJogoActivity extends AppCompatActivity {
     private List<Jogo> listaDeJogosEmComum;
     private List<Integer> listaPorcentagemComparado = new ArrayList<>();
     private RecyclerView mRecyclerView;
-    private ImageView ivImagemJogo;
+    private ImageView ivAvatarLogado;
+    private ImageView ivAvatarComparado;
+
+    private Usuario usuarioLogado;
+    private Usuario usuarioComparado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,14 +41,30 @@ public class ComparacaoJogoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_comparacao_jogo);
 
         mRecyclerView = findViewById(R.id.recycler_view_layour_recycler_comparacao);
+        ivAvatarLogado = findViewById(R.id.ivAvatarLogado);
+        ivAvatarComparado = findViewById(R.id.ivAvatarComparado);
         Intent i = this.getIntent();
         psnId = i.getExtras().getString("psnId");
         psnIdLogado = i.getExtras().getString("psnIdLogado");
         boolean logado = i.getExtras().getBoolean("logado");
 
+        try {
+            usuarioLogado = PSNiceService.getUsuario(this, psnIdLogado);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            usuarioComparado = PSNiceService.getUsuario(this, psnId);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
         listaDeJogosLogado = retornaListaDeJogos(psnIdLogado);
         listaDeJogosComparado = retornaListaDeJogos(psnId);
         listaDeJogosEmComum = comparaListas(listaDeJogosLogado, listaDeJogosComparado);
+        Glide.with(this).load(usuarioLogado.getAvatar()).into(ivAvatarLogado);
+        Glide.with(this).load(usuarioComparado.getAvatar()).into(ivAvatarComparado);
 
         ComparacaoJogosAdapter listAdapter = new ComparacaoJogosAdapter(this, listaPorcentagemComparado, listaDeJogosEmComum, psnIdLogado, psnId, logado);
         mRecyclerView.setAdapter(listAdapter);

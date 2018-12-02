@@ -3,31 +3,109 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="15dp">
-    <TextView
-        android:id="@+id/tvNomeJogo"
-        android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/Nao_Branco">
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nome do jogo"
-        android:layout_marginRight="20dp"/>
-    <TextView
-        android:id="@+id/tvPorcentagemLogado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="22"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="%"
-        android:layout_marginRight="20dp"/>
-    <TextView
-        android:id="@+id/tvPorcentagemComparacao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="22"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="%"/>
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/ivImagemJogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:minWidth="100dp"
+            android:minHeight="56dp"/>
+        <TextView
+            android:id="@+id/tvNomeJogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome do jasdasdasdasdasdadogo"
+            android:maxWidth="80dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"/>
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="66dp"
+            android:gravity="end"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="15dp">
+                    <TextView
+                        android:id="@+id/tvPorcentagemLogado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="22"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="%"/>
+                </LinearLayout>
+                <ProgressBar
+                    android:id="@+id/pbPorcentagemLogado"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_marginHorizontal="8dp"
+                    android:max="100"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/Menu_Ativo"
+                android:layout_marginVertical="5dp">
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:id="@+id/tvPorcentagemComparacao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="22" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="%"/>
+                </LinearLayout>
+                <ProgressBar
+                    android:id="@+id/pbPorcentagemComparado"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_marginHorizontal="10dp"
+                    android:max="100"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#C6C6C6"
+        android:layout_marginHorizontal="15dp">
+    </LinearLayout>
+
 
 </LinearLayout>
