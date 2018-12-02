@@ -173,12 +173,24 @@ public class EstatisticasFragment extends Fragment {
 
     private void calculaJogos(){
         int totalJogos = ps3Games + ps4Games + psVitaGames;
+        pbGamesConsole.setMax(totalJogos);
         float umPorCento = (float)totalJogos/100;
-        tvPs4Porcentagem.setText(String.valueOf((ps4Games * 100)/ totalJogos));
-        tvPs3Porcentagem.setText(String.valueOf((ps3Games * 100)/ totalJogos));
-        tvPsVitaPorcentagem.setText(String.valueOf((psVitaGames * 100)/ totalJogos));
-        int progress = (int)((ps4Games * 100)/ totalJogos);
-        int secondProgress = (int)(((ps4Games * 100)/ totalJogos) + ((ps3Games * 100)/ totalJogos));
+        int ps4PorCento = (ps4Games * 100)/ totalJogos;
+        int ps3PorCento = (ps3Games * 100)/ totalJogos;
+        int psvPorCento = (psVitaGames * 100)/ totalJogos;
+        if ((ps4PorCento + ps3PorCento + psvPorCento) != 100){
+            ps4PorCento += 100 - (ps4PorCento + ps3PorCento + psvPorCento);
+        }
+        tvPs4Porcentagem.setText(String.valueOf(ps4PorCento));
+        tvPs3Porcentagem.setText(String.valueOf(ps3PorCento));
+        tvPsVitaPorcentagem.setText(String.valueOf(psvPorCento));
+        int progress = (int)(((ps4Games * 100)/ totalJogos) * umPorCento);
+        int secondProgress;
+        if (psVitaGames != 0) {
+            secondProgress = (int) ((((ps4Games * 100) / totalJogos) + ((ps3Games * 100) / totalJogos)) * umPorCento);
+        } else {
+            secondProgress = totalJogos;
+        }
         pbGamesConsole.setProgress(progress);
         pbGamesConsole.setSecondaryProgress(secondProgress);
     }

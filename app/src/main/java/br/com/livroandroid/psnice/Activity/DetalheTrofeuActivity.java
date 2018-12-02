@@ -247,7 +247,7 @@ public class DetalheTrofeuActivity extends AppCompatActivity implements ValueEve
     public void atualizaComentarios(){
         tvTotalComentarios.setText(String.valueOf(listaComentarios.size()));
 
-        ComentarioAdapter listAdapter = new ComentarioAdapter(listaComentarios, idJogo, nome, this, psnId);
+        ComentarioAdapter listAdapter = new ComentarioAdapter(listaComentarios, idJogo, nome, this, psnId, logado);
         mRecyclerView.setAdapter(listAdapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);

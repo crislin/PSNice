@@ -34,18 +34,20 @@ public class ComentarioAdapter extends RecyclerView.Adapter<ComentarioListViewHo
     private String idJogo;
     private String nomeTrofeu;
     private String psnId;
+    private boolean logado;
     private Context context;
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference mRootReference = firebaseDatabase.getReference();
     private DatabaseReference mComentarioReference = mRootReference.child("comentarios");
     private DatabaseReference mTrofeuReference;
 
-    public ComentarioAdapter(List<Comentario> comentarios, String idJogo, String nomeTrofeu, Context context, String psnId){
+    public ComentarioAdapter(List<Comentario> comentarios, String idJogo, String nomeTrofeu, Context context, String psnId, boolean logado){
         this.comentarios = comentarios;
         this.idJogo = idJogo;
         this.nomeTrofeu = nomeTrofeu;
         this.context = context;
         this.psnId = psnId;
+        this.logado = logado;
     }
 
     @NonNull
@@ -82,24 +84,28 @@ public class ComentarioAdapter extends RecyclerView.Adapter<ComentarioListViewHo
         holder.upvote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!jaVotou(position)) {
-                    int likes = comentarios.get(position).getLikes();
-                    likes++;
-                    comentarios.get(position).setLikes(likes);
-                    List<UsuarioLikes> lista;
-                    if (comentarios.get(position).getVotos() != null) {
-                        lista = comentarios.get(position).getVotos();
+                if (logado) {
+                    if (!jaVotou(position)) {
+                        int likes = comentarios.get(position).getLikes();
+                        likes++;
+                        comentarios.get(position).setLikes(likes);
+                        List<UsuarioLikes> lista;
+                        if (comentarios.get(position).getVotos() != null) {
+                            lista = comentarios.get(position).getVotos();
+                        } else {
+                            lista = new ArrayList<>();
+                        }
+                        lista.add(new UsuarioLikes(psnId, "like"));
+                        comentarios.get(position).setVotos(lista);
+                        mTrofeuReference.child(comentarios.get(position).getKey()).setValue(comentarios.get(position));
+                        holder.tvLikes.setText(String.valueOf(comentarios.get(position).getLikes()));
+                        holder.upvote.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_like_votado));
+                        holder.tvLikes.setTextColor(context.getResources().getColor(R.color.Green_Playstation));
                     } else {
-                        lista = new ArrayList<>();
+                        Toast.makeText(context, "Apenas um voto por comentário.", Toast.LENGTH_SHORT).show();
                     }
-                    lista.add(new UsuarioLikes(psnId, "like"));
-                    comentarios.get(position).setVotos(lista);
-                    mTrofeuReference.child(comentarios.get(position).getKey()).setValue(comentarios.get(position));
-                    holder.tvLikes.setText(String.valueOf(comentarios.get(position).getLikes()));
-                    holder.upvote.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_like_votado));
-                    holder.tvLikes.setTextColor(context.getResources().getColor(R.color.Green_Playstation));
                 } else {
-                    Toast.makeText(context, "Já votou", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "É preciso estar logado para votar.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -107,24 +113,28 @@ public class ComentarioAdapter extends RecyclerView.Adapter<ComentarioListViewHo
         holder.downvote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!jaVotou(position)) {
-                    int deslikes = comentarios.get(position).getDeslikes();
-                    deslikes++;
-                    comentarios.get(position).setDeslikes(deslikes);
-                    List<UsuarioLikes> lista;
-                    if (comentarios.get(position).getVotos() != null) {
-                        lista = comentarios.get(position).getVotos();
+                if (logado) {
+                    if (!jaVotou(position)) {
+                        int deslikes = comentarios.get(position).getDeslikes();
+                        deslikes++;
+                        comentarios.get(position).setDeslikes(deslikes);
+                        List<UsuarioLikes> lista;
+                        if (comentarios.get(position).getVotos() != null) {
+                            lista = comentarios.get(position).getVotos();
+                        } else {
+                            lista = new ArrayList<>();
+                        }
+                        lista.add(new UsuarioLikes(psnId, "deslike"));
+                        comentarios.get(position).setVotos(lista);
+                        mTrofeuReference.child(comentarios.get(position).getKey()).setValue(comentarios.get(position));
+                        holder.tvDeslikes.setText(String.valueOf(comentarios.get(position).getDeslikes()));
+                        holder.downvote.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_deslike_votado));
+                        holder.tvDeslikes.setTextColor(context.getResources().getColor(R.color.Red_Playstation));
                     } else {
-                        lista = new ArrayList<>();
+                        Toast.makeText(context, "Apenas um voto por comentário.", Toast.LENGTH_SHORT).show();
                     }
-                    lista.add(new UsuarioLikes(psnId, "deslike"));
-                    comentarios.get(position).setVotos(lista);
-                    mTrofeuReference.child(comentarios.get(position).getKey()).setValue(comentarios.get(position));
-                    holder.tvDeslikes.setText(String.valueOf(comentarios.get(position).getDeslikes()));
-                    holder.downvote.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_deslike_votado));
-                    holder.tvDeslikes.setTextColor(context.getResources().getColor(R.color.Red_Playstation));
                 } else {
-                    Toast.makeText(context, "Já votou", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "É preciso estar logado para votar.", Toast.LENGTH_SHORT).show();
                 }
             }
         });

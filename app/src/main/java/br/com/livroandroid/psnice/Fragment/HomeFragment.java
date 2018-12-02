@@ -107,9 +107,6 @@ public class HomeFragment extends Fragment {
 
         adapter.adicionar( listaJogosFragment , "Jogos");
         adapter.adicionar( estatisticasFragment, "Estatisticas");
-        if (logado){
-            adapter.adicionar( new ListaAmigosFragment(), "Amigos");
-        }
 
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);

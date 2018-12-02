@@ -77,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
                         startActivity(it);
                         etLogin.setText("");
                         etSenha.setText("");
-                    } else {
+                    } else if (!verificaSeSenhaErrada()){
                         Toast.makeText(LoginActivity.this, "Usuario não cadastrado", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -109,6 +109,16 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         };
+    }
+
+    public boolean verificaSeSenhaErrada(){
+        for (int i = 0; i < listaCadastrados.size(); i++){
+            if (etLogin.getText().toString().equalsIgnoreCase(listaCadastrados.get(i).getPsnId()) && !etSenha.getText().toString().equalsIgnoreCase(listaCadastrados.get(i).getSenha())){
+                Toast.makeText(this, "Senha errada.", Toast.LENGTH_SHORT).show();
+                return true;
+            }
+        }
+        return false;
     }
 
     public boolean verificaSeCadastrado(){
