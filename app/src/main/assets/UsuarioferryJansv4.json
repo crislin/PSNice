@@ -34,13 +34,13 @@
         "imagem": "https://i.imgur.com/lFzz9yJ.png",
         "game_platinum": "0",
         "game_gold": "0",
-        "game_silver": "0",
-        "game_bronze": "10",
+        "game_silver": "5",
+        "game_bronze": "19",
         "game_total": "45",
-        "game_progress": "15",
+        "game_progress": "45",
 		"release_date": "20/01/2015",
         "has_platinum": "false",
-        "game_total_earned": "10",
+        "game_total_earned": "24",
         "trofeus": [
         {
             "nome": "Platinum Splattin' 'Em!",
@@ -58,9 +58,9 @@
             "imagem_trofeu": "https://i.imgur.com/HVmcHqc.png",
             "tipo": "bronze",
             "hidden": "false",
-            "earned": "false",
-            "day_earned": "",
-            "hour_earned": ""
+            "earned": "true",
+            "day_earned": "15/06/2018",
+            "hour_earned": "12:40:42"
         },
         {
             "nome": "Take that, Zombies!",
@@ -68,9 +68,9 @@
             "imagem_trofeu": "https://i.imgur.com/5JJgxZQ.png",
             "tipo": "bronze",
             "hidden": "false",
-            "earned": "false",
-            "day_earned": "",
-            "hour_earned": ""
+            "earned": "true",
+            "day_earned": "15/06/2018",
+            "hour_earned": "12:40:43"
         },
         {
             "nome": "Herbicide",
@@ -99,8 +99,8 @@
             "tipo": "bronze",
             "hidden": "false",
             "earned": "true",
-            "day_earned": "24/03/2018",
-            "hour_earned": "18:00:57"
+            "day_earned": "10/06/2018",
+            "hour_earned": "14:06:00"
         },
         {
             "nome": "The Key Master",
@@ -109,8 +109,8 @@
             "tipo": "bronze",
             "hidden": "false",
             "earned": "true",
-            "day_earned": "24/03/2018",
-            "hour_earned": "19:59:30"
+            "day_earned": "11/06/2018",
+            "hour_earned": "12:29:11"
         },
         {
             "nome": "Alpha Team's Finest",
@@ -118,9 +118,9 @@
             "imagem_trofeu": "https://i.imgur.com/SwuD0qk.png",
             "tipo": "silver",
             "hidden": "false",
-            "earned": "false",
-            "day_earned": "",
-            "hour_earned": ""
+            "earned": "true",
+            "day_earned": "13/06/2018",
+            "hour_earned": "15:14:36"
         },
         {
             "nome": "Who's the Hunter Now?",
@@ -129,8 +129,8 @@
             "tipo": "bronze",
             "hidden": "false",
             "earned": "true",
-            "day_earned": "24/03/2018",
-            "hour_earned": "20:17:49"
+            "day_earned": "24/06/2018",
+            "hour_earned": "12:45:48"
         },
         {
             "nome": "Starsenal",
@@ -295,14 +295,14 @@
         "players_upto": "1",
         "imagem": "https://i.imgur.com/Lj1a2rt.png",
         "game_platinum": "0",
-        "game_gold": "1",
-        "game_silver": "4",
-        "game_bronze": "5",
+        "game_gold": "0",
+        "game_silver": "1",
+        "game_bronze": "2",
         "game_total": "10",
-        "game_progress": "100",
+        "game_progress": "21",
 		"release_date": "12/07/2016",
         "has_platinum": "false",
-		"game_total_earned": "10",
+		"game_total_earned": "3",
         "trofeus": [
         {
             "nome": "Gearhead",
@@ -310,9 +310,9 @@
             "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/8M2bf78c.png",
             "tipo": "gold",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "29/09/2018",
-            "hour_earned": "19:00:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "Feast for a Queen",
@@ -320,9 +320,9 @@
             "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/7M8ac20c.png",
             "tipo": "silver",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:00:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "Sea Saver",
@@ -330,9 +330,9 @@
             "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/6M9f1e65.png",
             "tipo": "silver",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:00:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "Merryn and Goliath",
@@ -340,9 +340,9 @@
             "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/9Mefa12c.png",
             "tipo": "silver",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:00:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "Rest in Pieces",
@@ -352,7 +352,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:58:08"
+            "hour_earned": "12:27:48"
         },
         {
             "nome": "The Last Merrow",
@@ -362,7 +362,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:52:08"
+            "hour_earned": "10:02:40"
         },
         {
             "nome": "Your Watch is Over",
@@ -372,7 +372,7 @@
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
-            "hour_earned": "21:52:08"
+            "hour_earned": "12:20:47"
         },
         {
             "nome": "Aquatic Laser Show",
@@ -380,9 +380,9 @@
             "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/3Mab054b.png",
             "tipo": "bronze",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:48:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "Poor Turtles",
@@ -390,9 +390,9 @@
             "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/4M73e9e4.png",
             "tipo": "bronze",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:44:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "The Inner Sanctum",
@@ -400,9 +400,9 @@
             "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/5Md1cd31.png",
             "tipo": "bronze",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         }]
 
     },
@@ -416,15 +416,15 @@
         "genre": "Action",
         "players_upto": "22",
         "imagem": "http://i.imgur.com/rsbmfwf.png",
-        "game_platinum": "1",
-        "game_gold": "5",
-        "game_silver": "9",
+        "game_platinum": "0",
+        "game_gold": "4",
+        "game_silver": "5",
         "game_bronze": "22",
         "game_total": "37",
         "game_progress": "100",
 		"release_date": "20/04/2018",
         "has_platinum": "true",
-		"game_total_earned": "37",
+		"game_total_earned": "31",
         "trofeus": [
         {
             "nome": "Father and Son",
@@ -432,9 +432,9 @@
             "imagem_trofeu": "http://i.imgur.com/xPMgJLF.png",
             "tipo": "platinum",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:28:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "Last Wish",
@@ -482,9 +482,9 @@
             "imagem_trofeu": "http://i.imgur.com/7wGRXuC.png",
             "tipo": "gold",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:28:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "Iðunn’s Orchard",
@@ -502,9 +502,9 @@
             "imagem_trofeu": "http://i.imgur.com/PAmWfZg.png",
             "tipo": "silver",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:28:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "All Will Fall",
@@ -532,9 +532,9 @@
             "imagem_trofeu": "http://i.imgur.com/1G7zTN5.png",
             "tipo": "silver",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:28:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "Allfather Blinded",
@@ -542,9 +542,9 @@
             "imagem_trofeu": "http://i.imgur.com/aW0B7JC.png",
             "tipo": "silver",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:28:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "Unfinished Business",
@@ -562,25 +562,15 @@
             "imagem_trofeu": "http://i.imgur.com/HYVIY9f.png",
             "tipo": "silver",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:28:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "The Truth",
             "descricao": "Read all of the Jötnar shrines",
             "imagem_trofeu": "http://i.imgur.com/e0aSLpU.png",
             "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:28:08"
-        },
-        {
-            "nome": "Father and Son",
-            "descricao": "Obtain all other throphies",
-            "imagem_trofeu": "http://i.imgur.com/xPMgJLF.png",
-            "tipo": "bronze",
             "hidden": "false",
             "earned": "true",
             "day_earned": "19/08/2015",
@@ -808,377 +798,6 @@
         }]
     },
     {
-        "nome": "Spyro The Dragon",
-        "id": "CUSA01298",
-        "ps4_label": "true",
-        "ps3_label": "false",
-        "psv_label": "false",
-        "developer": "Toys for Bob",
-        "genre": "Adventure",
-        "players_upto": "1",
-        "release_date": "12/07/2016",
-        "imagem": "https://i.imgur.com/FC9YcM0.png",
-        "has_platinum": "true",
-        "game_platinum": "0",
-        "game_gold": "3",
-        "game_silver": "17",
-        "game_bronze": "16",
-        "game_total": "37",
-        "game_progress": "100",
-		"game_total_earned": "37",
-        "trofeus": [
-        {
-            "nome": "Gnasty's Demise",
-            "descricao": "Collect all Spyro the Dragon Trophies",
-            "imagem_trofeu": "https://i.imgur.com/PzwJyf8.png",
-            "tipo": "platinum",
-            "hidden": "false",
-            "earned": "false",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "I'm in the Money!",
-            "descricao": "Unlock Gnasty's Loot",
-            "imagem_trofeu": "https://i.imgur.com/OW2uJNB.png",
-            "tipo": "gold",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Fly Like an Eagle",
-            "descricao": "Complete Icy Flight without touching the ground",
-            "imagem_trofeu": "https://i.imgur.com/xp1Sc3L.png",
-            "tipo": "gold",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Launch Date",
-            "descricao": "Jump off every Supercharge ramp in Tree Tops",
-            "imagem_trofeu": "https://i.imgur.com/xTvYUTB.png",
-            "tipo": "gold",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Egg Hunt",
-            "descricao": "Defeat hidden Egg Thief in Wizard Pea",
-            "imagem_trofeu": "https://i.imgur.com/BnK8eht.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Dragon and On and On",
-            "descricao": "Get Gnasty Gnorc to complete 5 laps",
-            "imagem_trofeu": "https://i.imgur.com/P2Uv0Hr.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "What Really Grinds My Gears",
-            "descricao": "Destroy 6 gears in Twilight Harbor",
-            "imagem_trofeu": "https://i.imgur.com/RhJe5G2.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Jacques-tacular",
-            "descricao": "Defeat 4 Nightmare Beasts in one glide",
-            "imagem_trofeu": "https://i.imgur.com/f3BvzXv.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Scrap Metal",
-            "descricao": "Defeat all Tin Soldiers",
-            "imagem_trofeu": "https://i.imgur.com/ka3TRqJ.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "All Puffed Up",
-            "descricao": "Charge through 4 Puffer Birds in a row",
-            "imagem_trofeu": "https://i.imgur.com/tPLSqX3.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Bad Doggies!",
-            "descricao": "Defeat 3 Demon Dogs in large form",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/28M4f103d.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Gems in the Rough",
-            "descricao": "Collect 500 gems in Metalhead",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/26Me31eae.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "I Believe it is Time for Me to Fly",
-            "descricao": "Complete Wild Flight without touching the ground",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/25Mb5228c.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Mushroom Hunter",
-            "descricao": "Flame 5 Glowing Mushrooms in Beast Makers",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/21M3280a6.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Gatherer",
-            "descricao": "Collect 400 gems in Blowhard",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/20Mb19669.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Hot Wings 2",
-            "descricao": "Flame all Fairies in Crystal Flight",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/19M18adc2.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Hoarder",
-            "descricao": "Collect all gems in Gnasty's Loot",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/7M6c1685.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Hot Wings 1",
-            "descricao": "Flame all Fairies in Night Flight",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/13M4745b5.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Barnstormer",
-            "descricao": "Do a loop around an arch",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/7M6c1685.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Burnt Toast",
-            "descricao": "Defeat Toasty without getting hit by him",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/9Me8089d.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Pops of the Tops",
-            "descricao": "Detonate 3 explosive chests on the pillars in Alpine Ridge",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/16M472029.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Shoot the Moon",
-            "descricao": "Use a cannon to dispatch a taunting Gnorc",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/9Me8089d.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Hop, Skip, and Jump",
-            "descricao": "Find the hidden entrance to Sunny Flight",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/9Me8089d.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Sheep Kebab",
-            "descricao": "Flame 10 sheep in Stone Hill",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/3Mbc707b.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Ratastic!",
-            "descricao": "Complete Gnorc Cove without killing any Rats",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/4M05d7a2.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Light My Fire",
-            "descricao": "Light the two bonfires in Dark Hollow",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/6M1b85cb.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Leaf on the Wind",
-            "descricao": "Glide to secret Egg Thief area in Town Square",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/17Mc44379.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Arachnophobe",
-            "descricao": "Defeat all Metalback Spiders",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/11M3f0c63.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Bird Brained",
-            "descricao": "Charge a Vulture",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/12Mea482e.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Birds of a Feather",
-            "descricao": "Flame every Vulture in Cliff Town",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/23M90d386.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Triathlon",
-            "descricao": "Defeat all three Ski Gnorcs",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/22M3c14f2.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Cage Free",
-            "descricao": "Free a trapped Chicken",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/14M63e822.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Rocketeer",
-            "descricao": "Light 3 fireworks within 15 seconds",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/15M4d6b57.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "What's in the Box?",
-            "descricao": "Unlock the strong chest in Doctor Shemp",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/2M7cec91.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
-            "nome": "Comin' Through!",
-            "descricao": "Charge through 4 Armored Druids near the start of Magic Crafters",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/27M60e418.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        }]
-    },
-    {
         "nome": "FIFA 19",
         "id": "CUSA01256",
         "ps4_label": "true",
@@ -1190,13 +809,13 @@
         "release_date": "12/07/2016",
         "imagem": "https://i.imgur.com/aVUw66x.png",
         "has_platinum": "true",
-        "game_platinum": "1",
-        "game_gold": "4",
-        "game_silver": "8",
-        "game_bronze": "29",
+        "game_platinum": "0",
+        "game_gold": "3",
+        "game_silver": "7",
+        "game_bronze": "25",
         "game_total": "42",
         "game_progress": "100",
-		"game_total_earned": "42",
+		"game_total_earned": "32",
         "trofeus": [
         {
             "nome": "No 1 Fan",
@@ -1204,9 +823,9 @@
             "imagem_trofeu": "https://i.psnprofiles.com/games/577b51/trophies/1Mf9644d.png",
             "tipo": "platinum",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "Climbing the Ladder",
@@ -1234,9 +853,9 @@
             "imagem_trofeu": "https://i.psnprofiles.com/games/577b51/trophies/4Mebfee8.png",
             "tipo": "gold",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "The Champions",
@@ -1299,16 +918,6 @@
             "hour_earned": "21:42:08"
         },
         {
-            "nome": "Skill Games Frenzy",
-            "descricao": "Complete all Multiplayer Skill Games",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/577b51/trophies/11M295026.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        },
-        {
             "nome": "Made the Headlines",
             "descricao": "Win the UEFA Europa League Final",
             "imagem_trofeu": "https://i.psnprofiles.com/games/577b51/trophies/12M2c6a2a.png",
@@ -1324,9 +933,9 @@
             "imagem_trofeu": "https://i.psnprofiles.com/games/577b51/trophies/6M8bbb1e.png",
             "tipo": "silver",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "Cultivating Skills",
@@ -1344,7 +953,7 @@
             "imagem_trofeu": "https://i.psnprofiles.com/games/577b51/trophies/28Me4bce2.png",
             "tipo": "bronze",
             "hidden": "false",
-            "earned": "false",
+            "earned": "true",
             "day_earned": "19/08/2015",
             "hour_earned": "21:42:08"
         },
@@ -1354,7 +963,7 @@
             "imagem_trofeu": "https://i.psnprofiles.com/games/577b51/trophies/36M8c34a6.png",
             "tipo": "bronze",
             "hidden": "false",
-            "earned": "false",
+            "earned": "true",
             "day_earned": "19/08/2015",
             "hour_earned": "21:42:08"
         },
@@ -1424,9 +1033,9 @@
             "imagem_trofeu": "https://i.psnprofiles.com/games/577b51/trophies/29Ma75f1d.png",
             "tipo": "bronze",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "Easy Peasy",

@@ -191,16 +191,6 @@
             "hour_earned": "21:28:08"
         },
         {
-            "nome": "Father and Son",
-            "descricao": "Obtain all other throphies",
-            "imagem_trofeu": "http://i.imgur.com/xPMgJLF.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:28:08"
-        },
-        {
             "nome": "Dwarven Ingenuity",
             "descricao": "Upgrade a piece of armor",
             "imagem_trofeu": "http://i.imgur.com/CzaK4aX.png",
@@ -809,7 +799,7 @@
         "game_progress": "100",
         "trofeus": [
         {
-            "nome": "No.1 Fan",
+            "nome": "No 1 Fan",
             "descricao": "Unlock all other trophies (excluding additional content trophies)",
             "imagem_trofeu": "https://i.psnprofiles.com/games/577b51/trophies/1Mf9644d.png",
             "tipo": "platinum",

@@ -34,13 +34,13 @@
         "release_date": "20/01/2015",
         "imagem": "https://i.imgur.com/lFzz9yJ.png",
         "has_platinum": "false",
-        "game_platinum": "0",
-        "game_gold": "0",
-        "game_silver": "0",
-        "game_bronze": "10",
+        "game_platinum": "1",
+        "game_gold": "1",
+        "game_silver": "15",
+        "game_bronze": "28",
         "game_total": "45",
         "game_total_earned": "10",
-        "game_progress": "15",
+        "game_progress": "45",
         "trofeus": [
         {
             "nome": "Platinum Splattin' 'Em!",
@@ -48,9 +48,9 @@
             "imagem_trofeu": "https://i.imgur.com/GxJpxT7.png",
             "tipo": "platinum",
             "hidden": "false",
-            "earned": "false",
-            "day_earned": "",
-            "hour_earned": ""
+            "earned": "true",
+            "day_earned": "30/03/2018",
+            "hour_earned": "19:18:54"
         },
         {
             "nome": "Not in the Mood to Die",
@@ -58,9 +58,9 @@
             "imagem_trofeu": "https://i.imgur.com/HVmcHqc.png",
             "tipo": "bronze",
             "hidden": "false",
-            "earned": "false",
-            "day_earned": "",
-            "hour_earned": ""
+            "earned": "true",
+            "day_earned": "15/02/2018",
+            "hour_earned": "20:38:55"
         },
         {
             "nome": "Take that, Zombies!",
@@ -68,9 +68,9 @@
             "imagem_trofeu": "https://i.imgur.com/5JJgxZQ.png",
             "tipo": "bronze",
             "hidden": "false",
-            "earned": "false",
-            "day_earned": "",
-            "hour_earned": ""
+            "earned": "true",
+            "day_earned": "15/03/2018",
+            "hour_earned": "10:33:24"
         },
         {
             "nome": "Herbicide",
@@ -78,9 +78,9 @@
             "imagem_trofeu": "https://i.imgur.com/fxCVXY4.png",
             "tipo": "bronze",
             "hidden": "false",
-            "earned": "false",
-            "day_earned": "",
-            "hour_earned": ""
+            "earned": "true",
+            "day_earned": "16/01/2018",
+            "hour_earned": "19:18:49"
         },
         {
             "nome": "An End to a Poor Girl's Misery",
@@ -88,9 +88,9 @@
             "imagem_trofeu": "https://i.imgur.com/a9DxFxz.png",
             "tipo": "bronze",
             "hidden": "false",
-            "earned": "false",
-            "day_earned": "",
-            "hour_earned": ""
+            "earned": "true",
+            "day_earned": "16/02/2018",
+            "hour_earned": "20:20:37"
         },
         {
             "nome": "Grave Digger",
@@ -118,9 +118,9 @@
             "imagem_trofeu": "https://i.imgur.com/SwuD0qk.png",
             "tipo": "silver",
             "hidden": "false",
-            "earned": "false",
-            "day_earned": "",
-            "hour_earned": ""
+            "earned": "true",
+            "day_earned": "22/03/2018",
+            "hour_earned": "13:43:46"
         },
         {
             "nome": "Who's the Hunter Now?",
@@ -138,9 +138,9 @@
             "imagem_trofeu": "https://i.imgur.com/SNWxIXN.png",
             "tipo": "silver",
             "hidden": "false",
-            "earned": "false",
-            "day_earned": "",
-            "hour_earned": ""
+            "earned": "true",
+            "day_earned": "23/03/2018",
+            "hour_earned": "12:09:30"
         }]
     },
     {
@@ -286,127 +286,6 @@
         }]
     },
     {
-        "nome": "Song Of The Deep",
-        "id": "CUSA01105",
-        "ps4_label": "true",
-        "ps3_label": "false",
-        "psv_label": "true",
-        "developer": "Insomniac Games",
-        "genre": "Puzzle | Adventure",
-        "players_upto": "1",
-        "release_date": "12/07/2016",
-        "imagem": "https://i.imgur.com/Lj1a2rt.png",
-        "has_platinum": "false",
-        "game_platinum": "0",
-        "game_gold": "1",
-        "game_silver": "4",
-        "game_bronze": "5",
-        "game_total": "10",
-        "game_total_earned": "10",
-        "game_progress": "100",
-        "trofeus": [
-        {
-            "nome": "Gearhead",
-            "descricao": "Purchase all upgrades",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/8M2bf78c.png",
-            "tipo": "gold",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "29/09/2018",
-            "hour_earned": "19:00:08"
-        },
-        {
-            "nome": "Feast for a Queen",
-            "descricao": "Feed the Queen Leviathan.",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/7M8ac20c.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:00:08"
-        },
-        {
-            "nome": "Sea Saver",
-            "descricao": "Destroy the Forbidden City forever",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/6M9f1e65.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:00:08"
-        },
-        {
-            "nome": "Merryn and Goliath",
-            "descricao": "Kill a Tremorclaw Crab as Merryn",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/9Mefa12c.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:00:08"
-        },
-        {
-            "nome": "Rest in Pieces",
-            "descricao": "Pay your respects to the Watcher and drop a flower on her final resting place.",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/10M226139.png",
-            "tipo": "silver",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:58:08"
-        },
-        {
-            "nome": "The Last Merrow",
-            "descricao": "Meet the Merrow",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/1M2dd02d.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:52:08"
-        },
-        {
-            "nome": "Your Watch is Over",
-            "descricao": "Defeat the Watcher",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/2M8050e8.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:52:08"
-        },
-        {
-            "nome": "Aquatic Laser Show",
-            "descricao": "Activate the Deeplight",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/3Mab054b.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:48:08"
-        },
-        {
-            "nome": "Poor Turtles",
-            "descricao": "Defeat the Fomori Boss",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/4M73e9e4.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:44:08"
-        },
-        {
-            "nome": "The Inner Sanctum",
-            "descricao": "Commune with the giant seahorse",
-            "imagem_trofeu": "https://i.psnprofiles.com/games/e96a89/trophies/5Md1cd31.png",
-            "tipo": "bronze",
-            "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
-        }]
-    },
-    {
         "nome": "Spyro The Dragon",
         "id": "CUSA01298",
         "ps4_label": "true",
@@ -419,11 +298,11 @@
         "imagem": "https://i.imgur.com/FC9YcM0.png",
         "has_platinum": "true",
         "game_platinum": "0",
-        "game_gold": "3",
-        "game_silver": "17",
-        "game_bronze": "16",
+        "game_gold": "0",
+        "game_silver": "8",
+        "game_bronze": "12",
         "game_total": "37",
-        "game_total_earned": "37",
+        "game_total_earned": "20",
         "game_progress": "100",
         "trofeus": [
         {
@@ -433,8 +312,8 @@
             "tipo": "platinum",
             "hidden": "false",
             "earned": "false",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "I'm in the Money!",
@@ -442,9 +321,9 @@
             "imagem_trofeu": "https://i.imgur.com/OW2uJNB.png",
             "tipo": "gold",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "Fly Like an Eagle",
@@ -452,9 +331,9 @@
             "imagem_trofeu": "https://i.imgur.com/xp1Sc3L.png",
             "tipo": "gold",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "Launch Date",
@@ -462,9 +341,9 @@
             "imagem_trofeu": "https://i.imgur.com/xTvYUTB.png",
             "tipo": "gold",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "Egg Hunt",
@@ -482,9 +361,9 @@
             "imagem_trofeu": "https://i.imgur.com/P2Uv0Hr.png",
             "tipo": "silver",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "What Really Grinds My Gears",
@@ -492,9 +371,9 @@
             "imagem_trofeu": "https://i.imgur.com/RhJe5G2.png",
             "tipo": "silver",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "Jacques-tacular",
@@ -502,9 +381,9 @@
             "imagem_trofeu": "https://i.imgur.com/f3BvzXv.png",
             "tipo": "silver",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "Scrap Metal",
@@ -512,9 +391,9 @@
             "imagem_trofeu": "https://i.imgur.com/ka3TRqJ.png",
             "tipo": "silver",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "All Puffed Up",
@@ -522,9 +401,9 @@
             "imagem_trofeu": "https://i.imgur.com/tPLSqX3.png",
             "tipo": "silver",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "Bad Doggies!",
@@ -532,9 +411,9 @@
             "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/28M4f103d.png",
             "tipo": "silver",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "Gems in the Rough",
@@ -542,9 +421,9 @@
             "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/26Me31eae.png",
             "tipo": "silver",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "I Believe it is Time for Me to Fly",
@@ -552,9 +431,9 @@
             "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/25Mb5228c.png",
             "tipo": "silver",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "Mushroom Hunter",
@@ -592,9 +471,9 @@
             "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/7M6c1685.png",
             "tipo": "silver",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "Hot Wings 1",
@@ -672,9 +551,9 @@
             "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/4M05d7a2.png",
             "tipo": "bronze",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "Light My Fire",
@@ -742,9 +621,9 @@
             "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/14M63e822.png",
             "tipo": "bronze",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "Rocketeer",
@@ -752,9 +631,9 @@
             "imagem_trofeu": "https://i.psnprofiles.com/games/b8edaf/trophies/15M4d6b57.png",
             "tipo": "bronze",
             "hidden": "false",
-            "earned": "true",
-            "day_earned": "19/08/2015",
-            "hour_earned": "21:42:08"
+            "earned": "false",
+            "day_earned": "",
+            "hour_earned": ""
         },
         {
             "nome": "What's in the Box?",
@@ -798,7 +677,7 @@
         "game_total_earned": "42",
         "trofeus": [
         {
-            "nome": "No.1 Fan",
+            "nome": "No 1 Fan",
             "descricao": "Unlock all other trophies (excluding additional content trophies)",
             "imagem_trofeu": "https://i.psnprofiles.com/games/577b51/trophies/1Mf9644d.png",
             "tipo": "platinum",
